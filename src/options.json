@@ -16,8 +16,8 @@
     "SER Verb"
   ],
   [
-    "numbers1",
-    "Numbers 0-99"
+    "numbers",
+    "Numbers"
   ],
   [
     "age",
@@ -70,10 +70,6 @@
   [
     "prepositions",
     "Prepositions"
-  ],
-  [
-    "numbers2",
-    "Numbers 101 and Higher"
   ],
   [
     "family",
