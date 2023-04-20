@@ -98,21 +98,3 @@ noventa y seis	ninety six
 noventa y siete	ninety seven
 noventa y ocho	ninety eight
 noventa y nueve	ninety nine
-ciento uno	one hundred one
-doscientos	two hundred
-trescientos	three hundred
-cuatrocientos	four hundred
-quinientos	five hundred
-seiscientos	six hundred
-setecientos	seven hundred
-ochocientos	eight hundred
-novecientos	nine hundred
-mil	one thousand
-mil cien	one thousand one hundred
-dos mil	two thousand
-cinco mil	five thousand
-cien mil	one hundred thousand
-doscientos mil	two hundred thousand
-quinientos cincuenta mil	five hundred fifty thousand 
-un millón (de)	one million
-ocho millones (de)	eight million
