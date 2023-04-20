@@ -1,0 +1,40 @@
+aprendo	to learn/yo
+aprende	to learn/él
+aprendes	to learn/tú
+aprendemos	to learn/nos
+aprenden	to learn/ellos
+bebo	to drink/yo
+bebe	to drink/él
+bebes	to drink/tú
+bebemos	to drink/nos
+beben	to drink/ellos
+como	to eat/yo
+come	to eat/él
+comes	to eat/tú
+comemos	to eat/nos
+comen	to eat/ellos
+comprendo	to understand/yo
+comprende	to understand/él
+comprendes	to understand/tú
+comprendemos	to understand/nos
+comprenden	to understand/ellos
+corro	to run/yo
+corre	to run/él
+corres	to run/tú
+corremos	to run/nos
+corren	to run/ellos
+creo	to believe/yo
+cree	to believe/él
+crees	to believe/tú
+creemos	to believe/nos
+creen	to believe/ellos
+debo	should; must; ought to/yo
+debe	should; must; ought to/él
+debes	should; must; ought to/tú
+debemos	should; must; ought to/nos
+deben	should; must; ought to/ellos
+leo	to read/yo
+lee	to read/él
+lees	to read/tú
+leemos	to read/nos
+leen	to read/ellos

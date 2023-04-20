@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Improved Quizlet</title>
+<link rel="icon" href="https://assets.quizlet.com/a/j/dist/app/i/logo/2021/q-twilight.389092a385cb51d.png">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="https://assets.quizlet.com/a/j/dist/app/i/logo/2021/q-twilight.389092a385cb51d.png" property="og:image" />
+<meta content="Improved Quizlet" property="og:title">
+<meta content="A website that tries to improve the quizzing experience with a simple layout and UI." property="og:description">
+<meta name="description" content="A website that tries to improve the quizzing experience with a simple layout and UI.">
+<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body, button, select, input {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+body {
+  padding-left: 1em;
+}
+
+input[type='text'] {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+@keyframes splashscreen-on {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+@keyframes splashscreen-off {
+  from {opacity: 100%;}
+  to {opacity: 0%;}
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 101;
+  opacity: 0%;
+  display: none;
+  font-size: 10em;
+  color: white;
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* .popup {
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  opacity: 0%;
+  display: none;
+  font-size: 10em;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 30px;
+  width: 70%;
+  height: 70%;
+  width: 70vw;
+  height: 70vh;
+}
+
+.popup-exit {
+  float: right;
+  margin-right: 15px;
+  margin-top: -10px;
+  color: red;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.popup-title {
+  float: left;
+  margin-left: 15px;
+  margin-top: 8px;
+  color: black;
+  font-size: 35px;
+}
+
+.popup-text {
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 15px;
+} */
+
+div.question {
+  display: flex;
+  vertical-align: top;
+  align-items: center;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: .25em .5em;
+  margin: 5px;
+  white-space: nowrap;
+}
+
+button {
+  margin-bottom: 0.5em;
+  background-color: inherit;
+  font-size: 18px;
+  padding: 7px;
+  font-family: sans-serif;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+
+select {
+  font-size: 18px;
+  border: solid 2px black;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+/* .stats {
+  font-size: 20px;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 16px;
+  float: right;
+  margin: 0 10px 6px 20px;
+  text-align: center;
+} */
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+@media only screen and (max-width: 2200px) {
+  .responsive-grid {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 1900px) {
+  .responsive-grid {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .responsive-grid {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .responsive-grid {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .responsive-grid {
+    grid-template-columns: auto;
+  }
+}
+
+.responsive-grid-buttons {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1900px) {
+  .responsive-grid-buttons {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .responsive-grid-buttons {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .responsive-grid-buttons {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .responsive-grid-buttons {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive-grid-buttons {
+    grid-template-columns: auto;
+  }
+}
+
+#progress, #progress-bar {
+  position: fixed;
+  left: 5%;
+  bottom: 7px;
+  height: 30px;
+  border: 1.5px solid darkgray;
+  border-radius: 100px;
+}
+
+#progress {
+  background-color: white;
+  width: 90%;
+  width: 90vw;
+  z-index: 120;
+}
+
+#progress-bar {
+  background-color: lightgreen;
+  border: 1.5px solid darkgray;
+}
+
+#outer-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 121;
+}
+
+.right-bar {
+  margin-right: 2em;
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+#flipquiz {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .spanish-english-toggle {
+    display: none !important;
+  }
+
+  #flipquiz {
+    display: inline-block;
+  }
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  z-index: 99;
+  height: 80px;
+}
+
+.navbar-title {
+  margin: auto;
+  text-align: center;
+  font-size: 200%;
+  position: absolute;
+}
+
+.navbar-title-author {
+  font-size: 65%;
+}
+
+@media only screen and (max-width: 430px) {
+  .navbar-title-author {
+    display: none;
+  }
+}
+
+#set-parent > div {
+  display: none;
+}
+
+#set-parent:hover > div {
+  display: block;
+}
+
+#set-parent:hover > div.responsive-grid-buttons {
+  display: grid;
+}</style>
+<style>/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1100ff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ff0000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff0000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}</style><meta id="meta-set-s2week10all1.txt" content="cierro	to close/yo
+cierra	to close/él
+cierras	to close/tú
+cerramos	to close/nos
+cierran	to close/ellos
+comienzo	to begin/yo
+comienza	to begin/él
+comienzas	to begin/tú
+comenzamos	to begin/nos
+comienzan	to begin/ellos
+empiezo	to begin/yo
+empieza	to begin/él
+empiezas	to begin/tú
+empezamos	to begin/nos
+empiezan	to begin/ellos
+entiendo	to understand/yo
+entiende	to understand/él
+entiendes	to understand/tú
+entendemos	to understand/nos
+entienden	to understand/ellos
+pienso	to think/yo
+piensa	to think/él
+piensas	to think/tú
+pensamos	to think/nos
+piensan	to think/ellos
+pierdo	to lose; to miss/yo
+pierde	to lose; to miss/él
+pierdes	to lose; to miss/tú
+perdemos	to lose; to miss/nos
+pierden	to lose; to miss/ellos
+prefiero	to prefer/yo
+prefiere	to prefer/él
+prefieres	to prefer/tú
+preferimos	to prefer/nos
+prefieren	to prefer/ellos
+quiero	to want; to love/yo
+quiere	to want; to love/él
+quieres	to want; to love/tú
+queremos	to want; to love/nos
+quieren	to want; to love/ellos"/><meta id="meta-set-s2week10all2.txt" content="almuerzo	to have lunch/yo
+almuerza	to have lunch/él
+almuerzas	to have lunch/tú
+almorzamos	to have lunch/nos
+almuerzan	to have lunch/ellos
+cuento	to count; to tell/yo
+cuenta	to count; to tell/él
+cuentas	to count; to tell/tú
+contamos	to count; to tell/nos
+cuentan	to count; to tell/ellos
+duermo	to sleep/yo
+duerme	to sleep/él
+duermes	to sleep/tú
+dormimos	to sleep/nos
+duermen	to sleep/ellos
+encuentro	to find/yo
+encuentra	to find/él
+encuentras	to find/tú
+encontramos	to find/nos
+encuentran	to find/ellos
+muestro	to show/yo
+muestra	to show/él
+muestras	to show/tú
+mostramos	to show/nos
+muestran	to show/ellos
+puedo	to be able to; can/yo
+puede	to be able to; can/él
+puedes	to be able to; can/tú
+podemos	to be able to; can/nos
+pueden	to be able to; can/ellos
+recuerdo	to remember/yo
+recuerda	to remember/él
+recuerdas	to remember/tú
+recordamos	to remember/nos
+recuerdan	to remember/ellos
+vuelvo	to return/yo
+vuelve	to return/él
+vuelves	to return/tú
+volvemos	to return/nos
+vuelven	to return/ellos"/><meta id="meta-set-s2week10all3.txt" content="juego	to play/yo
+juega	to play/él
+juegas	to play/tú
+jugamos	to play/nos
+juegan	to play/ellos"/><meta id="meta-set-s2week10simple1.txt" content="cerrar	to close
+comenzar	to begin
+empezar	to begin
+entender	to understand
+pensar	to think
+perder	to lose; to miss
+preferir	to prefer
+querer	to want; to love"/><meta id="meta-set-s2week10simple2.txt" content="almorzar	to have lunch
+contar	to count; to tell
+dormir	to sleep
+encontrar	to find
+mostrar	to show
+poder	to be able to; can
+recordar	to remember
+volver	to return"/><meta id="meta-set-s2week10simple3.txt" content="jugar	to play"/><meta id="meta-set-s2week14all.txt" content="pido	to ask for; to request/yo
+pide	to ask for; to request/él
+pides	to ask for; to request/tú
+pedimos	to ask for; to request/nos
+piden	to ask for; to request/ellos
+consiguo	to get; to obtain/yo
+consigue	to get; to obtain/él
+consigues	to get; to obtain/tú
+conseguimos	to get; to obtain/nos
+consiguen	to get; to obtain/ellos
+dico	to say; to tell/yo
+dice	to say; to tell/él
+dices	to say; to tell/tú
+decimos	to say; to tell/nos
+dicen	to say; to tell/ellos
+repito	to repeat/yo
+repite	to repeat/él
+repites	to repeat/tú
+repetimos	to repeat/nos
+repiten	to repeat/ellos
+siguo	to follow; to continue; to keep doing something/yo
+sigue	to follow; to continue; to keep doing something/él
+sigues	to follow; to continue; to keep doing something/tú
+seguimos	to follow; to continue; to keep doing something/nos
+siguen	to follow; to continue; to keep doing something/ellos"/><meta id="meta-set-s2week14simple.txt" content="pedir	to ask for; to request
+conseguir	to get; to obtain
+decir	to say; to tell
+repetir	to repeat
+seguir	to follow; to continue; to keep doing something"/><meta id="meta-set-s2week3.txt" content="I like	A mí me gusta
+to me	Me
+You like (informal)	A ti te gusta
+to you (informal)	Te
+You like (formal)	A usted le gusta
+to him, to her, to you (formal)	Le
+He likes	A él le gusta
+She likes	A ella le gusta
+We like (masculine)	A nosotros nos gusta
+to us	Nos
+We like (feminine)	A nosotras nos gusta
+to us	Nos
+Y'all like (formal)	A ustedes les gusta
+to them, to y'all (formal pl.)	Les
+They like (masculine)	A ellos les gusta
+They like (feminine)	A ellas les gusta
+Ana likes	A Ana le gusta
+Juan likes	A Juan le gusta
+Diego and Ana like	A Diego y a Ana les gusta
+A Rafael le gusta bailar.	Rafael likes to dance.
+You like to sing	A ti te gusta cantar.
+A mi me gusta caminar.	I like to walk.
+A ustedes les gusta jugar al fútbol.	Y'all like to play soccer.
+A nosotros nos gusta escuchar música.	We like to listen to music.
+Me gusta comprar	I like to buy"/><meta id="meta-set-s2week5.txt" content="ciento uno	101
+doscientos/as	200
+trescientos/as	300
+cuatrocientos/as	400
+quinientos/as	500
+seiscientos/as	600
+setecientos/as	700
+ochocientos/as	800
+novecientos/as	900
+mil	1.000
+mil cien	1.100
+dos mil	2.000
+cinco mil	5.000
+cien mil	100.000
+doscientos mil	200.000
+quinientos/as cincuenta mil	550.000
+un millón (de)	1.000.000
+ocho millones (de)	8.000.000"/><meta id="meta-set-s2week6.txt" content="el abuelo	grandfather
+la abuela	grandmother
+los abuelos	grandparents
+el amigo	friend (male)
+el apellido	last name
+el bisabuelo	great-grandfather
+la bisabuela	great-grandmother
+el esposo	husband
+la esposa	wife
+la familia	family
+el gemelo	twin (male)
+la gemela	twin (female)
+la gente	people
+el hermanastro	stepbrother
+la hermanastra	stepsister
+el hermano	brother
+la hermana	sister
+el hijastro	stepson
+la hijastra	stepdaughter
+el hijo	son
+la hija	daughter
+los hijos	children
+la madrastra	stepmother
+la madre	mother
+el medio hermano	half-brother
+la media hermana	half-sister
+el nieto	grandson
+la nieta	granddaughter
+el padrastro	stepfather
+el padre	father
+los padres	parents
+los parientes	relatives
+el primo	cousin (male)
+la prima	cousin (female)
+el sobrino	nephew
+la sobrina	niece
+el tío	uncle
+la tía	aunt
+el cuñado	brother-in-law
+la cuñada	sister-in-law
+el suegro	father-in-law
+la suegra	mother-in-law
+la nuera	daughter-in-law"/><meta id="meta-set-s2week6all2.txt" content="aprendo	to learn/yo
+aprende	to learn/él
+aprendes	to learn/tú
+aprendemos	to learn/nos
+aprenden	to learn/ellos
+bebo	to drink/yo
+bebe	to drink/él
+bebes	to drink/tú
+bebemos	to drink/nos
+beben	to drink/ellos
+como	to eat/yo
+come	to eat/él
+comes	to eat/tú
+comemos	to eat/nos
+comen	to eat/ellos
+comprendo	to understand/yo
+comprende	to understand/él
+comprendes	to understand/tú
+comprendemos	to understand/nos
+comprenden	to understand/ellos
+corro	to run/yo
+corre	to run/él
+corres	to run/tú
+corremos	to run/nos
+corren	to run/ellos
+creo	to believe/yo
+cree	to believe/él
+crees	to believe/tú
+creemos	to believe/nos
+creen	to believe/ellos
+debo	should; must; ought to/yo
+debe	should; must; ought to/él
+debes	should; must; ought to/tú
+debemos	should; must; ought to/nos
+deben	should; must; ought to/ellos
+leo	to read/yo
+lee	to read/él
+lees	to read/tú
+leemos	to read/nos
+leen	to read/ellos"/><meta id="meta-set-s2week6all3.txt" content="abro	to open/yo
+abre	to open/él
+abres	to open/tú
+abrimos	to open/nos
+abren	to open/ellos
+asisto	to attend/yo
+asiste	to attend/él
+asistes	to attend/tú
+asistimos	to attend/nos
+asisten	to attend/ellos
+comparto	to share/yo
+comparte	to share/él
+compartes	to share/tú
+compartimos	to share/nos
+comparten	to share/ellos
+decido	to decide/yo
+decide	to decide/él
+decides	to decide/tú
+decidimos	to decide/nos
+deciden	to decide/ellos
+describo	to describe/yo
+describe	to describe/él
+describes	to describe/tú
+describimos	to describe/nos
+describen	to describe/ellos
+escribo	to write/yo
+escribe	to write/él
+escribes	to write/tú
+escribimos	to write/nos
+escriben	to write/ellos
+recibo	to receive/yo
+recibe	to receive/él
+recibes	to receive/tú
+recibimos	to receive/nos
+reciben	to receive/ellos
+vivo	to live/yo
+vive	to live/él
+vives	to live/tú
+vivimos	to live/nos
+viven	to live/ellos"/><meta id="meta-set-s2week6simple2.txt" content="aprender	to learn
+beber	to drink
+comer	to eat
+comprender	to understand
+correr	to run
+creer	to believe
+deber	should; must; ought to
+leer	to read"/><meta id="meta-set-s2week6simple3.txt" content="abrir	to open
+asistir	to attend
+compartir	to share
+decidir	to decide
+describir	to describe
+escribir	to write
+recibir	to receive
+vivir	to live"/><meta id="meta-set-s2week9.txt" content="malo	bad
+grande	big
+rubio	blonde
+moreno	brunette
+fácil	easy
+gordo	fat
+bueno	good
+guapo	good-looking
+difícil	hard
+trabajador	hard-working
+importante	important
+inteligente	intelligent
+interesante	interesting
+mucho	much
+simpático	nice
+viejo	old
+bonito	pretty
+pelirrojo	red-haired
+mismo	same
+bajo	short
+tonto	silly
+pequeño	small
+alto	tall
+delgado	thin
+feo	ugly
+antipático	unpleasant
+joven	young"/><meta id="meta-set-s2week9set2.txt" content="__ padres (his)	sus
+__ madre (his)	su
+__ hermano (her)	su
+__ hermanos (her)	sus
+__ abuelos (their)	sus
+__ abuelo (their)	su
+__ maestros (our)	nuestros
+__ amigo (our)	nuestro
+__ primas (my)	mis
+__ prima (my)	mi
+__ hermanos (your - formal)	sus
+__ hermano (your - formal)	su
+__ amigos (your - familiar)	tus
+__ amigo (your - familiar)	tu
+__ perros (my)	mis
+__ perro (my)	mi
+__ hijos (his)	sus
+__ hijo (his)	su
+__ hermano (your - formal)	su
+__ hermano (your - familiar)	tu
+__ hermanos (your - formal)	sus
+__ hermanos (your - familiar)	tus
+__ padres (their)	sus
+__ padre (their)	su
+__ abuelos (his)	sus
+__ abuelos (our)	nuestros
+__ amigos (your - familiar)	tus
+__ amigo (your - familiar)	tu
+__ maestros (my)	mis
+__ hermanos (her)	sus
+__ maestro (my)	mi
+__ primos (his)	sus
+__ hija (his)	su
+__ prima (his)	su
+__ hijo (our)	nuestro
+__ hermana (our)	nuestra
+__ hermanas (our)	nuestras
+__ hijos (our)	nuestros"/><meta id="meta-set-week12.txt" content="un escritorio	large desk
+un pizarrón	whiteboard
+un gis	chalk
+un borrador	eraser
+un pupitre	student's desk
+una silla	seat
+un cuaderno	notebook
+un bolígrafo	pen
+un lápiz	pencil
+un libro	textbook
+una mochila	backpack
+una computadora	computer
+un reloj	clock
+un televisor	television
+una calculadora	calculator
+un bote de basura	trash can"/><meta id="meta-set-week12set2.txt" content="las materias	subjects
+el arte	art
+las ciencias	science
+el español	Spanish
+la geografía	geography
+la historia	history
+el inglés	English
+las matemáticas	math
+la música	music"/><meta id="meta-set-week12set3.txt" content="estudio	I study
+estudias	you study
+¿Cómo se dice _ en español?	How do you say _ in Spanish?
+Con permiso	Excuse me
+De nada	You're welcome
+¿De veras?	Really?
+¿En qué página estamos?	What page are we on?
+Más despacio, por favor	Slower, please
+Muchas gracias	Thanks a lot
+No entiendo	I don't understand.
+No sé	I don't know
+Por favor	Please
+¿Qué significa_?	What does _mean?
+Tengo una pregunta	I have a question"/><meta id="meta-set-week12set4.txt" content="domingo	Sunday
+lunes	Monday
+martes	Tuesday
+miércoles	Wednesday
+jueves	Thursday
+viernes	Friday
+sábado	Saturday
+mañana	tomorrow
+¿Qué día es hoy?	What day is today?
+Hoy es...	Today is..."/><meta id="meta-set-week12set5.txt" content="enero	January
+febrero	February
+marzo	March
+abril	April
+mayo	May
+junio	June
+julio	July
+agosto	August
+septiembre	September
+octubre	October
+noviembre	November
+diciembre	December"/><meta id="meta-set-week12set6.txt" content="verde	green
+naranja	orange
+rosado	pink
+morado	purple
+amarillo	yellow
+rojo	red
+azul	blue
+cafe	brown"/><meta id="meta-set-week14.txt" content="la cabeza	head
+los hombros	shoulders
+la rodilla	knee
+el pie	foot
+el ojo	eye
+la oreja	ear
+la boca	mouth
+la nariz	nose
+la mano	hand
+el dedo	finger
+la lengua	tongue
+las piernas	legs
+el pelo	hair
+el brazo	arm
+el cuello	neck
+la ceja	eyebrow
+el codo	elbow"/><meta id="meta-set-week15.txt" content="bailar	to dance
+buscar	to look for
+caminar	to walk
+cantar	to sing
+cenar	to have dinner
+comprar	to buy
+contestar	to answer
+conversar	to converse, to chat
+desayunar	to have breakfast
+desear	to wish, to desire
+dibujar	to draw
+enseñar	to teach
+escuchar	to listen to
+esperar	to wait for, to hope
+estudiar	to study
+explicar	to explain
+hablar	to talk, to speak
+llegar	to arrive
+llevar	to carry, to take, to wear
+mirar	to look at, to watch
+necesitar	to need
+practicar	to practice
+preguntar	to ask a question
+preparar	to prepare
+regresar	to return
+terminar	to end, to finish
+tomar	to take, to drink
+trabajar	to work
+viajar	to travel
+descansar	to rest"/><meta id="meta-set-week15all.txt" content="bailo	to dance/yo
+baila	to dance/él
+bailas	to dance/tú
+bailamos	to dance/nos
+bailan	to dance/ellos
+busco	to look for/yo
+busca	to look for/él
+buscas	to look for/tú
+buscamos	to look for/nos
+buscan	to look for/ellos
+camino	to walk/yo
+camina	to walk/él
+caminas	to walk/tú
+caminamos	to walk/nos
+caminan	to walk/ellos
+canto	to sing/yo
+canta	to sing/él
+cantas	to sing/tú
+cantamos	to sing/nos
+cantan	to sing/ellos
+ceno	to have dinner/yo
+cena	to have dinner/él
+cenas	to have dinner/tú
+cenamos	to have dinner/nos
+cenan	to have dinner/ellos
+compro	to buy/yo
+compra	to buy/él
+compras	to buy/tú
+compramos	to buy/nos
+compran	to buy/ellos
+contesto	to answer/yo
+contesta	to answer/él
+contestas	to answer/tú
+contestamos	to answer/nos
+contestan	to answer/ellos
+converso	to converse, to chat/yo
+conversa	to converse, to chat/él
+conversas	to converse, to chat/tú
+conversamos	to converse, to chat/nos
+conversan	to converse, to chat/ellos
+desayuno	to have breakfast/yo
+desayuna	to have breakfast/él
+desayunas	to have breakfast/tú
+desayunamos	to have breakfast/nos
+desayunan	to have breakfast/ellos
+deseo	to wish, to desire/yo
+desea	to wish, to desire/él
+deseas	to wish, to desire/tú
+deseamos	to wish, to desire/nos
+desean	to wish, to desire/ellos
+dibujo	to draw/yo
+dibuja	to draw/él
+dibujas	to draw/tú
+dibujamos	to draw/nos
+dibujan	to draw/ellos
+enseño	to teach/yo
+enseña	to teach/él
+enseñas	to teach/tú
+enseñamos	to teach/nos
+enseñan	to teach/ellos
+escucho	to listen to/yo
+escucha	to listen to/él
+escuchas	to listen to/tú
+escuchamos	to listen to/nos
+escuchan	to listen to/ellos
+espero	to wait for, to hope/yo
+espera	to wait for, to hope/él
+esperas	to wait for, to hope/tú
+esperamos	to wait for, to hope/nos
+esperan	to wait for, to hope/ellos
+estudio	to study/yo
+estudia	to study/él
+estudias	to study/tú
+estudiamos	to study/nos
+estudian	to study/ellos
+explico	to explain/yo
+explica	to explain/él
+explicas	to explain/tú
+explicamos	to explain/nos
+explican	to explain/ellos
+hablo	to talk, to speak/yo
+habla	to talk, to speak/él
+hablas	to talk, to speak/tú
+hablamos	to talk, to speak/nos
+hablan	to talk, to speak/ellos
+llego	to arrive/yo
+llega	to arrive/él
+llegas	to arrive/tú
+llegamos	to arrive/nos
+llegan	to arrive/ellos
+llevo	to carry, to take, to wear/yo
+lleva	to carry, to take, to wear/él
+llevas	to carry, to take, to wear/tú
+llevamos	to carry, to take, to wear/nos
+llevan	to carry, to take, to wear/ellos
+miro	to look at, to watch/yo
+mira	to look at, to watch/él
+miras	to look at, to watch/tú
+miramos	to look at, to watch/nos
+miran	to look at, to watch/ellos
+necesito	to need/yo
+necesita	to need/él
+necesitas	to need/tú
+necesitamos	to need/nos
+necesitan	to need/ellos
+practico	to practice/yo
+practica	to practice/él
+practicas	to practice/tú
+practicamos	to practice/nos
+practican	to practice/ellos
+pregunto	to ask a question/yo
+pregunta	to ask a question/él
+preguntas	to ask a question/tú
+preguntamos	to ask a question/nos
+preguntan	to ask a question/ellos
+preparo	to prepare/yo
+prepara	to prepare/él
+preparas	to prepare/tú
+preparamos	to prepare/nos
+preparan	to prepare/ellos
+regreso	to return/yo
+regresa	to return/él
+regresas	to return/tú
+regresamos	to return/nos
+regresan	to return/ellos
+termino	to end, to finish/yo
+termina	to end, to finish/él
+terminas	to end, to finish/tú
+terminamos	to end, to finish/nos
+terminan	to end, to finish/ellos
+tomo	to take, to drink/yo
+toma	to take, to drink/él
+tomas	to take, to drink/tú
+tomamos	to take, to drink/nos
+toman	to take, to drink/ellos
+trabajo	to work/yo
+trabaja	to work/él
+trabajas	to work/tú
+trabajamos	to work/nos
+trabajan	to work/ellos
+viajo	to travel/yo
+viaja	to travel/él
+viajas	to travel/tú
+viajamos	to travel/nos
+viajan	to travel/ellos
+descanso	to rest/yo
+descansa	to rest/él
+descansas	to rest/tú
+descansamos	to rest/nos
+descansan	to rest/ellos"/><meta id="meta-set-week16.txt" content="¿Cuáles?	Which is?
+¿Cuántos/as?	How many?
+¿Cuántos _ hay?	How many _ are there?
+Hay (número) _	There are (number) _"/><meta id="meta-set-week17.txt" content="al lado de	next to
+a la derecha de	to the right of
+a la izquierda de	to the left of
+allá	over there
+allí	there
+cerca de	near
+con	with
+debajo de	below
+de lante de	in front of
+detrás de	behind
+en	in/on
+encima de	on top of
+entre	between
+lejos de	far from
+sin	without
+sobre	on/over"/><meta id="meta-set-week3.txt" content="ah	A
+beh	B
+seh	C
+they	D
+eh	E
+eh-feh	F
+heh	G
+ah-cheh	H
+ee	I
+ho-tah	J
+kah	K
+elle-eh	L
+eh-meh	M
+eh-neh	N
+eh-nee-eh	Ñ
+oh	O
+peh	P
+qoo	Q
+eh-reh	R
+es-seh	S
+teh	T
+oo	U
+oo-beh	V
+thoh-bleh-oo	W
+eh-keys	X
+ee-gree-egg-ah	Y
+sehtah	Z"/><meta id="meta-set-week4and5.txt" content="Hola	Hello
+¿Cómo se llama usted?	What's your name? (formal)
+¿Cómo te llamas?	What is your name? (informal)
+Me llamo	My name is ...
+¿Y usted?	And you (formal)
+¿Y tú?	And you? (informal)
+Mucho gusto	It's a pleasure
+El gusto es mío	The pleasure is all mine
+Igualmente	Likewise
+Encantado/a	Charmed
+El nombre	Name
+El señor (sr)	Mr.
+La señora (sra)	Ms., Mrs
+Buenos días	good morning
+Buenas tardes	good afternoon
+Buenas noches	good evening/good night
+Hasta la vista	See you later
+Le presento a	I would like to introduce you to (name) (formal)
+Te presento a	I would like to introduce you to (name) (informal)
+¿Cómo estás?	How are you (familiar)
+Muy bien	Very Good
+Regular	so-so; OK
+No muy bien	Not very well
+Gracias	Thank you
+Excellente	Excellent
+saludos	greetings
+introducciones	introductions"/><meta id="meta-set-week6.txt" content="La bandera	flag
+La capital	capital
+La chica	girl
+El chico	boy
+La nacionalidad	nationality
+El país	country
+¿De dónde eres?	Where are you from (informal)
+¿De dónde es usted?	Where are you from? (formal)
+De	from"/><meta id="meta-set-week6set2.txt" content="Yo soy	I am
+Tú eres	You are (familiar)
+Él es	He is
+Ella es	She is
+Usted es	You are (formal)
+Nosotros somos	We are
+Nosotras somos	We are (all female group)
+Ellos son	They are
+Ellas son	They are (all female group)
+Ustedes son	You are (plural)"/><meta id="meta-set-week8.txt" content="cero	zero
+uno	one
+dos	two
+tres	three
+cuatro	four
+cinco	five
+seis	six
+siete	seven
+ocho	eight
+nueve	nine
+diez	ten
+once	eleven
+doce	twelve
+trece	thirteen
+catorce	fourteen
+quince	fifteen
+dieciséis	sixteen
+diecisiete	seventeen
+dieciocho	eighteen
+diecinueve	nineteen
+veinte	twenty
+veintiuno	twenty one
+veintidós	twenty two
+veintitrés	twenty three
+veinticuatro	twenty four
+veinticinco	twenty five
+veintiséis	twenty six
+veintisiete	twenty seven
+veintiocho	twenty eight
+veintinueve	twenty nine
+treinta	thirty
+treinta y uno	thirty one
+treinta y dos	thirty two
+treinta y tres	thirty three
+treinta y cuatro	thirty four
+treinta y cinco	thirty five
+treinta y seis	thirty six
+treinta y siete	thirty seven
+treinta y ocho	thirty eight
+treinta y nueve	thirty nine
+cuarenta	forty
+cuarenta y uno	forty one
+cuarenta y dos	forty two
+cuarenta y tres	forty three
+cuarenta y cuatro	forty four
+cuarenta y cinco	forty five
+cuarenta y seis	forty six
+cuarenta y siete	forty seven
+cuarenta y ocho	forty eight
+cuarenta y nueve	forty nine
+cincuenta	fifty
+cincuenta y uno	fifty one
+cincuenta y dos	fifty two
+cincuenta y tres	fifty three
+cincuenta y cuatro	fifty four
+cincuenta y cinco	fifty five
+cincuenta y seis	fifty six
+cincuenta y siete	fifty seven
+cincuenta y ocho	fifty eight
+cincuenta y nueve	fifty nine
+sesenta	sixty
+sesenta y uno	sixty one
+sesenta y dos	sixty two
+sesenta y tres	sixty three
+sesenta y cuatro	sixty four
+sesenta y cinco	sixty five
+sesenta y seis	sixty six
+sesenta y siete	sixty seven
+sesenta y ocho	sixty eight
+sesenta y nueve	sixty nine
+setenta	seventy
+setenta y uno	seventy one
+setenta y dos	seventy two
+setenta y tres	seventy three
+setenta y cuatro	seventy four
+setenta y cinco	seventy five
+setenta y seis	seventy six
+setenta y siete	seventy seven
+setenta y ocho	seventy eight
+setenta y nueve	seventy nine
+ochenta	eighty
+ochenta y uno	eighty one
+ochenta y dos	eighty two
+ochenta y tres	eighty three
+ochenta y cuatro	eighty four
+ochenta y cinco	eighty five
+ochenta y seis	eighty six
+ochenta y siete	eighty seven
+ochenta y ocho	eighty eight
+ochenta y nueve	eighty nine
+noventa	ninety
+noventa y uno	ninety one
+noventa y dos	ninety two
+noventa y tres	ninety three
+noventa y cuatro	ninety four
+noventa y cinco	ninety five
+noventa y seis	ninety six
+noventa y siete	ninety seven
+noventa y ocho	ninety eight
+noventa y nueve	ninety nine"/><meta id="meta-set-week8set2.txt" content="el año	year
+¿Cuántos años tienes?	How old are you? (familiar)
+¿Cuántos años tiene usted?	How old are you? (formal)
+Yo tengo (número) años	I am (number) years old"/><meta id="meta-set-week9.txt" content="el hombre	the man
+el chico	the boy
+el pasajero	the male passenger
+el conductor	the male driver
+el profesor	the male teacher
+el turista	the male tourist
+la mujer	the woman
+la chica	the girl
+la pasajera	the female passenger
+la conductora	the female driver
+la profesora	the female teacher
+la turista	the female tourist
+el joven	the young man
+la joven	the young woman
+el estudiante	the male student
+la estudiante	the female student
+el cuarderno	the notebook
+el diario	the diary
+el diccionario	the dictionary
+el número	the number
+el video	the video
+el problema	the problem
+el programa	the program
+el autobús	the bus
+el país	the country
+la cosa	the thing
+la escuela	the school
+la computadora	the computer
+la maleta	the suitcase
+la palabra	the word
+la lección	the lesson
+la conversación	the conversation
+la nacionalidad	the nationality
+la comunidad	the community
+el mapa	the map
+un pasajero	a passenger
+unos pasajeros	some passengers
+una fotografía	a photograph
+unas fotografías	some photographs"/></head>
+<body>
+<span id="splashscreen" class="fullscreen">
+<span id="splashscreen-inner" style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></span>
+</span>
+<div class="navbar">
+<br>
+<div class="navbar-title">
+<span>Improved Quizlet</span>
+<span class="navbar-title-author">by Zayn Damji</span>
+</div>
+<div class="right-bar">
+<span class="spanish-english-toggle" id="spanish-english-toggle" style="flex: 1; margin-right: 25px; margin-top: 8px; display: flex; align-items: center;">
+<span style="font-size: 100%; margin-right: 10px;">English</span>
+<label class="switch">
+<input type="checkbox" id="flipped-or-not">
+<span class="slider round"></span>
+</label>
+<span style="font-size: 100%; margin-left: 10px;">Spanish</span>
+</span>
+</div>
+</div>
+<div style="height: 52px"></div>
+<span id="instructions" style="display: none; font-size: 15px;">
+<br>Once you've answered a question, click Enter.<br>If you are wrong, it will show the correct answer under your answer.<br>To correct the answer, just type the correct answer where your wrong answer was previously!
+</span>
+<span id="flipquiz">
+<br>
+<button onclick="flipQuiz(false); regenerateQuiz();">English</button>&nbsp;<button onclick="flipQuiz(true); regenerateQuiz();">Spanish</button>
+</span>
+<br>
+<button onclick="shuffleWords(); restartQuiz();  regenerateQuiz();">Shuffle</button>&nbsp;<button onclick="restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>&nbsp;<button onclick="toggleInstructions();">Instructions</button>
+<br>
+<button onclick="toggleStatus(); regenerateQuiz();" id="status-selector">Hide whether Correct or Incorrect</button>
+<br>
+<div id="set-parent">
+<button>Choose Sets (<span id="numberofsets">0</span> chosen)</button><div><button style="padding: 5px; font-size: 100%; margin-right: 5px;" onclick="selectAllSets(true);">Select All</button><button style="padding: 5px; font-size: 100%;" onclick="selectAllSets(false);">Deselect All</button></div><div class="responsive-grid-buttons" id="set"><div><input type="checkbox" id="week3" name="set" value="week3" checked="checked" onchange="selectSet()"/><label for="week3">Spanish Alphabet</label></div><div><input type="checkbox" id="week4and5" name="set" value="week4and5" onchange="selectSet()"/><label for="week4and5">Greetings</label></div><div><input type="checkbox" id="week6" name="set" value="week6" onchange="selectSet()"/><label for="week6">Location</label></div><div><input type="checkbox" id="week6set2" name="set" value="week6set2" onchange="selectSet()"/><label for="week6set2">SER Verb</label></div><div><input type="checkbox" id="week8" name="set" value="week8" onchange="selectSet()"/><label for="week8">Numbers 0-99</label></div><div><input type="checkbox" id="week8set2" name="set" value="week8set2" onchange="selectSet()"/><label for="week8set2">Age Expressions</label></div><div><input type="checkbox" id="week9" name="set" value="week9" onchange="selectSet()"/><label for="week9">Nouns and Articles</label></div><div><input type="checkbox" id="week12" name="set" value="week12" onchange="selectSet()"/><label for="week12">Classroom Objects</label></div><div><input type="checkbox" id="week12set2" name="set" value="week12set2" onchange="selectSet()"/><label for="week12set2">School Subjects</label></div><div><input type="checkbox" id="week12set3" name="set" value="week12set3" onchange="selectSet()"/><label for="week12set3">School Expressions</label></div><div><input type="checkbox" id="week12set4" name="set" value="week12set4" onchange="selectSet()"/><label for="week12set4">Days</label></div><div><input type="checkbox" id="week12set5" name="set" value="week12set5" onchange="selectSet()"/><label for="week12set5">Months</label></div><div><input type="checkbox" id="week12set6" name="set" value="week12set6" onchange="selectSet()"/><label for="week12set6">Colors</label></div><div><input type="checkbox" id="week14" name="set" value="week14" onchange="selectSet()"/><label for="week14">Body Parts</label></div><div><input type="checkbox" id="week15" name="set" value="week15" onchange="selectSet()"/><label for="week15">AR Verbs (simple)</label></div><div><input type="checkbox" id="week15all" name="set" value="week15all" onchange="selectSet()"/><label for="week15all">AR Verbs (conjugations)</label></div><div><input type="checkbox" id="week16" name="set" value="week16" onchange="selectSet()"/><label for="week16">Counting Expressions</label></div><div><input type="checkbox" id="week17" name="set" value="week17" onchange="selectSet()"/><label for="week17">Prepositions</label></div><div><input type="checkbox" id="s2week5" name="set" value="s2week5" onchange="selectSet()"/><label for="s2week5">Numbers 101 and Higher</label></div><div><input type="checkbox" id="s2week6" name="set" value="s2week6" onchange="selectSet()"/><label for="s2week6">La Familia</label></div><div><input type="checkbox" id="s2week6simple2" name="set" value="s2week6simple2" onchange="selectSet()"/><label for="s2week6simple2">ER Verbs (simple)</label></div><div><input type="checkbox" id="s2week6all2" name="set" value="s2week6all2" onchange="selectSet()"/><label for="s2week6all2">ER Verbs (conjugations)</label></div><div><input type="checkbox" id="s2week6simple3" name="set" value="s2week6simple3" onchange="selectSet()"/><label for="s2week6simple3">IR Verbs (simple)</label></div><div><input type="checkbox" id="s2week6all3" name="set" value="s2week6all3" onchange="selectSet()"/><label for="s2week6all3">IR Verbs (conjugations)</label></div><div><input type="checkbox" id="s2week9" name="set" value="s2week9" onchange="selectSet()"/><label for="s2week9">Descriptive Adjectives</label></div><div><input type="checkbox" id="s2week9set2" name="set" value="s2week9set2" onchange="selectSet()"/><label for="s2week9set2">Possessive Adjectives</label></div><div><input type="checkbox" id="s2week10simple1" name="set" value="s2week10simple1" onchange="selectSet()"/><label for="s2week10simple1">E:IE Verbs (simple)</label></div><div><input type="checkbox" id="s2week10all1" name="set" value="s2week10all1" onchange="selectSet()"/><label for="s2week10all1">E:IE Verbs (conjugations)</label></div><div><input type="checkbox" id="s2week10simple2" name="set" value="s2week10simple2" onchange="selectSet()"/><label for="s2week10simple2">O:UE Verbs (simple)</label></div><div><input type="checkbox" id="s2week10all2" name="set" value="s2week10all2" onchange="selectSet()"/><label for="s2week10all2">O:UE Verbs (conjugations)</label></div><div><input type="checkbox" id="s2week10simple3" name="set" value="s2week10simple3" onchange="selectSet()"/><label for="s2week10simple3">U:UE Verbs (simple)</label></div><div><input type="checkbox" id="s2week10all3" name="set" value="s2week10all3" onchange="selectSet()"/><label for="s2week10all3">U:UE Verbs (conjugations)</label></div><div><input type="checkbox" id="s2week14simple" name="set" value="s2week14simple" onchange="selectSet()"/><label for="s2week14simple">E:I Verbs (simple)</label></div><div><input type="checkbox" id="s2week14all" name="set" value="s2week14all" onchange="selectSet()"/><label for="s2week14all">E:I Verbs (conjugations)</label></div></div></div>
+<div id="questions" class="responsive-grid"></div>
+<div style="width: 100%; position: fixed; bottom: 0; height: 55px; background-color: white;">
+<div id="progress">
+<div id="outer-progress-text">0%</div>
+<div id="progress-bar" style="display: none;">
+</div>
+</div>
+</div>
+<br><br><br><br><audio style="display: none;" id="failure.mp3"><source src="data:audio/mpeg;base64,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"/></audio><audio style="display: none;" id="success.mp3"><source src="data:audio/mpeg;base64,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jmigsYWwoUKOUeflUzisKxqkOJ7CARAaAD4sD7xVpMEFixk1d7muLmA5FET4iBhRMDUGaYIIzsPC4wGXGEAkc30AQ1HQYKPJXsZCiMwjOx5vEA0FxyA34ac/r6wQ/asLjLlW0ydqzTWVNldh84Fd5gKBz2SJNRcy0FlzguZFQhFAuTKqPpEieKVShMhSTQH2UKy6AmIUl3ZsSJdQ1iI4fxFcJweiiWbMolThpFdKulLUKrDSGppEyJlaeIryVopsyVzaav/7hMT9gBbBfz+spfXCo7An/YSicFdPjJWCKNIhkcNClJNcwTISy7DTKEsXMEypZdhxMrDREpURIcmqWKw0pWVFWJBqliURKVEJaRINDVJTJiQ5LSsEw1ScqIlE/v/22/2qQABkiSoQlskru0DBg2AiuMVEDCz6ljQ4okSiIyRkmBf0IQaNQ4vpvHcf7JGcjpG8GaEKGUSM0Ee6u3KVJJJTqxVtCqVqmXK5bI+qvmFTJFIhAMZyp+5TBQQIOR8wUECDkdv9jFMDBoflDAwZA8a9QsKmfrFRbFhcj/FOLCtMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7lMTrgBxhgTeM4SnKC53idYeJvFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVQ=="/></audio><script>let showStatus = true;
+
+function toggleStatus(newStatus) {
+  showStatus = newStatus ?? !showStatus;
+  setLocalStorage('status', showStatus.toString());
+  document.getElementById('status-selector').textContent = (showStatus ? 'Hide' : 'Show') + ' whether Correct or Incorrect';
+}</script>
+<script>function playSound(id, universal = false) {
+  if (showStatus || universal) {
+    const clone = document.getElementById(id).cloneNode(true);
+    document.body.appendChild(clone);
+    clone.onended = () => {
+      document.body.removeChild(clone);
+    };
+    clone.play();
+  }
+}
+
+function playSuccessSound() {
+  playSound('success.mp3');
+}
+
+function playFailureSound() {
+  playSound('failure.mp3');
+}</script>
+<script>let doingAnimation = false;
+
+function customSplashScreenAnimation(background, text, color = 'white', onDuration, midDuration, offDuration) {
+  if (doingAnimation || !showStatus) return;
+
+  doingAnimation = true;
+  const id = 'splashscreen';
+  document.getElementById(id).style.backgroundColor = background;
+  document.getElementById(id).style.color = color;
+  document.getElementById(`${id}-inner`).textContent = text;
+
+  document.getElementById(id).style.display = 'block'
+  document.getElementById(id).style.animationDirection = 'normal';
+  document.getElementById(id).style.animation = `splashscreen-on ${onDuration}ms`;
+  setTimeout(() => {
+    doingAnimation = true;
+    document.getElementById(id).style.opacity = '100%';
+    setTimeout(() => {
+      doingAnimation = true;
+      document.getElementById(id).style.animationDirection = 'normal';
+      document.getElementById(id).style.animation = `splashscreen-off ${offDuration}ms`;
+      document.getElementById(id).style.opacity = '0%';
+      setTimeout(() => {
+        document.getElementById(id).style.display = 'none';
+        doingAnimation = false;
+      }, offDuration);
+    }, midDuration);
+  }, onDuration - 50);
+}
+
+function splashscreenAnimation(background, text, color = 'white') {
+  customSplashScreenAnimation(background, text, color, 200, 300, 300);
+}
+
+function longSplashscreenAnimation(background, text, color = 'white') {
+  customSplashScreenAnimation(background, text, color, 200, 600, 300);
+}</script>
+<script>let words = [], flipped = false, content = '';
+const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(/g;
+const convertToPlain = w => w.toLowerCase().replace(specialChars, '').replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').trim();
+
+document.getElementById('spanish-english-toggle').addEventListener('change', e => {
+  flipQuiz(e.target.checked);
+  regenerateQuiz();
+});
+
+function selectSet() {
+  const setValue = Array.from(document.querySelectorAll('input[name="set"]:checked')).map(e => e.value);
+  setLocalStorage('set', setValue.join(';'));
+  importFromFile(setValue);
+}
+
+async function importFromFile(filename) {
+  content = ''
+  for (let i = 0; i < filename.length; i++) {
+    content += document.getElementById(`meta-set-${filename[i]}.txt`).getAttribute('content') + '\n';
+  }
+  content = content.trim();
+  setLocalStorage('content', content);
+
+  clearWords();
+  generateWords();
+  shuffleWords();
+  regenerateQuiz();
+  restartQuiz();
+}
+
+function restartQuiz() {
+  for (let i = 0; i < words.length; i++) {
+    words[i].status = 0;
+    words[i].word = '';
+  }
+  
+  if (document.getElementById(0) != undefined)
+    document.getElementById(0).select();
+}
+
+function clearWords() {
+  document.getElementById('questions').textContent = '';
+  words = [];
+}
+
+function generateWords() {
+  if (content.length > 0)
+    content.split('\n').forEach(word => {
+      const [term, definition] = word.split('\t');
+      words.push({ term, definition, status: 0, word: '' });
+    })
+}
+
+function shuffleWords() {
+  let newWords = [], oldWords = JSON.parse(JSON.stringify(words));
+  for (let i = 0; i < words.length; i++) {
+    const index = Math.floor(Math.random() * oldWords.length);
+    newWords.push(oldWords[index]);
+    oldWords.splice(index, 1);
+  }
+  words = newWords;
+}
+
+function flipQuiz(newValue) {
+  if (newValue == undefined)
+    flipped = !flipped;
+  else
+    flipped = newValue;
+  setLocalStorage('flipped', flipped.toString());
+  document.getElementById('flipped-or-not').checked = flipped;
+}
+
+function regenerateQuiz() {
+  document.getElementById('numberofsets').textContent = Array.from(document.querySelectorAll('input[name="set"]:checked')).map(e => e.value).length;
+  
+  if (words.length == 0) return;
+
+  for (let i = 0; i < words.length; i++) {
+    let { term, definition } = words[i];
+
+    if (flipped) {
+      const tempTerm = term;
+      term = definition;
+      definition = tempTerm;
+    }
+
+    const checkAnswer = (check, skip) => {
+      const question = document.getElementById(i);
+
+      if (check) {
+        if (question.value.trim() == '') {
+          words[i].status = 0;
+          words[i].word = '';
+        }
+        else if (convertToPlain(question.value) == convertToPlain(definition)) {
+          words[i].status = 2;
+          if (skip) {
+            splashscreenAnimation('green', 'Correct!');
+            playSound('success.mp3');
+          }
+          words[i].word = definition;
+        }
+        else {
+          words[i].status = 1;
+          if (skip) {
+            splashscreenAnimation('red', 'Wrong!');
+            playSound('failure.mp3');
+          }
+          words[i].word = question.value.trim();
+        }
+
+        if (i + 1 == words.length && question.value.trim().length > 0)
+          toggleStatus(true);
+
+        regenerateQuiz();
+
+        if (skip && i + 1 < words.length)
+          document.getElementById(i + 1).select();
+      }
+    }
+
+    if (document.getElementById(i) == undefined) {
+      const wordDiv = document.createElement('div');
+      wordDiv.setAttribute('class', 'question');
+      wordDiv.setAttribute('id', `div${i}`);
+
+      const wordDesc = document.createElement('span');
+      wordDesc.innerHTML = `${term} -&nbsp;`;
+      wordDesc.setAttribute('id', `desc${i}`);
+
+      const wordInput = document.createElement('input');
+      wordInput.style.borderColor = 'lightgray';
+      wordInput.setAttribute('type', 'text');
+      wordInput.setAttribute('id', i);
+      wordInput.style.flex = 1;
+
+      wordInput.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
+      wordInput.addEventListener('blur', e => checkAnswer(true, false));
+
+      wordDiv.append(wordDesc);
+      wordDiv.append(wordInput);
+
+      document.getElementById('questions').append(wordDiv);
+    }
+
+    const div = document.getElementById(`div${i}`);
+    const desc = document.getElementById(`desc${i}`);
+    let question = document.getElementById(i);
+
+    if (desc.innerHTML != `${term} -&nbsp;`) {
+      desc.innerHTML = `${term} -&nbsp;`;
+      question.replaceWith(question.cloneNode(true));
+      question = document.getElementById(i);
+      question.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
+      question.addEventListener('blur', e => checkAnswer(true, false));
+      words[i].status = 0;
+      words[i].word = '';
+    }
+
+    question.value = words[i].word;
+
+    const wrong = document.getElementById(`wrong${i}`);
+    if (wrong != undefined)
+      div.removeChild(wrong);
+
+    if (showStatus) {
+      question.style.borderColor = words[i].status == 1 ? 'red' :
+        words[i].status == 2 ? 'lightgreen' :
+          'lightgray';
+    } else {
+      question.style.borderColor = 'lightgray';
+    }
+
+    if (words[i].status == 1 && showStatus) {
+      const span = document.createElement('span');
+      if (flipped)
+        span.innerHTML = `&nbsp;${words[i].term}  `;
+      else
+        span.innerHTML = `&nbsp;${words[i].definition}  `;
+      span.style.color = 'red';
+      span.style.fontSize = '80%';
+      span.setAttribute('id', `wrong${i}`);
+      div.append(span);
+    }
+  }
+
+  // document.getElementById('total').textContent = words.length;
+  // document.getElementById('correct').textContent = words.filter(word => word.status == 2).length;
+  // document.getElementById('wrong').textContent = words.filter(word => word.status == 1).length;
+  // document.getElementById('unanswered').textContent = words.filter(word => word.status == 0).length;
+
+  const percentage = words.filter(word => word.status == 2).length / words.length * 100;
+  const text = `${Math.floor(percentage)}% (${words.filter(word => word.status == 2).length}/${words.length})`;
+  if (!showStatus) {
+    document.getElementById('outer-progress-text').textContent = 'Progress Hidden';
+    document.getElementById('outer-progress-text').style.display = 'block';
+    document.getElementById('progress-bar').style.display = 'none';
+  }
+  else if (percentage < 1) {
+    document.getElementById('outer-progress-text').textContent = text;
+    document.getElementById('progress-bar').style.display = 'none';
+  }
+  else {
+    document.getElementById('outer-progress-text').textContent = text;
+    document.getElementById('progress-bar').style.width = Math.floor(percentage) * 0.93 + '%';
+    document.getElementById('progress-bar').style.display = 'block';
+  }
+
+  // if (words.filter(word => word.status == 2).length == words.length) {
+  //   document.getElementById('stats').style.backgroundColor = 'green';
+  //   document.getElementById('stats').style.color = 'white';
+  // }
+  // else {
+  //   document.getElementById('stats').style.backgroundColor = 'inherit';
+  //   document.getElementById('stats').style.color = 'inherit';
+  // }
+
+  setLocalStorage('words', JSON.stringify(words));
+}
+
+function solveQuiz() {
+  for (let i = 0; i < words.length; i++) {
+    words[i].status = 2;
+    words[i].word = flipped ? words[i].term : words[i].definition;
+  }
+  regenerateQuiz();
+  longSplashscreenAnimation('green', '100%..?');
+}
+
+function toggleInstructions() {
+  if (document.getElementById('instructions').style.display == 'none')
+    document.getElementById('instructions').style.display = 'block';
+  else
+    document.getElementById('instructions').style.display = 'none';
+}
+
+function selectAllSets(on) {
+  Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = on);
+  selectSet();
+}</script>
+<script>let setIsStillValid = true;
+const tempSet = getLocalStorage('set');
+if (tempSet != "") {
+  Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
+  for (const set of tempSet.split(';')) {
+    const prevSet = document.querySelector('input[type="checkbox"][name="set"]#' + set);
+    if (prevSet != undefined) {
+      prevSet.checked = true;
+    } else {
+      setIsStillValid = false;
+    }
+  }
+  console.log('Fin.');
+} else {
+  setIsStillValid = false;
+}
+
+const tempFlipped = getLocalStorage('flipped');
+if (tempFlipped != "") {
+  flipQuiz(tempFlipped == 'true');
+  console.log('User has flipped quiz before.');
+}
+
+const tempStatus = getLocalStorage('status');
+if (tempStatus != "") {
+  toggleStatus(tempStatus == 'true');
+  console.log('User has toggled status before.')
+}
+
+const tempWords = getLocalStorage('words');
+const tempContent = getLocalStorage('content');
+if (tempWords != "" && tempWords != '[]' && tempContent != "" && setIsStillValid) {
+  content = tempContent;
+  words = JSON.parse(tempWords);
+  regenerateQuiz();
+  console.log('User has previous data... regenerating quiz from saved data.');
+} else {
+  Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
+  document.querySelector('input[type="checkbox"][name="set"]').checked = true;
+  selectSet();
+  console.log('User is new... generating quiz from scratch.');
+}
+
+function setLocalStorage(key, value) {
+  localStorage.setItem(key, value);
+  console.log(key + ' set to a value of length ' + value.length + '.');
+  console.trace();
+}
+
+function getLocalStorage(key) {
+  const value = localStorage.getItem(key);
+  if (value === null) return '';
+  return value;
+}</script>
+</body>
+</html>

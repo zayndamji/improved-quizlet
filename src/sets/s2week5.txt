@@ -1,0 +1,18 @@
+ciento uno	101
+doscientos/as	200
+trescientos/as	300
+cuatrocientos/as	400
+quinientos/as	500
+seiscientos/as	600
+setecientos/as	700
+ochocientos/as	800
+novecientos/as	900
+mil	1.000
+mil cien	1.100
+dos mil	2.000
+cinco mil	5.000
+cien mil	100.000
+doscientos mil	200.000
+quinientos/as cincuenta mil	550.000
+un millón (de)	1.000.000
+ocho millones (de)	8.000.000

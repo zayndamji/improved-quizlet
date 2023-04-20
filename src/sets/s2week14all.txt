@@ -1,0 +1,25 @@
+pido	to ask for; to request/yo
+pide	to ask for; to request/él
+pides	to ask for; to request/tú
+pedimos	to ask for; to request/nos
+piden	to ask for; to request/ellos
+consiguo	to get; to obtain/yo
+consigue	to get; to obtain/él
+consigues	to get; to obtain/tú
+conseguimos	to get; to obtain/nos
+consiguen	to get; to obtain/ellos
+dico	to say; to tell/yo
+dice	to say; to tell/él
+dices	to say; to tell/tú
+decimos	to say; to tell/nos
+dicen	to say; to tell/ellos
+repito	to repeat/yo
+repite	to repeat/él
+repites	to repeat/tú
+repetimos	to repeat/nos
+repiten	to repeat/ellos
+siguo	to follow; to continue; to keep doing something/yo
+sigue	to follow; to continue; to keep doing something/él
+sigues	to follow; to continue; to keep doing something/tú
+seguimos	to follow; to continue; to keep doing something/nos
+siguen	to follow; to continue; to keep doing something/ellos

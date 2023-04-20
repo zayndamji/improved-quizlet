@@ -1,0 +1,25 @@
+I like	A mí me gusta
+to me	Me
+You like (informal)	A ti te gusta
+to you (informal)	Te
+You like (formal)	A usted le gusta
+to him, to her, to you (formal)	Le
+He likes	A él le gusta
+She likes	A ella le gusta
+We like (masculine)	A nosotros nos gusta
+to us	Nos
+We like (feminine)	A nosotras nos gusta
+to us	Nos
+Y'all like (formal)	A ustedes les gusta
+to them, to y'all (formal pl.)	Les
+They like (masculine)	A ellos les gusta
+They like (feminine)	A ellas les gusta
+Ana likes	A Ana le gusta
+Juan likes	A Juan le gusta
+Diego and Ana like	A Diego y a Ana les gusta
+A Rafael le gusta bailar.	Rafael likes to dance.
+You like to sing	A ti te gusta cantar.
+A mi me gusta caminar.	I like to walk.
+A ustedes les gusta jugar al fútbol.	Y'all like to play soccer.
+A nosotros nos gusta escuchar música.	We like to listen to music.
+Me gusta comprar	I like to buy

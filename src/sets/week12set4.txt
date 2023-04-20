@@ -1,0 +1,10 @@
+domingo	Sunday
+lunes	Monday
+martes	Tuesday
+miércoles	Wednesday
+jueves	Thursday
+viernes	Friday
+sábado	Saturday
+mañana	tomorrow
+¿Qué día es hoy?	What day is today?
+Hoy es...	Today is...

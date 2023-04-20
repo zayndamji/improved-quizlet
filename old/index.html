@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Improved Quizlet</title>
+  <link rel="icon" href="https://assets.quizlet.com/a/j/dist/app/i/logo/2021/q-twilight.389092a385cb51d.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <span class="stats">
+    Total: <span id="total">0</span><br>
+    Correct: <span id="correct">0</span><br>
+    Wrong: <span id="wrong">0</span><br>
+    Unanswered: <span id="unanswered">0</span>
+  </span>
+
+  <h1>Improved Quizlet by Zayn</h1>
+  <h3>Press Enter if you think you are correct or if you want to skip the question.<br>You don't
+    need to have the
+    correct capitalization, but must add accents.<br>IMPORTANT: you MUST press enter to get the answer
+    checked!</h3>
+  <button onclick="restartQuiz()" id="restart">Restart</button>
+  &nbsp;
+  <button onclick="shuffleWords()" id="shuffle">Shuffle</button>
+  &nbsp;
+  <button onclick="showImportFromQuizlet()" id="import">Import from Quizlet</button>
+  <br>
+  <button onclick="flipWords(false)">English</button>
+  &nbsp;
+  <button onclick="flipWords(true)">Spanish</button>
+  <br>
+  <select id="set" onchange="selectSet()">
+    <option value="week3">Week 3 - Spanish Alphabet</option>
+    <option value="week4">Week 4 - Greetings and Introductions Pt. 1</option>
+    <option value="week5">Week 5 - Greetings and Introductions Pt. 2</option>
+    <option value="week6">Week 6 - Where are you from? / Verb "to be"</option>
+    <option value="week8">Week 8 - Numbers from 0-30</option>
+    <option value="week9">Week 9 - Nouns and Articles</option>
+    <option value="week12">Week 12 - Classroom Objects / School Subjects</option>
+    <option value="week13">Week 13 - Test Review</option>
+    <option value="week14">Week 14 - Body Parts</option>
+    <option value="week15">Week 15 - AR Present Tense Verbs</option>
+    <option value="week17">Week 17 - Prepositions</option>
+    <option value="week18" selected>Week 18 - Final Test Review</option>
+  </select>
+  <br><br>
+  <div id="newQuestionsDiv" hidden>
+    <textarea id="newQuestions" style="width: 30em; height: 30em;"></textarea>
+    <br>
+    <button onclick="generateQuestions()" id="submitNewQuestions">Generate Questions</button>
+  </div>
+  <div id="questions"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

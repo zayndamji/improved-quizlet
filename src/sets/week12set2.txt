@@ -1,0 +1,9 @@
+las materias	subjects
+el arte	art
+las ciencias	science
+el español	Spanish
+la geografía	geography
+la historia	history
+el inglés	English
+las matemáticas	math
+la música	music
