@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-let date = getDate();
+let date = getDate(); 
 
 app.get('/', (req, res, next) => {
   console.log('Website accessed on ' + getDate());
