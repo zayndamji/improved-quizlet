@@ -1,8 +1,13 @@
 me gusta	I like
 te gusta	You like (familiar)
-le gusta	He/she/you likes (formal)
+le gusta	He/she likes/you like (formal)
 nos gusta	We like
 les gusta	They/you all like
+no me gusta	I do not like
+no te gusta	You do not like (familiar)
+no le gusta	He/she does not like/you do not like (formal)
+no nos gusta	We do not like
+no les gusta	They/you all do not like
 a mí me gusta	I like (a lot)
 a ti te gusta	You like (a lot) (familiar)
 a él le gusta	He likes (a lot)
