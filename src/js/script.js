@@ -1,6 +1,6 @@
 let words = [], flipped = false, content = '';
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(/g;
-const convertToPlain = w => w.toLowerCase().replace(specialChars, '').replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').trim();
+const convertToPlain = w => w.toLowerCase().replace(specialChars, '').replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i').trim();
 
 document.getElementById('spanish-english-toggle').addEventListener('change', e => {
   flipQuiz(e.target.checked);
