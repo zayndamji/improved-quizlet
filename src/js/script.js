@@ -1,6 +1,9 @@
 let words = [], flipped = false, content = '';
+let ignoreAccents = false;
+
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
+const convertToNoAccents = w => w.replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i');
 
 document.getElementById('spanish-english-toggle').addEventListener('change', e => {
   flipQuiz(e.target.checked);
@@ -92,7 +95,8 @@ function regenerateQuiz() {
           words[i].status = 0;
           words[i].word = '';
         }
-        else if (convertToPlain(question.value) == convertToPlain(definition)) {
+        else if (convertToPlain(question.value) == convertToPlain(definition) ||
+                (ignoreAccents && (convertToNoAccents(convertToPlain(question.value)) == convertToNoAccents(convertToPlain(definition))))) {
           words[i].status = 2;
           if (skip) {
             splashscreenAnimation('green', 'Correct!');
