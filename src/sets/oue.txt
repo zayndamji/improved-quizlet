@@ -1,3 +1,11 @@
+almorzar	to have lunch
+contar	to count; to tell
+dormir	to sleep
+encontrar	to find
+mostrar	to show
+poder	to be able to; can
+recordar	to remember
+volver	to return
 almuerzo	to have lunch/yo
 almuerza	to have lunch/él
 almuerzas	to have lunch/tú

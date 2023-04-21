@@ -56,12 +56,8 @@
     "Body Parts"
   ],
   [
-    "arsimple",
-    "AR Verbs (simple)"
-  ],
-  [
-    "arconjugations",
-    "AR Verbs (conjugations)"
+    "ar",
+    "AR Verbs"
   ],
   [
     "counting",
@@ -80,20 +76,12 @@
     "Family"
   ],
   [
-    "ersimple",
-    "ER Verbs (simple)"
+    "er",
+    "ER Verbs"
   ],
   [
-    "erconjugations",
-    "ER Verbs (conjugations)"
-  ],
-  [
-    "irsimple",
-    "IR Verbs (simple)"
-  ],
-  [
-    "irconjugations",
-    "IR Verbs (conjugations)"
+    "ir",
+    "IR Verbs"
   ],
   [
     "descadjectives",
@@ -104,35 +92,19 @@
     "Possessive Adjectives"
   ],
   [
-    "eiesimple",
-    "E:IE Verbs (simple)"
+    "eie",
+    "E:IE Verbs"
   ],
   [
-    "eieconjugations",
-    "E:IE Verbs (conjugations)"
+    "oue",
+    "O:UE Verbs"
   ],
   [
-    "ouesimple",
-    "O:UE Verbs (simple)"
+    "uue",
+    "U:UE Verbs"
   ],
   [
-    "oueconjugations",
-    "O:UE Verbs (conjugations)"
-  ],
-  [
-    "uuesimple",
-    "U:UE Verbs (simple)"
-  ],
-  [
-    "uueconjugations",
-    "U:UE Verbs (conjugations)"
-  ],
-  [
-    "eisimple",
-    "E:I Verbs (simple)"
-  ],
-  [
-    "eiconjugations",
-    "E:I Verbs (conjugations)"
+    "ei",
+    "E:I Verbs"
   ]
 ]

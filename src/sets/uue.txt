@@ -1,3 +1,4 @@
+jugar	to play
 juego	to play/yo
 juega	to play/él
 juegas	to play/tú

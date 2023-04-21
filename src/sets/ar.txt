@@ -1,3 +1,33 @@
+bailar	to dance
+buscar	to look for
+caminar	to walk
+cantar	to sing
+cenar	to have dinner
+comprar	to buy
+contestar	to answer
+conversar	to converse, to chat
+desayunar	to have breakfast
+desear	to wish, to desire
+dibujar	to draw
+enseñar	to teach
+escuchar	to listen to
+esperar	to wait for, to hope
+estudiar	to study
+explicar	to explain
+hablar	to talk, to speak
+llegar	to arrive
+llevar	to carry, to take, to wear
+mirar	to look at, to watch
+necesitar	to need
+practicar	to practice
+preguntar	to ask a question
+preparar	to prepare
+regresar	to return
+terminar	to end, to finish
+tomar	to take, to drink
+trabajar	to work
+viajar	to travel
+descansar	to rest
 bailo	to dance/yo
 baila	to dance/él
 bailas	to dance/tú
