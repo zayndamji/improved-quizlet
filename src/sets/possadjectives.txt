@@ -4,7 +4,7 @@ tu	your (familiar)
 tus	your (familiar, plural)
 su	his; her; its; their; your (formal)
 sus	his; her; its; their; your (formal, plural)
-nuestro our
+nuestro	our
 nuestra	our (all female group)
 nuestros	our (plural)
 nuestras	our (all female group, plural)
