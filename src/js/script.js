@@ -1,5 +1,4 @@
 let words = [], flipped = false, content = '';
-let ignoreAccents = false;
 
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();

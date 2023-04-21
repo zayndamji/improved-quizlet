@@ -74,11 +74,15 @@
   <button onclick="toggleInstructions();">Instructions</button>
   <br>
 
-  <button onclick="toggleStatus(); regenerateQuiz();" id="status-selector">Hide whether Correct or Incorrect</button>
-  <br>
+  <div id="set-parent">
+    <button>Settings (hover to see)</button>
+    div
+      <button style="padding: 5px; font-size: 100%; margin-right: 5px;" onclick="toggleStatus(); regenerateQuiz();" id="status-selector">Hide whether Correct or Incorrect</button>
+      <button style="padding: 5px; font-size: 100%; margin-right: 5px;" onclick="toggleAccents(); regenerateQuiz();" id="accents-selector">Ignore Accents</button>
+  </div>
 
   <div id="set-parent">
-    <button>Choose Sets (<span id="numberofsets">0</span> chosen)</button>
+    <button>Choose Sets (<span id="numberofsets">0</span> chosen) (hover to see)</button>
     div
       button(style="padding: 5px; font-size: 100%; margin-right: 5px;" onclick="selectAllSets(true);") Select All
       button(style="padding: 5px; font-size: 100%;" onclick="selectAllSets(false);") Deselect All
@@ -109,7 +113,7 @@
       source(src=sound.data)
 
   <script>
-    include ./js/status.js
+    include ./js/settings.js
   </script>
 
   <script>
