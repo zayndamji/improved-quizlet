@@ -1,38 +1,10 @@
-__ padres (his)	sus
-__ madre (his)	su
-__ hermano (her)	su
-__ hermanos (her)	sus
-__ abuelos (their)	sus
-__ abuelo (their)	su
-__ maestros (our)	nuestros
-__ amigo (our)	nuestro
-__ primas (my)	mis
-__ prima (my)	mi
-__ hermanos (your - formal)	sus
-__ hermano (your - formal)	su
-__ amigos (your - familiar)	tus
-__ amigo (your - familiar)	tu
-__ perros (my)	mis
-__ perro (my)	mi
-__ hijos (his)	sus
-__ hijo (his)	su
-__ hermano (your - formal)	su
-__ hermano (your - familiar)	tu
-__ hermanos (your - formal)	sus
-__ hermanos (your - familiar)	tus
-__ padres (their)	sus
-__ padre (their)	su
-__ abuelos (his)	sus
-__ abuelos (our)	nuestros
-__ amigos (your - familiar)	tus
-__ amigo (your - familiar)	tu
-__ maestros (my)	mis
-__ hermanos (her)	sus
-__ maestro (my)	mi
-__ primos (his)	sus
-__ hija (his)	su
-__ prima (his)	su
-__ hijo (our)	nuestro
-__ hermana (our)	nuestra
-__ hermanas (our)	nuestras
-__ hijos (our)	nuestros
+mi	my
+mis	my (plural)
+tu	your (familiar)
+tus	your (familiar, plural)
+su	his; her; its; their; your (formal)
+sus	his; her; its; their; your (formal, plural)
+nuestro our
+nuestra	our (all female group)
+nuestros	our (plural)
+nuestras	our (all female group, plural)
