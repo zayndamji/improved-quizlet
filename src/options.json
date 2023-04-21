@@ -13,10 +13,6 @@
       "Location"
     ],
     [
-      "ser",
-      "Ser (verb)"
-    ],
-    [
       "numbers",
       "Numbers"
     ],
@@ -57,8 +53,8 @@
       "Body Parts"
     ],
     [
-      "ar",
-      "AR Verbs"
+      "family",
+      "Family"
     ],
     [
       "counting",
@@ -71,22 +67,6 @@
   ],
   [
     [
-    "gustar",
-    "Gustar (verb)"
-  ],
-  [
-    "family",
-    "Family"
-  ],
-  [
-      "er",
-      "ER Verbs"
-    ],
-    [
-      "ir",
-      "IR Verbs"
-    ],
-    [
       "descadjectives",
       "Descriptive Adjectives"
     ],
@@ -95,12 +75,32 @@
       "Possessive Adjectives"
     ],
     [
+      "ser",
+      "Ser (verb)"
+    ],
+    [
+      "gustar",
+      "Gustar (verb)"
+    ],
+    [
       "tener",
       "Tener (verb)"
     ],
     [
       "venir",
       "Venir (verb)"
+    ],
+    [
+      "ar",
+      "AR Verbs"
+    ],
+    [
+      "er",
+      "ER Verbs"
+    ],
+    [
+      "ir",
+      "IR Verbs"
     ],
     [
       "eie",
