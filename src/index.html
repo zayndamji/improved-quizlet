@@ -76,9 +76,12 @@
 
   <div id="set-parent">
     <button>Settings (hover to see)</button>
-    div
-      <button style="padding: 5px; font-size: 100%; margin-right: 5px;" onclick="toggleStatus(); regenerateQuiz();" id="status-selector">Hide whether Correct or Incorrect</button>
-      <button style="padding: 5px; font-size: 100%; margin-right: 5px;" onclick="toggleAccents(); regenerateQuiz();" id="accents-selector">Ignore Accents</button>
+    div(style="margin-bottom: 8px;")
+      <label for="status-selector">Hide whether Correct or Incorrect</label>
+      <input id="status-selector" name="status-selector" type="checkbox" onclick="toggleStatus(); regenerateQuiz();">
+      <br>
+      <label for="accents-selector">Ignore Accents</label>
+      <input id="accents-selector" name="accents-selector" type="checkbox" onclick="toggleAccents(); regenerateQuiz();">
   </div>
 
   <div id="set-parent">
