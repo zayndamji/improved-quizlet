@@ -13,10 +13,6 @@
       "Location"
     ],
     [
-      "numbers",
-      "Numbers"
-    ],
-    [
       "age",
       "Age Expressions"
     ],
@@ -57,6 +53,10 @@
       "Family"
     ],
     [
+      "numbers",
+      "Numbers"
+    ],
+    [
       "counting",
       "Counting Expressions"
     ],
@@ -73,7 +73,9 @@
     [
       "possadjectives",
       "Possessive Adjectives"
-    ],
+    ]
+  ],
+  [
     [
       "ser",
       "Ser (verb)"
@@ -89,7 +91,9 @@
     [
       "venir",
       "Venir (verb)"
-    ],
+    ]
+  ],
+  [
     [
       "ar",
       "AR Verbs"
@@ -101,7 +105,9 @@
     [
       "ir",
       "IR Verbs"
-    ],
+    ]
+  ],
+  [
     [
       "eie",
       "E:IE Verbs"
