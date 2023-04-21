@@ -1,73 +1,76 @@
 [
   [
-    "alphabet",
-    "Spanish Alphabet"
+    [
+      "alphabet",
+      "Spanish Alphabet"
+    ],
+    [
+      "greetings",
+      "Greetings"
+    ],
+    [
+      "location",
+      "Location"
+    ],
+    [
+      "ser",
+      "Ser (verb)"
+    ],
+    [
+      "numbers",
+      "Numbers"
+    ],
+    [
+      "age",
+      "Age Expressions"
+    ],
+    [
+      "nouns",
+      "Nouns and Articles"
+    ],
+    [
+      "classroom",
+      "Classroom Objects"
+    ],
+    [
+      "subjects",
+      "School Subjects"
+    ],
+    [
+      "school",
+      "School Expressions"
+    ],
+    [
+      "days",
+      "Days"
+    ],
+    [
+      "months",
+      "Months"
+    ],
+    [
+      "colors",
+      "Colors"
+    ],
+    [
+      "body",
+      "Body Parts"
+    ],
+    [
+      "ar",
+      "AR Verbs"
+    ],
+    [
+      "counting",
+      "Counting Expressions"
+    ],
+    [
+      "prepositions",
+      "Prepositions"
+    ]
   ],
   [
-    "greetings",
-    "Greetings"
-  ],
-  [
-    "location",
-    "Location"
-  ],
-  [
-    "ser",
-    "Ser (verb)"
-  ],
-  [
-    "numbers",
-    "Numbers"
-  ],
-  [
-    "age",
-    "Age Expressions"
-  ],
-  [
-    "nouns",
-    "Nouns and Articles"
-  ],
-  [
-    "classroom",
-    "Classroom Objects"
-  ],
-  [
-    "subjects",
-    "School Subjects"
-  ],
-  [
-    "school",
-    "School Expressions"
-  ],
-  [
-    "days",
-    "Days"
-  ],
-  [
-    "months",
-    "Months"
-  ],
-  [
-    "colors",
-    "Colors"
-  ],
-  [
-    "body",
-    "Body Parts"
-  ],
-  [
-    "ar",
-    "AR Verbs"
-  ],
-  [
-    "counting",
-    "Counting Expressions"
-  ],
-  [
-    "prepositions",
-    "Prepositions"
-  ],
-  [
+    [
     "gustar",
     "Gustar (verb)"
   ],
@@ -76,43 +79,44 @@
     "Family"
   ],
   [
-    "er",
-    "ER Verbs"
-  ],
-  [
-    "ir",
-    "IR Verbs"
-  ],
-  [
-    "descadjectives",
-    "Descriptive Adjectives"
-  ],
-  [
-    "possadjectives",
-    "Possessive Adjectives"
-  ],
-  [
-    "tener",
-    "Tener (verb)"
-  ],
-  [
-    "venir",
-    "Venir (verb)"
-  ],
-  [
-    "eie",
-    "E:IE Verbs"
-  ],
-  [
-    "oue",
-    "O:UE Verbs"
-  ],
-  [
-    "uue",
-    "U:UE Verbs"
-  ],
-  [
-    "ei",
-    "E:I Verbs"
+      "er",
+      "ER Verbs"
+    ],
+    [
+      "ir",
+      "IR Verbs"
+    ],
+    [
+      "descadjectives",
+      "Descriptive Adjectives"
+    ],
+    [
+      "possadjectives",
+      "Possessive Adjectives"
+    ],
+    [
+      "tener",
+      "Tener (verb)"
+    ],
+    [
+      "venir",
+      "Venir (verb)"
+    ],
+    [
+      "eie",
+      "E:IE Verbs"
+    ],
+    [
+      "oue",
+      "O:UE Verbs"
+    ],
+    [
+      "uue",
+      "U:UE Verbs"
+    ],
+    [
+      "ei",
+      "E:I Verbs"
+    ]
   ]
 ]

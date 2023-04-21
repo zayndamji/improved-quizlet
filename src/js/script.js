@@ -238,6 +238,6 @@ function toggleInstructions() {
 }
 
 function selectAllSets(on) {
-  Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = on);
+  Array.from(document.getElementById('set').children).forEach(e => Array.from(e.children).forEach(e => e.children[0].checked = on));
   selectSet();
 }

@@ -89,14 +89,13 @@
     div
       button(style="padding: 5px; font-size: 100%; margin-right: 5px;" onclick="selectAllSets(true);") Select All
       button(style="padding: 5px; font-size: 100%;" onclick="selectAllSets(false);") Deselect All
-    div(class="responsive-grid-buttons" id="set")
-      each week, index in options
-        div
-          if index == 0
-            input(type="checkbox" id=week[0] name="set" value=week[0] checked onchange="selectSet()")
-          else
-            input(type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
-          label(for=week[0]) #{week[1]}
+    div(id="set")
+      each sec in options
+        div(class="responsive-grid-buttons")
+          each week in sec
+            div
+              input(type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
+              label(for=week[0]) #{week[1]}
   </div>
 
   <div id="questions" class="responsive-grid"></div>

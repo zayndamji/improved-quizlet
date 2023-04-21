@@ -165,31 +165,37 @@ select {
 
 .responsive-grid-buttons {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: repeat(7, 300px);
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 1900px) {
+@media only screen and (max-width: 2100px) {
   .responsive-grid-buttons {
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(6, 300px);
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .responsive-grid-buttons {
+    grid-template-columns: repeat(5, 300px);
   }
 }
 
 @media only screen and (max-width: 1500px) {
   .responsive-grid-buttons {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 300px);
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .responsive-grid-buttons {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 300px);
   }
 }
 
 @media only screen and (max-width: 900px) {
   .responsive-grid-buttons {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 300px);
   }
 }
 
@@ -284,6 +290,6 @@ select {
   display: block;
 }
 
-#set-parent:hover > div.responsive-grid-buttons {
+#set-parent:hover > div > div.responsive-grid-buttons {
   display: grid;
 }
