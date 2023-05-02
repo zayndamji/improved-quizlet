@@ -67,24 +67,12 @@
   ],
   [
     [
-      "gustar",
-      "Gustar (verb)"
-    ],
-    [
       "numbers",
       "Numbers"
     ],
     [
       "family",
       "Family"
-    ],
-    [
-      "er",
-      "ER Verbs"
-    ],
-    [
-      "ir",
-      "IR Verbs"
     ],
     [
       "descadjectives",
@@ -95,12 +83,28 @@
       "Possessive Adjectives"
     ],
     [
+      "gustar",
+      "Gustar (verb)"
+    ],
+    [
       "tener",
       "Tener (verb)"
     ],
     [
       "venir",
       "Venir (verb)"
+    ],
+    [
+      "irverb",
+      "Ir (verb)"
+    ],
+    [
+      "er",
+      "ER Verbs"
+    ],
+    [
+      "ir",
+      "IR Verbs"
     ],
     [
       "eiesimple",
@@ -125,10 +129,6 @@
     [
       "uue",
       "U:UE Verbs (conjugations)"
-    ],
-    [
-      "irverb",
-      "Ir (verb)"
     ],
     [
       "eisimple",
