@@ -1,11 +1,3 @@
-aprender	to learn
-beber	to drink
-comer	to eat
-comprender	to understand
-correr	to run
-creer	to believe
-deber	should; must; ought to
-leer	to read
 aprendo	to learn/yo
 aprende	to learn/él
 aprendes	to learn/tú

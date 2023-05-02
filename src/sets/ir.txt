@@ -1,11 +1,3 @@
-abrir	to open
-asistir	to attend
-compartir	to share
-decidir	to decide
-describir	to describe
-escribir	to write
-recibir	to receive
-vivir	to live
 abro	to open/yo
 abre	to open/él
 abres	to open/tú

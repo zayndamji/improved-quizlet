@@ -53,8 +53,12 @@
       "Body Parts"
     ],
     [
+      "arsimple",
+      "AR Verbs (simple)"
+    ],
+    [
       "ar",
-      "AR Verbs"
+      "AR Verbs (conjugations)"
     ],
     [
       "counting",
@@ -99,12 +103,20 @@
       "Ir (verb)"
     ],
     [
+      "ersimple",
+      "ER Verbs (simple)"
+    ],
+    [
       "er",
-      "ER Verbs"
+      "ER Verbs (conjugations)"
+    ],
+    [
+      "irsimple",
+      "IR Verbs (simple)"
     ],
     [
       "ir",
-      "IR Verbs"
+      "IR Verbs (conjugations)"
     ],
     [
       "eiesimple",
