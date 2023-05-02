@@ -103,24 +103,40 @@
       "Venir (verb)"
     ],
     [
+      "eiesimple",
+      "E:IE Verbs (simple)"
+    ],
+    [
       "eie",
-      "E:IE Verbs"
+      "E:IE Verbs (conjugations)"
+    ],
+    [
+      "ouesimple",
+      "O:UE Verbs (simple)"
     ],
     [
       "oue",
-      "O:UE Verbs"
+      "O:UE Verbs (conjugations)"
+    ],
+    [
+      "uuesimple",
+      "U:UE Verbs (simple)"
     ],
     [
       "uue",
-      "U:UE Verbs"
+      "U:UE Verbs (conjugations)"
     ],
     [
       "irverb",
       "Ir (verb)"
     ],
     [
+      "eisimple",
+      "E:I Verbs (simple)"
+    ],
+    [
       "ei",
-      "E:I Verbs"
+      "E:I Verbs (conjugations)"
     ]
   ]
 ]
