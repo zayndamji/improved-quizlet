@@ -13,10 +13,6 @@
       "Location"
     ],
     [
-      "ser",
-      "Ser (verb)"
-    ],
-    [
       "age",
       "Age Expressions"
     ],
@@ -45,20 +41,8 @@
       "Months"
     ],
     [
-      "colors",
-      "Colors"
-    ],
-    [
       "body",
       "Body Parts"
-    ],
-    [
-      "arsimple",
-      "AR Verbs (infinitives)"
-    ],
-    [
-      "ar",
-      "AR Verbs (conjugations)"
     ],
     [
       "counting",
@@ -71,36 +55,12 @@
   ],
   [
     [
-      "numbers",
-      "Numbers"
+      "arsimple",
+      "AR Verbs (infinitives)"
     ],
     [
-      "family",
-      "Family"
-    ],
-    [
-      "descadjectives",
-      "Descriptive Adjectives"
-    ],
-    [
-      "possadjectives",
-      "Possessive Adjectives"
-    ],
-    [
-      "gustar",
-      "Gustar (verb)"
-    ],
-    [
-      "tener",
-      "Tener (verb)"
-    ],
-    [
-      "venir",
-      "Venir (verb)"
-    ],
-    [
-      "irverb",
-      "Ir (verb)"
+      "ar",
+      "AR Verbs (conjugations)"
     ],
     [
       "ersimple",
@@ -151,8 +111,62 @@
       "E:I Verbs (conjugations)"
     ],
     [
+      "ser",
+      "Ser (verb)"
+    ],
+    [
+      "tener",
+      "Tener (verb)"
+    ],
+    [
+      "venir",
+      "Venir (verb)"
+    ],
+    [
+      "irverb",
+      "Ir (verb)"
+    ],
+    [
+      "gustar",
+      "Gustar (verb)"
+    ]
+  ],
+  [
+    [
+      "gustar",
+      "Gustar (verb)"
+    ],
+    [
+      "irverb",
+      "Ir (verb)"
+    ],
+    [
+      "ser",
+      "Ser (verb)"
+    ],
+    [
+      "numbers",
+      "Numbers"
+    ],
+    [
+      "family",
+      "Family"
+    ],
+    [
+      "descadjectives",
+      "Descriptive Adjectives"
+    ],
+    [
+      "possadjectives",
+      "Possessive Adjectives"
+    ],
+    [
       "hobbies",
       "Hobbies"
+    ],
+    [
+      "colors",
+      "Colors"
     ]
   ]
 ]
