@@ -1,12 +1,3 @@
-venir	to come
-hacer	to do
-tener	to have
-oír	to hear
-poner	to put
-salir	to leave
-suponer	to suppose
-traer	to bring
-ver	to see
 vengo	to come/yo
 viene	to come/él
 vienes	to come/tú
