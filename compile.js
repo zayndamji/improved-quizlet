@@ -13,7 +13,7 @@ const sounds = fs.readdirSync('src/sounds/').map(e => {
 });
 
 fs.writeFileSync('serve/index.html',
-  pug.renderFile('src/index.html', {
+  pug.renderFile('src/index.pug', {
     setData: fs.readdirSync('src/sets').map(e => {
       return {
         name: e,
