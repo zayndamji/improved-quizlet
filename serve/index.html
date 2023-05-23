@@ -1327,8 +1327,7 @@ let ignoreAccents = false;
 function toggleAccents(newAccents) {
   ignoreAccents = newAccents ?? !ignoreAccents;
   setLocalStorage('accents', ignoreAccents.toString());
-}</script>
-<script>function playSound(id, universal = false) {
+}</script><script>function playSound(id, universal = false) {
   if (showStatus || universal) {
     const clone = document.getElementById(id).cloneNode(true);
     document.body.appendChild(clone);
@@ -1345,8 +1344,7 @@ function playSuccessSound() {
 
 function playFailureSound() {
   playSound('failure.mp3');
-}</script>
-<script>let doingAnimation = false;
+}</script><script>let doingAnimation = false;
 
 function customSplashScreenAnimation(background, text, color = 'white', onDuration, midDuration, offDuration) {
   if (doingAnimation || !showStatus) return;
@@ -1382,8 +1380,7 @@ function splashscreenAnimation(background, text, color = 'white') {
 
 function longSplashscreenAnimation(background, text, color = 'white') {
   customSplashScreenAnimation(background, text, color, 200, 600, 300);
-}</script>
-<script>let words = [], flipped = false, content = '';
+}</script><script>let words = [], flipped = false, content = '';
 
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
@@ -1625,8 +1622,7 @@ function toggleInstructions() {
 function selectAllSets(on) {
   Array.from(document.getElementById('set').children).forEach(e => Array.from(e.children).forEach(e => e.children[0].checked = on));
   selectSet();
-}</script>
-<script>let setIsStillValid = true;
+}</script><script>let setIsStillValid = true;
 const tempSet = getLocalStorage('set');
 if (tempSet != "") {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
@@ -1679,6 +1675,5 @@ function getLocalStorage(key) {
   const value = localStorage.getItem(key);
   if (value === null) return '';
   return value;
-}</script>
-</body>
+}</script></body>
 </html>
