@@ -237,7 +237,7 @@ function toggleInstructions() {
     document.getElementById('instructions').style.display = 'none';
 }
 
-function selectAllSets(on) {
-  Array.from(document.getElementById('set').children).forEach(e => Array.from(e.children).forEach(e => e.children[0].checked = on));
+function selectAllSets(on, id) {
+  Array.from(document.getElementById(id).children).forEach(e => e.children[0].checked = on);
   selectSet();
 }

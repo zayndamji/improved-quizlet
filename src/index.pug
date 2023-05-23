@@ -84,13 +84,17 @@
 
   <div id="set-parent">
     <button>Choose Sets (<span id="numberofsets">0</span> chosen) (hover to see)</button>
-    div
-      button(style="padding: 5px; font-size: 100%; margin-right: 5px;" onclick="selectAllSets(true);") Select All
-      button(style="padding: 5px; font-size: 100%;" onclick="selectAllSets(false);") Deselect All
     div(id="set")
       each sec in options
-        div(class="responsive-grid-buttons")
-          each week in sec
+        - const secId = `${sec.name}-setchooser`
+        div
+          span(style="font-size: 20px;") #{sec.display}&nbsp;&nbsp;
+          - const onclickOn = `selectAllSets(true, "${secId}");`
+          button(style="padding: 5px; font-size: 100%; margin-right: 8px;" onclick=onclickOn) Select All
+          - const onclickOff = `selectAllSets(false, "${secId}");`
+          button(style="padding: 5px; font-size: 100%;" onclick=onclickOff) Deselect All
+        div(class="responsive-grid-buttons" id=secId)
+          each week in sec.sets
             div
               input(type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
               label(for=week[0]) #{week[1]}
