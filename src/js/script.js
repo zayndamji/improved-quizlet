@@ -99,7 +99,7 @@ function regenerateQuiz() {
           words[i].status = 2;
           if (skip) {
             splashscreenAnimation('green', 'Correct!');
-            playSound('success.mp3');
+            playSuccessSound();
           }
           words[i].word = definition;
         }
@@ -107,7 +107,7 @@ function regenerateQuiz() {
           words[i].status = 1;
           if (skip) {
             splashscreenAnimation('red', 'Wrong!');
-            playSound('failure.mp3');
+            playFailureSound();
           }
           words[i].word = question.value.trim();
         }

@@ -10,9 +10,11 @@ function playSound(id, universal = false) {
 }
 
 function playSuccessSound() {
-  playSound('success.mp3');
+  const index = (Math.floor(Math.random() * 4) + 1).toFixed(0);
+  playSound(`success${index}.mp3`);
 }
 
 function playFailureSound() {
-  playSound('failure.mp3');
+  const index = (Math.floor(Math.random() * 2) + 1).toFixed(0);
+  playSound(`failure${index}.mp3`);
 }
