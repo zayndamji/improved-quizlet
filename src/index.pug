@@ -88,16 +88,16 @@
       each sec in options
         - const secId = `${sec.name}-setchooser`
         div
-          span(style="font-size: 20px;") #{sec.display}&nbsp;&nbsp;
+          span(style="font-size: 18px;") #{sec.display}&nbsp;&nbsp;
           - const onclickOn = `selectAllSets(true, "${secId}");`
-          button(style="padding: 5px; font-size: 100%; margin-right: 8px;" onclick=onclickOn) Select All
+          button(style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick=onclickOn) Select All
           - const onclickOff = `selectAllSets(false, "${secId}");`
-          button(style="padding: 5px; font-size: 100%;" onclick=onclickOff) Deselect All
+          button(style="padding: 5px; font-size: 16px;" onclick=onclickOff) Deselect All
         div(class="responsive-grid-buttons" id=secId)
           each week in sec.sets
             div
-              input(type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
-              label(for=week[0]) #{week[1]}
+              input(style="width: 10px;" type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
+              label(style="font-size: 15px;" for=week[0]) #{week[1]}
   </div>
 
   <div id="questions" class="responsive-grid"></div>
