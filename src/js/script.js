@@ -179,7 +179,7 @@ function regenerateQuiz() {
       question.style.borderColor = 'lightgray';
     }
 
-    if (words[i].status == 1 && showStatus) {
+    if ((words[i].status == 1 || (words[i].status == 3 && showAnswerWhenSkipped)) && showStatus) {
       const span = document.createElement('span');
       if (flipped)
         span.innerHTML = `&nbsp;${words[i].term}  `;

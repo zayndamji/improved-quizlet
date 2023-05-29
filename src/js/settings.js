@@ -13,3 +13,11 @@ function toggleAccents(newAccents) {
   setLocalStorage('accents', ignoreAccents.toString());
   document.getElementById('accents-selector').checked = ignoreAccents;
 }
+
+let showAnswerWhenSkipped = false;
+
+function toggleShowSkippedAnswer(newSkipped) {
+  showAnswerWhenSkipped = newSkipped ?? !showAnswerWhenSkipped;
+  setLocalStorage('skippedanswer', showAnswerWhenSkipped.toString());
+  document.getElementById('skipped-answer-selector').checked = showAnswerWhenSkipped;
+}

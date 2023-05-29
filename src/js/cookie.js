@@ -27,6 +27,12 @@ if (tempStatus != "") {
   console.log('User has toggled status before.')
 }
 
+const tempSkippedAnswer = getLocalStorage('skippedanswer');
+if (tempSkippedAnswer != "") {
+  toggleShowSkippedAnswer(tempSkippedAnswer == 'true');
+  console.log('User has toggled showing answers when skipped before.')
+}
+
 const tempWords = getLocalStorage('words');
 const tempContent = getLocalStorage('content');
 if (tempWords != "" && tempWords != '[]' && tempContent != "" && setIsStillValid) {
