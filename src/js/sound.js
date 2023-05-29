@@ -1,5 +1,5 @@
 function playSound(id, universal = false) {
-  if (showStatus || universal) {
+  if ((showStatus || universal) && !muteSound) {
     const clone = document.getElementById(id).cloneNode(true);
     document.body.appendChild(clone);
     clone.onended = () => {

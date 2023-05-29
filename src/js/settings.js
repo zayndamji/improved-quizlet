@@ -21,3 +21,11 @@ function toggleShowSkippedAnswer(newSkipped) {
   setLocalStorage('skippedanswer', showAnswerWhenSkipped.toString());
   document.getElementById('skipped-answer-selector').checked = showAnswerWhenSkipped;
 }
+
+let muteSound = false;
+
+function toggleMute(newMute) {
+  muteSound = newMute ?? !muteSound;
+  setLocalStorage('mutesound', muteSound.toString());
+  document.getElementById('mute-selector').checked = muteSound;
+}

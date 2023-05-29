@@ -33,6 +33,12 @@ if (tempSkippedAnswer != "") {
   console.log('User has toggled showing answers when skipped before.')
 }
 
+const tempMuteSound = getLocalStorage('mutesound');
+if (tempMuteSound != "") {
+  toggleMute(tempMuteSound == 'true');
+  console.log('User has toggled muting sound before.')
+}
+
 const tempWords = getLocalStorage('words');
 const tempContent = getLocalStorage('content');
 if (tempWords != "" && tempWords != '[]' && tempContent != "" && setIsStillValid) {
