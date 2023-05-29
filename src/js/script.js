@@ -90,9 +90,13 @@ function regenerateQuiz() {
       const question = document.getElementById(i);
 
       if (check) {
-        if (question.value.trim() == '') {
-          words[i].status = 0;
-          words[i].word = '';
+        if (question.value.trim() == '' ||
+            question.value.trim() == '‎') {
+          words[i].status = 3;
+          if (skip) {
+            splashscreenAnimation('yellow', 'Skipped');
+          }
+          words[i].word = '‎';
         }
         else if (convertToPlain(question.value) == convertToPlain(definition) ||
                 (ignoreAccents && (convertToNoAccents(convertToPlain(question.value)) == convertToNoAccents(convertToPlain(definition))))) {
@@ -137,6 +141,9 @@ function regenerateQuiz() {
       wordInput.setAttribute('id', i);
       wordInput.style.flex = 1;
 
+      wordInput.addEventListener('focus', e => {
+        document.getElementById(i).value = document.getElementById(i).value.replace(/‎/g, '');
+      });
       wordInput.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
       wordInput.addEventListener('blur', e => checkAnswer(true, false));
 
@@ -169,7 +176,8 @@ function regenerateQuiz() {
     if (showStatus) {
       question.style.borderColor = words[i].status == 1 ? 'red' :
         words[i].status == 2 ? 'lightgreen' :
-          'lightgray';
+          words[i].status == 3 ? 'rgb(240, 240, 0)' :
+            'lightgray';
     } else {
       question.style.borderColor = 'lightgray';
     }
