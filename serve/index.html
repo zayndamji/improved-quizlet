@@ -1594,9 +1594,6 @@ function regenerateQuiz() {
       wordInput.setAttribute('id', i);
       wordInput.style.flex = 1;
 
-      wordInput.addEventListener('focus', e => {
-        document.getElementById(i).value = document.getElementById(i).value.replace(/‎/g, '');
-      });
       wordInput.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
       wordInput.addEventListener('blur', e => checkAnswer(true, false));
 
