@@ -3,6 +3,7 @@ let showStatus = true;
 function toggleStatus(newStatus) {
   showStatus = newStatus ?? !showStatus;
   setLocalStorage('status', showStatus.toString());
+  document.getElementById('status-selector').checked = !showStatus;
 }
 
 let ignoreAccents = false;
@@ -10,4 +11,5 @@ let ignoreAccents = false;
 function toggleAccents(newAccents) {
   ignoreAccents = newAccents ?? !ignoreAccents;
   setLocalStorage('accents', ignoreAccents.toString());
+  document.getElementById('accents-selector').checked = ignoreAccents;
 }

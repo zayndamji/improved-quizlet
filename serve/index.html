@@ -1359,6 +1359,7 @@ juegan	to play/ellos"/><meta id="meta-set-uuesimple.txt" content="jugar	to play"
 function toggleStatus(newStatus) {
   showStatus = newStatus ?? !showStatus;
   setLocalStorage('status', showStatus.toString());
+  document.getElementById('status-selector').checked = !showStatus;
 }
 
 let ignoreAccents = false;
@@ -1366,6 +1367,7 @@ let ignoreAccents = false;
 function toggleAccents(newAccents) {
   ignoreAccents = newAccents ?? !ignoreAccents;
   setLocalStorage('accents', ignoreAccents.toString());
+  document.getElementById('accents-selector').checked = ignoreAccents;
 }</script><script>function playSound(id, universal = false) {
   if (showStatus || universal) {
     const clone = document.getElementById(id).cloneNode(true);
