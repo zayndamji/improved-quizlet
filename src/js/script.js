@@ -116,9 +116,6 @@ function regenerateQuiz() {
           words[i].word = question.value.trim();
         }
 
-        if (i + 1 == words.length && question.value.trim().length > 0)
-          toggleStatus(true);
-
         regenerateQuiz();
 
         if (skip && i + 1 < words.length)
