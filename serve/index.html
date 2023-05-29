@@ -1447,7 +1447,7 @@ function longSplashscreenAnimation(background, text, color = 'white') {
   customSplashScreenAnimation(background, text, color, 200, 600, 300);
 }</script><script>let words = [], flipped = false, content = '';
 
-const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(/g;
+const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(|‎/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
 const convertToNoAccents = w => w.replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i');
 

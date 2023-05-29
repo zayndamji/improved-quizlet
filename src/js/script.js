@@ -1,6 +1,6 @@
 let words = [], flipped = false, content = '';
 
-const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(/g;
+const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(|‎/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
 const convertToNoAccents = w => w.replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i');
 
