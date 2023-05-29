@@ -90,8 +90,17 @@ function regenerateQuiz() {
       const question = document.getElementById(i);
 
       if (check) {
-        if (question.value.trim() == '' ||
-            question.value.trim() == '‎') {
+        if (question.value.trim() == '') {
+          if (skip) {
+            words[i].status = 3;
+            splashscreenAnimation('yellow', 'Skipped');
+            words[i].word = '‎';
+          } else {
+            words[i].status = 0;
+            words[i].word = '';
+          }
+        }
+        else if (question.value.trim() == '‎') {
           words[i].status = 3;
           if (skip) {
             splashscreenAnimation('yellow', 'Skipped');
