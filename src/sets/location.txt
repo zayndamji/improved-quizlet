@@ -1,9 +1,0 @@
-La bandera	flag
-La capital	capital
-La chica	girl
-El chico	boy
-La nacionalidad	nationality
-El país	country
-¿De dónde eres?	Where are you from (informal)
-¿De dónde es usted?	Where are you from? (formal)
-De	from

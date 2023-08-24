@@ -1,4 +1,0 @@
-Place	Position, Location, Action, Condition, Emotion (Estar)
-Helpp	Health, Emotion, Location, Physical Condition, Present Progressive (Estar)
-Doctor Eve	Description, Origin, Character, Time, Occupation, Relationship, Event (Ser)
-Toedip	Time, Origin, Events, Descriptions, Identification, Professions and Occupations (Ser)
