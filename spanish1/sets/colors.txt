@@ -1,0 +1,8 @@
+verde	green
+naranja	orange
+rosado	pink
+morado	purple
+amarillo	yellow
+rojo	red
+azul	blue
+cafe	brown

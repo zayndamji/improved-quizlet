@@ -1,0 +1,6 @@
+ir	to go
+voy	to go/yo
+va	to go/él
+vas	to go/tú
+vamos	to go/nos
+van	to go/ellos

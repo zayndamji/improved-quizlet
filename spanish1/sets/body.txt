@@ -1,0 +1,17 @@
+la cabeza	head
+los hombros	shoulders
+la rodilla	knee
+el pie	foot
+el ojo	eye
+la oreja	ear
+la boca	mouth
+la nariz	nose
+la mano	hand
+el dedo	finger
+la lengua	tongue
+las piernas	legs
+el pelo	hair
+el brazo	arm
+el cuello	neck
+la ceja	eyebrow
+el codo	elbow

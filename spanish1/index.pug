@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Improved Quizlet</title>
+  <link rel="icon" href="https://assets.quizlet.com/a/j/dist/app/i/logo/2021/q-twilight.389092a385cb51d.png">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="https://assets.quizlet.com/a/j/dist/app/i/logo/2021/q-twilight.389092a385cb51d.png" property="og:image" />
+  <meta content="Improved Quizlet" property="og:title">
+  <meta content="A website that tries to improve the quizzing experience with a simple layout and UI." property="og:description">
+  <meta name="description" content="A website that tries to improve the quizzing experience with a simple layout and UI.">
+  
+  style
+    include ./css/style.css
+
+  style
+    include ./css/toggle.css
+
+  each e in setData
+    - const metaId = 'meta-set-' + e.name
+    meta(id=metaId content=e.content)
+</head>
+
+<body>
+  <span id="splashscreen" class="fullscreen">
+    <span id="splashscreen-inner" style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></span>
+  </span>
+
+  <div class="navbar">
+    <br>
+    <div class="navbar-title">
+      <span>Improved Quizlet</span>
+      <span class="navbar-title-author">by Zayn Damji</span>
+    </div>
+    <div class="right-bar">
+      <span class="spanish-english-toggle" id="spanish-english-toggle" style="flex: 1; margin-right: 25px; margin-top: 8px; display: flex; align-items: center;">
+        <span style="font-size: 100%; margin-right: 10px;">English</span>
+        <label class="switch">
+          <input type="checkbox" id="flipped-or-not">
+          <span class="slider round"></span>
+        </label>
+        <span style="font-size: 100%; margin-left: 10px;">Spanish</span>
+      </span>
+    </div>
+  </div>
+
+  <div style="height: 52px"></div>
+
+  <span id="instructions" style="display: none; font-size: 15px;">
+    <br>Once you've answered a question, click Enter.<br>If you are wrong, it will show the correct answer next to your answer.<br>To correct the answer, just type the correct answer where your wrong answer was previously!<br>Accents and special characters are mostly ignored, but once you've clicked Enter, it will correct it with the accents.
+  </span>
+
+  <span id="flipquiz">
+    <br>
+    <button onclick="flipQuiz(false); regenerateQuiz();">English</button>
+    |&nbsp;
+    <button onclick="flipQuiz(true); regenerateQuiz();">Spanish</button>
+  </span>
+
+  <br>
+
+  <button onclick="shuffleWords(); restartQuiz();  regenerateQuiz();">Shuffle</button>
+  |&nbsp;
+  <button onclick="restartQuiz(); regenerateQuiz();">Restart</button>
+  |&nbsp;
+  <button onclick="solveQuiz();">Solve All</button>
+  |&nbsp;
+  <button onclick="toggleInstructions();">Instructions</button>
+  <br>
+
+  <div id="set-parent">
+    <button>Settings (hover to see)</button>
+    div(style="margin-bottom: 8px;")
+      <label for="status-selector">Hide whether Correct or Incorrect</label>
+      <input id="status-selector" name="status-selector" type="checkbox" onclick="toggleStatus(); regenerateQuiz();">
+      <br>
+      <label for="accents-selector">Ignore Accents</label>
+      <input id="accents-selector" name="accents-selector" type="checkbox" onclick="toggleAccents(); regenerateQuiz();">
+      <br>
+      <label for="skipped-answer-selector">Show Answer when Skipped</label>
+      <input id="skipped-answer-selector" name="skipped-answer-selector" type="checkbox" onclick="toggleShowSkippedAnswer(); regenerateQuiz();">
+      <br>
+      <label for="mute-selector">Mute Sounds</label>
+      <input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();">
+  </div>
+
+  <div id="set-parent">
+    <button>Choose Sets (<span id="numberofsets">0</span> chosen) (hover to see)</button>
+    div(id="set")
+      each sec in options
+        - const secId = `${sec.name}-setchooser`
+        div
+          span(style="font-size: 18px;") #{sec.display}&nbsp;&nbsp;
+          - const onclickOn = `selectAllSets(true, "${secId}");`
+          button(style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick=onclickOn) Select All
+          - const onclickOff = `selectAllSets(false, "${secId}");`
+          button(style="padding: 5px; font-size: 16px;" onclick=onclickOff) Deselect All
+        div(class="responsive-grid-buttons" id=secId)
+          each week in sec.sets
+            div
+              input(style="width: 10px;" type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
+              label(style="font-size: 15px;" for=week[0]) #{week[1]}
+  </div>
+
+  <div id="questions" class="responsive-grid"></div>
+
+  <div style="width: 100%; position: fixed; bottom: 0; height: 55px; background-color: white;">
+    <div id="progress">
+      <div id="outer-progress-text">0%</div>
+      <div id="progress-bar" style="display: none;">
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br>
+
+  each sound in sounds
+    audio(style="display: none;" id=sound.id)
+      source(src=sound.data)
+
+  script
+    include ./js/settings.js
+
+  script
+    include ./js/sound.js
+
+  script
+    include ./js/animation.js
+
+  script
+    include ./js/script.js
+
+  script
+    include ./js/cookie.js
+</body>
+
+</html>

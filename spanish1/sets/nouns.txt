@@ -1,0 +1,39 @@
+el hombre	the man
+el chico	the boy
+el pasajero	the male passenger
+el conductor	the male driver
+el profesor	the male teacher
+el turista	the male tourist
+la mujer	the woman
+la chica	the girl
+la pasajera	the female passenger
+la conductora	the female driver
+la profesora	the female teacher
+la turista	the female tourist
+el joven	the young man
+la joven	the young woman
+el estudiante	the male student
+la estudiante	the female student
+el cuarderno	the notebook
+el diario	the diary
+el diccionario	the dictionary
+el número	the number
+el video	the video
+el problema	the problem
+el programa	the program
+el autobús	the bus
+el país	the country
+la cosa	the thing
+la escuela	the school
+la computadora	the computer
+la maleta	the suitcase
+la palabra	the word
+la lección	the lesson
+la conversación	the conversation
+la nacionalidad	the nationality
+la comunidad	the community
+el mapa	the map
+un pasajero	a passenger
+unos pasajeros	some passengers
+una fotografía	a photograph
+unas fotografías	some photographs

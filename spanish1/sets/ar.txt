@@ -1,0 +1,150 @@
+bailo	to dance/yo
+baila	to dance/él
+bailas	to dance/tú
+bailamos	to dance/nos
+bailan	to dance/ellos
+busco	to look for/yo
+busca	to look for/él
+buscas	to look for/tú
+buscamos	to look for/nos
+buscan	to look for/ellos
+camino	to walk/yo
+camina	to walk/él
+caminas	to walk/tú
+caminamos	to walk/nos
+caminan	to walk/ellos
+canto	to sing/yo
+canta	to sing/él
+cantas	to sing/tú
+cantamos	to sing/nos
+cantan	to sing/ellos
+ceno	to have dinner/yo
+cena	to have dinner/él
+cenas	to have dinner/tú
+cenamos	to have dinner/nos
+cenan	to have dinner/ellos
+compro	to buy/yo
+compra	to buy/él
+compras	to buy/tú
+compramos	to buy/nos
+compran	to buy/ellos
+contesto	to answer/yo
+contesta	to answer/él
+contestas	to answer/tú
+contestamos	to answer/nos
+contestan	to answer/ellos
+converso	to converse, to chat/yo
+conversa	to converse, to chat/él
+conversas	to converse, to chat/tú
+conversamos	to converse, to chat/nos
+conversan	to converse, to chat/ellos
+desayuno	to have breakfast/yo
+desayuna	to have breakfast/él
+desayunas	to have breakfast/tú
+desayunamos	to have breakfast/nos
+desayunan	to have breakfast/ellos
+deseo	to wish, to desire/yo
+desea	to wish, to desire/él
+deseas	to wish, to desire/tú
+deseamos	to wish, to desire/nos
+desean	to wish, to desire/ellos
+dibujo	to draw/yo
+dibuja	to draw/él
+dibujas	to draw/tú
+dibujamos	to draw/nos
+dibujan	to draw/ellos
+enseño	to teach/yo
+enseña	to teach/él
+enseñas	to teach/tú
+enseñamos	to teach/nos
+enseñan	to teach/ellos
+escucho	to listen to/yo
+escucha	to listen to/él
+escuchas	to listen to/tú
+escuchamos	to listen to/nos
+escuchan	to listen to/ellos
+espero	to wait for, to hope/yo
+espera	to wait for, to hope/él
+esperas	to wait for, to hope/tú
+esperamos	to wait for, to hope/nos
+esperan	to wait for, to hope/ellos
+estudio	to study/yo
+estudia	to study/él
+estudias	to study/tú
+estudiamos	to study/nos
+estudian	to study/ellos
+explico	to explain/yo
+explica	to explain/él
+explicas	to explain/tú
+explicamos	to explain/nos
+explican	to explain/ellos
+hablo	to talk, to speak/yo
+habla	to talk, to speak/él
+hablas	to talk, to speak/tú
+hablamos	to talk, to speak/nos
+hablan	to talk, to speak/ellos
+llego	to arrive/yo
+llega	to arrive/él
+llegas	to arrive/tú
+llegamos	to arrive/nos
+llegan	to arrive/ellos
+llevo	to carry, to take, to wear/yo
+lleva	to carry, to take, to wear/él
+llevas	to carry, to take, to wear/tú
+llevamos	to carry, to take, to wear/nos
+llevan	to carry, to take, to wear/ellos
+miro	to look at, to watch/yo
+mira	to look at, to watch/él
+miras	to look at, to watch/tú
+miramos	to look at, to watch/nos
+miran	to look at, to watch/ellos
+necesito	to need/yo
+necesita	to need/él
+necesitas	to need/tú
+necesitamos	to need/nos
+necesitan	to need/ellos
+practico	to practice/yo
+practica	to practice/él
+practicas	to practice/tú
+practicamos	to practice/nos
+practican	to practice/ellos
+pregunto	to ask a question/yo
+pregunta	to ask a question/él
+preguntas	to ask a question/tú
+preguntamos	to ask a question/nos
+preguntan	to ask a question/ellos
+preparo	to prepare/yo
+prepara	to prepare/él
+preparas	to prepare/tú
+preparamos	to prepare/nos
+preparan	to prepare/ellos
+regreso	to return/yo
+regresa	to return/él
+regresas	to return/tú
+regresamos	to return/nos
+regresan	to return/ellos
+termino	to end, to finish/yo
+termina	to end, to finish/él
+terminas	to end, to finish/tú
+terminamos	to end, to finish/nos
+terminan	to end, to finish/ellos
+tomo	to take, to drink/yo
+toma	to take, to drink/él
+tomas	to take, to drink/tú
+tomamos	to take, to drink/nos
+toman	to take, to drink/ellos
+trabajo	to work/yo
+trabaja	to work/él
+trabajas	to work/tú
+trabajamos	to work/nos
+trabajan	to work/ellos
+viajo	to travel/yo
+viaja	to travel/él
+viajas	to travel/tú
+viajamos	to travel/nos
+viajan	to travel/ellos
+descanso	to rest/yo
+descansa	to rest/él
+descansas	to rest/tú
+descansamos	to rest/nos
+descansan	to rest/ellos

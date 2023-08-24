@@ -1,0 +1,16 @@
+un escritorio	large desk
+un pizarrón	whiteboard
+un gis	chalk
+un borrador	eraser
+un pupitre	student's desk
+una silla	seat
+un cuaderno	notebook
+un bolígrafo	pen
+un lápiz	pencil
+un libro	textbook
+una mochila	backpack
+una computadora	computer
+un reloj	clock
+un televisor	television
+una calculadora	calculator
+un bote de basura	trash can
