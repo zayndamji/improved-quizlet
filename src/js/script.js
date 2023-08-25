@@ -30,8 +30,8 @@ function restartQuiz() {
     words[i].word = Array(words[i].definition.length).fill('');
   }
   
-  // if (document.getElementById(0) != undefined)
-  //   document.getElementById(0).select();
+  if (document.getElementById(0) != undefined)
+    document.getElementById(0).children[1].children[0].select();
 }
 
 function clearWords() {
@@ -89,8 +89,27 @@ function regenerateQuiz() {
 
         regenerateQuiz();
 
-        // if (skip && i + 1 < words.length)
-        //   document.getElementById(i + 1).select();
+        if (skip && i + 1 < words.length) {
+          // if (words[i].word[j+1] == undefined) {
+          //   console.log(words[i+1].word[0]);
+          // } else {
+          //   console.log(words[i].word[j+1]);
+          // }
+          // console.log(i, j);
+          // console.log(document.getElementById(i));
+          // console.log(document.getElementById(i).children);
+          // console.log(document.getElementById(i).children.item(j+2).children.item(0));
+          // console.log(Array.from(document.getElementById(i).children)[1]);
+
+          // if (Array.from(document.getElementById(i).children)[j+2] == undefined) {
+          //   console.log('d');
+          //   console.log(Array.from(document.getElementById(i + 1).children));
+          //   Array.from(Array.from(document.getElementById(i + 1).children)[1].children)[0].select();
+          // } else {
+          //   console.log('ddd');
+          //   Array.from(Array.from(document.getElementById(i).children)[j+2].children)[0].select();
+          // }
+        }
       }
     }
 

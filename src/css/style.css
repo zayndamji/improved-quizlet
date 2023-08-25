@@ -279,3 +279,8 @@ select {
 #set-parent:hover > div > div.responsive-grid-buttons {
   display: grid;
 }
+
+#main-table > tr > th, #main-table > tr > td {
+  width: 128px;
+  text-align: center;
+}

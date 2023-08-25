@@ -289,6 +289,11 @@ select {
 
 #set-parent:hover > div > div.responsive-grid-buttons {
   display: grid;
+}
+
+#main-table > tr > th, #main-table > tr > td {
+  width: 128px;
+  text-align: center;
 }</style><meta id="meta-set-spanish1review.txt" content="venir	to come	vengo	vienes	viene	venimos	vienen
 traer	to bring	traigo	traes	trae	traemos	traen
 ver	to see	veo	ves	ve	vemos	ven
@@ -359,7 +364,7 @@ despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despe
 <input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();"></div></div>
 <div id="set-parent">
 <button>Choose Sets (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Spanish 2&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;spanishtwo-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;spanishtwo-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="spanishtwo-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div></div></div></div>
-<table>
+<table class="main-table-parent">
 <tbody id="main-table">
 <tr>
 <th>Verb</th>
@@ -488,8 +493,8 @@ function restartQuiz() {
     words[i].word = Array(words[i].definition.length).fill('');
   }
   
-  // if (document.getElementById(0) != undefined)
-  //   document.getElementById(0).select();
+  if (document.getElementById(0) != undefined)
+    document.getElementById(0).children[1].children[0].select();
 }
 
 function clearWords() {
@@ -547,8 +552,27 @@ function regenerateQuiz() {
 
         regenerateQuiz();
 
-        // if (skip && i + 1 < words.length)
-        //   document.getElementById(i + 1).select();
+        if (skip && i + 1 < words.length) {
+          // if (words[i].word[j+1] == undefined) {
+          //   console.log(words[i+1].word[0]);
+          // } else {
+          //   console.log(words[i].word[j+1]);
+          // }
+          // console.log(i, j);
+          // console.log(document.getElementById(i));
+          // console.log(document.getElementById(i).children);
+          // console.log(document.getElementById(i).children.item(j+2).children.item(0));
+          // console.log(Array.from(document.getElementById(i).children)[1]);
+
+          // if (Array.from(document.getElementById(i).children)[j+2] == undefined) {
+          //   console.log('d');
+          //   console.log(Array.from(document.getElementById(i + 1).children));
+          //   Array.from(Array.from(document.getElementById(i + 1).children)[1].children)[0].select();
+          // } else {
+          //   console.log('ddd');
+          //   Array.from(Array.from(document.getElementById(i).children)[j+2].children)[0].select();
+          // }
+        }
       }
     }
 
