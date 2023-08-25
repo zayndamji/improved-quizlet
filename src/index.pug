@@ -17,9 +17,6 @@
   style
     include ./css/style.css
 
-  style
-    include ./css/toggle.css
-
   each e in setData
     - const metaId = 'meta-set-' + e.name
     meta(id=metaId content=e.content)
@@ -36,16 +33,6 @@
       <span>Improved Quizlet</span>
       <span class="navbar-title-author">by Zayn Damji</span>
     </div>
-    <div class="right-bar">
-      <span class="spanish-english-toggle" id="spanish-english-toggle" style="flex: 1; margin-right: 25px; margin-top: 8px; display: flex; align-items: center;">
-        <span style="font-size: 100%; margin-right: 10px;">English</span>
-        <label class="switch">
-          <input type="checkbox" id="flipped-or-not">
-          <span class="slider round"></span>
-        </label>
-        <span style="font-size: 100%; margin-left: 10px;">Spanish</span>
-      </span>
-    </div>
   </div>
 
   <div style="height: 52px"></div>
@@ -54,17 +41,8 @@
     <br>Once you've answered a question, click Enter.<br>If you are wrong, it will show the correct answer next to your answer.<br>To correct the answer, just type the correct answer where your wrong answer was previously!<br>Accents and special characters are mostly ignored, but once you've clicked Enter, it will correct it with the accents.
   </span>
 
-  <span id="flipquiz">
-    <br>
-    <button onclick="flipQuiz(false); regenerateQuiz();">English</button>
-    |&nbsp;
-    <button onclick="flipQuiz(true); regenerateQuiz();">Spanish</button>
-  </span>
-
   <br>
 
-  <button onclick="shuffleWords(); restartQuiz();  regenerateQuiz();">Shuffle</button>
-  |&nbsp;
   <button onclick="restartQuiz(); regenerateQuiz();">Restart</button>
   |&nbsp;
   <button onclick="solveQuiz();">Solve All</button>
@@ -106,7 +84,9 @@
               label(style="font-size: 15px;" for=week[0]) #{week[1]}
   </div>
 
-  <div id="questions" class="responsive-grid"></div>
+  <table>
+    <tbody id="main-table"></tbody>
+  </table>
 
   <div style="width: 100%; position: fixed; bottom: 0; height: 55px; background-color: white;">
     <div id="progress">
