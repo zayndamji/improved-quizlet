@@ -521,8 +521,8 @@ function regenerateQuiz() {
 
   for (let i = 0; i < words.length; i++) {
     const checkAnswer = (target, check, skip) => {
-      const i = target.getAttribute('i');
-      const j = target.getAttribute('j');
+      const i = parseInt(target.getAttribute('i'));
+      const j = parseInt(target.getAttribute('j'));
       const singleDefinition = words[i].definition[j];
 
       if (check) {
@@ -552,26 +552,12 @@ function regenerateQuiz() {
 
         regenerateQuiz();
 
-        if (skip && i + 1 < words.length) {
-          // if (words[i].word[j+1] == undefined) {
-          //   console.log(words[i+1].word[0]);
-          // } else {
-          //   console.log(words[i].word[j+1]);
-          // }
-          // console.log(i, j);
-          // console.log(document.getElementById(i));
-          // console.log(document.getElementById(i).children);
-          // console.log(document.getElementById(i).children.item(j+2).children.item(0));
-          // console.log(Array.from(document.getElementById(i).children)[1]);
-
-          // if (Array.from(document.getElementById(i).children)[j+2] == undefined) {
-          //   console.log('d');
-          //   console.log(Array.from(document.getElementById(i + 1).children));
-          //   Array.from(Array.from(document.getElementById(i + 1).children)[1].children)[0].select();
-          // } else {
-          //   console.log('ddd');
-          //   Array.from(Array.from(document.getElementById(i).children)[j+2].children)[0].select();
-          // }
+        if (skip && parseInt(i) + 1 < words.length) {
+          if (document.getElementById(`input-${i}-${j+1}`) == undefined) {
+            document.getElementById(`input-${i+1}-0`).select();
+          } else {
+            document.getElementById(`input-${i}-${j+1}`).select();
+          }
         }
       }
     }
@@ -590,6 +576,7 @@ function regenerateQuiz() {
         const definition = document.createElement('td');
         const input = document.createElement('input');
         input.type = 'text';
+        input.id = `input-${i}-${j}`;
         input.setAttribute('i', i);
         input.setAttribute('j', j);
         input.classList.add('isInput');
