@@ -24,3 +24,20 @@ fs.writeFileSync('serve/index.html',
     options: JSON.parse(fs.readFileSync('src/options.json', { encoding: 'utf-8' }))
   }
   ));
+
+if (!fs.existsSync('serve/spanish1')) {
+  fs.mkdirSync('serve/spanish1');
+}
+
+fs.writeFileSync('serve/spanish1/index.html',
+  pug.renderFile('spanish1/index.pug', {
+    setData: fs.readdirSync('spanish1/sets').map(e => {
+      return {
+        name: e,
+        content: fs.readFileSync('spanish1/sets/' + e, { encoding: 'utf-8' }),
+      }
+    }),
+    sounds,
+    options: JSON.parse(fs.readFileSync('spanish1/options.json', { encoding: 'utf-8' }))
+  }
+  ));
