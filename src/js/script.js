@@ -128,8 +128,8 @@ function regenerateQuiz() {
     }
 
     for (const inputWord of document.getElementsByClassName('isInput')) {
-      const i = inputWord.getAttribute('i');
-      const j = inputWord.getAttribute('j');
+      const i = parseInt(inputWord.getAttribute('i'));
+      const j = parseInt(inputWord.getAttribute('j'));
 
       if (showStatus) {
         inputWord.style.borderColor = words[i].status[j] == 1 ? 'red' :
@@ -141,6 +141,24 @@ function regenerateQuiz() {
 
       if (inputWord.value != words[i].word[j]) {
         inputWord.value = words[i].word[j];
+      }
+
+      const wrong = document.getElementById(`wrong-${i}-${j}`);
+      if (wrong != undefined) {
+        inputWord.parentElement.removeChild(wrong);
+      }
+      inputWord.style.width = '95%';
+
+      if (words[i].status[j] == 1 && showStatus) {
+        const span = document.createElement('span');
+        span.innerHTML = `&nbsp;${words[i].definition[j]}`;
+        span.style.color = 'red';
+        span.style.fontSize = '80%';
+        span.style.inlineSize = '35%';
+        span.setAttribute('id', `wrong-${i}-${j}`);
+        inputWord.parentElement.append(span);
+        inputWord.style.width = '60%';
+        console.log(span.innerText.length);
       }
     }
   }

@@ -280,7 +280,16 @@ select {
   display: grid;
 }
 
-#main-table > tr > th, #main-table > tr > td {
-  width: 128px;
+#main-table {
+  width: 950px;
+}
+
+#main-table > tr > td {
+  width: calc(90%/6);
+  text-align: left;
+}
+
+#main-table > tr > th {
+  width: 10%;
   text-align: center;
 }
