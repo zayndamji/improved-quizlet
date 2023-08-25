@@ -253,20 +253,6 @@ select {
   align-items: center;
 }
 
-#flipquiz {
-  display: none;
-}
-
-@media only screen and (max-width: 700px) {
-  .spanish-english-toggle {
-    display: none !important;
-  }
-
-  #flipquiz {
-    display: inline-block;
-  }
-}
-
 .navbar {
   position: fixed;
   width: 100%;
@@ -303,68 +289,47 @@ select {
 
 #set-parent:hover > div > div.responsive-grid-buttons {
   display: grid;
-}</style><style>/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #1100ff;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #ff0000;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #ff0000;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}</style><meta id="meta-set-spanish1review.txt" content=""/></head>
+}</style><meta id="meta-set-spanish1review.txt" content="venir	to come	vengo	vienes	viene	venimos	vienen
+traer	to bring	traigo	traes	trae	traemos	traen
+ver	to see	veo	ves	ve	vemos	ven
+tener	to have	tengo	tienes	tiene	tenemos	tienen
+ser	to be	soy	eres	es	somos	son
+salir	to leave; to go out	salgo	sales	sale	salimos	salen
+saber	to know (information)	sé	sabes	sabe	sabemos	saben
+querer	to want	quiero	quieres	quiere	queremos	quieren
+poner	to put; to set	pongo	pones	pone	ponemos	ponen
+poder	to be able able to; can	puedo	puedes	puede	podemos	pueden
+oír	to hear	oigo	oyes	oye	oímos	oyen
+ir	to go	voy	vas	va	vamos	van
+hacer	to do; to make	hago	haces	hace	hacemos	hacen
+estar	to be (temporary)	estoy	estás	está	estamos	están
+decir	to tell; to say	digo	dices	dice	decimos	dicen
+dar	to give	doy	das	da	damos	dan
+conducir	to drive	conduzco	conduces	conduce	conducimos	conducen
+caer	to fall	caigo	caes	cae	caemos	caen
+entender	to understand	entiendo	entiendes	entiende	entendemos	entienden
+jugar	to play	juego	juegas	juega	jugamos	juegan
+pedir	to ask for; to order	pido	pides	pide	pedimos	piden
+pensar	to think	pienso	piensas	piensa	pensamos	piensan
+reír	to laugh	río	ríes	ríe	reímos	ríen
+seguir	to follow; to continue	sigo	sigues	sigue	seguimos	siguen
+sentir	to feel	siento	sientes	siente	sentimos	sienten
+contar	to count; to tell	cuento	cuentas	cuenta	contamos	cuentan
+dormir	to sleep	duermo	duermes	duerme	dormimos	duermen
+empezar	to start	empiezo	empiezas	empieza	empezamos	empiezan
+volver	to return	vuelvo	vuelves	vuelve	volvemos	vuelven
+poder	to be able to; can	puedo	puedes	puede	podemos	pueden
+almorzar	to have lunch	almuerzo	almuerzas	almuerza	almorzamos	almuerzan
+querer	to want; to love	quiero	quieres	quiere	queremos	quieren
+cerrar	to close	cierro	cierras	cierra	cerramos	cierran
+mentir	to lie	miento	mientes	miente	mentimos	mienten
+recomendar	to recommend	recomiendo	recomiendas	recomienda	recomendamos	recomiendan
+sentar	to sit	siento	sientas	sienta	sentamos	sientan
+morir	to die	muero	mueres	muere	morimos	mueren
+recordar	to remember	recuerdo	recuerdas	recuerda	recordamos	recuerdan
+probar	to try; to prove	pruebo	pruebas	prueba	probamos	prueban
+repetir	to repeat	repito	repites	repite	repetimos	repiten
+despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despedimos	despiden"/></head>
 <body>
 <span id="splashscreen" class="fullscreen">
 <span id="splashscreen-inner" style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></span>
@@ -375,27 +340,13 @@ input:checked + .slider:before {
 <span>Improved Quizlet</span>
 <span class="navbar-title-author">by Zayn Damji</span>
 </div>
-<div class="right-bar">
-<span class="spanish-english-toggle" id="spanish-english-toggle" style="flex: 1; margin-right: 25px; margin-top: 8px; display: flex; align-items: center;">
-<span style="font-size: 100%; margin-right: 10px;">English</span>
-<label class="switch">
-<input type="checkbox" id="flipped-or-not">
-<span class="slider round"></span>
-</label>
-<span style="font-size: 100%; margin-left: 10px;">Spanish</span>
-</span>
-</div>
 </div>
 <div style="height: 52px"></div>
 <span id="instructions" style="display: none; font-size: 15px;">
 <br>Once you've answered a question, click Enter.<br>If you are wrong, it will show the correct answer next to your answer.<br>To correct the answer, just type the correct answer where your wrong answer was previously!<br>Accents and special characters are mostly ignored, but once you've clicked Enter, it will correct it with the accents.
 </span>
-<span id="flipquiz">
 <br>
-<button onclick="flipQuiz(false); regenerateQuiz();">English</button>&nbsp;<button onclick="flipQuiz(true); regenerateQuiz();">Spanish</button>
-</span>
-<br>
-<button onclick="shuffleWords(); restartQuiz();  regenerateQuiz();">Shuffle</button>&nbsp;<button onclick="restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>&nbsp;<button onclick="toggleInstructions();">Instructions</button>
+<button onclick="restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>&nbsp;<button onclick="toggleInstructions();">Instructions</button>
 <br>
 <div id="set-parent">
 <button>Settings (hover to see)</button><div style="margin-bottom: 8px;"><label for="status-selector">Hide whether Correct or Incorrect</label>
@@ -404,14 +355,23 @@ input:checked + .slider:before {
 <label for="accents-selector">Ignore Accents</label>
 <input id="accents-selector" name="accents-selector" type="checkbox" onclick="toggleAccents(); regenerateQuiz();">
 <br>
-<label for="skipped-answer-selector">Show Answer when Skipped</label>
-<input id="skipped-answer-selector" name="skipped-answer-selector" type="checkbox" onclick="toggleShowSkippedAnswer(); regenerateQuiz();">
-<br>
 <label for="mute-selector">Mute Sounds</label>
 <input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();"></div></div>
 <div id="set-parent">
-<button>Choose Sets (<span id="numberofsets">0</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Spanish 2&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;spanishtwo-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;spanishtwo-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="spanishtwo-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div></div></div></div>
-<div id="questions" class="responsive-grid"></div>
+<button>Choose Sets (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Spanish 2&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;spanishtwo-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;spanishtwo-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="spanishtwo-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div></div></div></div>
+<table>
+<tbody id="main-table">
+<tr>
+<th>Verb</th>
+<th>Definition</th>
+<th>Yo form</th>
+<th>Tú form</th>
+<th>Él/Ella/Usted form</th>
+<th>Nosotros form</th>
+<th>Ellos/Ellas/Ustedes form</th>
+</tr>
+</tbody>
+</table>
 <div style="width: 100%; position: fixed; bottom: 0; height: 55px; background-color: white;">
 <div id="progress">
 <div id="outer-progress-text">0%</div>
@@ -433,14 +393,6 @@ function toggleAccents(newAccents) {
   ignoreAccents = newAccents ?? !ignoreAccents;
   setLocalStorage('accents', ignoreAccents.toString());
   document.getElementById('accents-selector').checked = ignoreAccents;
-}
-
-let showAnswerWhenSkipped = false;
-
-function toggleShowSkippedAnswer(newSkipped) {
-  showAnswerWhenSkipped = newSkipped ?? !showAnswerWhenSkipped;
-  setLocalStorage('skippedanswer', showAnswerWhenSkipped.toString());
-  document.getElementById('skipped-answer-selector').checked = showAnswerWhenSkipped;
 }
 
 let muteSound = false;
@@ -504,16 +456,11 @@ function splashscreenAnimation(background, text, color = 'white') {
 
 function longSplashscreenAnimation(background, text, color = 'white') {
   customSplashScreenAnimation(background, text, color, 200, 600, 300);
-}</script><script>let words = [], flipped = false, content = '';
+}</script><script>let words = [], content = '';
 
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(|‎/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
-const convertToNoAccents = w => w.replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i');
-
-document.getElementById('spanish-english-toggle').addEventListener('change', e => {
-  flipQuiz(e.target.checked);
-  regenerateQuiz();
-});
+const convertToNoAccents = w => w.replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i').replace('ó', 'o');
 
 function selectSet() {
   const setValue = Array.from(document.querySelectorAll('input[name="set"]:checked')).map(e => e.value);
@@ -531,51 +478,35 @@ async function importFromFile(filename) {
 
   clearWords();
   generateWords();
-  shuffleWords();
   regenerateQuiz();
   restartQuiz();
 }
 
 function restartQuiz() {
   for (let i = 0; i < words.length; i++) {
-    words[i].status = 0;
-    words[i].word = '';
+    words[i].status = Array(words[i].definition.length).fill(0);
+    words[i].word = Array(words[i].definition.length).fill('');
   }
   
-  if (document.getElementById(0) != undefined)
-    document.getElementById(0).select();
+  // if (document.getElementById(0) != undefined)
+  //   document.getElementById(0).select();
 }
 
 function clearWords() {
-  document.getElementById('questions').textContent = '';
+  for (let i = 1; i < document.getElementById('main-table').children.length; i++) {
+    document.getElementById('main-table').removeChild(document.getElementById('main-table').children[i]);
+  }
   words = [];
 }
 
 function generateWords() {
   if (content.length > 0)
     content.split('\n').forEach(word => {
-      const [term, definition] = word.split('\t');
-      words.push({ term, definition, status: 0, word: '' });
+      const term = word.split('\t')[0];
+      console.log(term);
+      const definition = word.split('\t').slice(1);
+      words.push({ term, definition, status: Array(definition.length).fill(0), word: Array(definition.length).fill('') });
     })
-}
-
-function shuffleWords() {
-  let newWords = [], oldWords = JSON.parse(JSON.stringify(words));
-  for (let i = 0; i < words.length; i++) {
-    const index = Math.floor(Math.random() * oldWords.length);
-    newWords.push(oldWords[index]);
-    oldWords.splice(index, 1);
-  }
-  words = newWords;
-}
-
-function flipQuiz(newValue) {
-  if (newValue == undefined)
-    flipped = !flipped;
-  else
-    flipped = newValue;
-  setLocalStorage('flipped', flipped.toString());
-  document.getElementById('flipped-or-not').checked = flipped;
 }
 
 function regenerateQuiz() {
@@ -584,133 +515,98 @@ function regenerateQuiz() {
   if (words.length == 0) return;
 
   for (let i = 0; i < words.length; i++) {
-    let { term, definition } = words[i];
-
-    if (flipped) {
-      const tempTerm = term;
-      term = definition;
-      definition = tempTerm;
-    }
-
-    const checkAnswer = (check, skip) => {
-      const question = document.getElementById(i);
+    const checkAnswer = (target, check, skip) => {
+      const i = target.getAttribute('i');
+      const j = target.getAttribute('j');
+      const singleDefinition = words[i].definition[j];
 
       if (check) {
-        if (question.value.trim() == '') {
-          if (skip) {
-            words[i].status = 3;
-            splashscreenAnimation('yellow', 'Skipped');
-            words[i].word = '‎';
-          } else {
-            words[i].status = 0;
-            words[i].word = '';
-          }
+        if (target.value.trim() == '') {
+          words[i].status[j] = 0;
+          words[i].word[j] = '';
         }
-        else if (question.value.trim() == '‎') {
-          words[i].status = 3;
-          if (skip) {
-            splashscreenAnimation('yellow', 'Skipped');
-          }
-          words[i].word = '‎';
-        }
-        else if (convertToPlain(question.value) == convertToPlain(definition) ||
-                (ignoreAccents && (convertToNoAccents(convertToPlain(question.value)) == convertToNoAccents(convertToPlain(definition))))) {
-          words[i].status = 2;
+
+        else if (convertToPlain(target.value) == convertToPlain(singleDefinition) ||
+                (ignoreAccents && (convertToNoAccents(convertToPlain(target.value)) == convertToNoAccents(convertToPlain(singleDefinition))))) {
+          words[i].status[j] = 2;
           if (skip) {
             splashscreenAnimation('green', 'Correct!');
             playSuccessSound();
           }
-          words[i].word = definition;
+          words[i].word[j] = singleDefinition;
         }
+
         else {
-          words[i].status = 1;
+          words[i].status[j] = 1;
           if (skip) {
             splashscreenAnimation('red', 'Wrong!');
             playFailureSound();
           }
-          words[i].word = question.value.trim();
+          words[i].word[j] = target.value.trim();
         }
 
         regenerateQuiz();
 
-        if (skip && i + 1 < words.length)
-          document.getElementById(i + 1).select();
+        // if (skip && i + 1 < words.length)
+        //   document.getElementById(i + 1).select();
       }
     }
 
     if (document.getElementById(i) == undefined) {
-      const wordDiv = document.createElement('div');
-      wordDiv.setAttribute('class', 'question');
-      wordDiv.setAttribute('id', `div${i}`);
+      const table = document.getElementById('main-table');
+      const row = document.createElement('tr');
+      row.id = i;
 
-      const wordDesc = document.createElement('span');
-      wordDesc.innerHTML = `${term} -&nbsp;`;
-      wordDesc.setAttribute('id', `desc${i}`);
+      const term = document.createElement('th');
+      term.textContent = words[i].term;
+      row.appendChild(term);
 
-      const wordInput = document.createElement('input');
-      wordInput.style.borderColor = 'lightgray';
-      wordInput.setAttribute('type', 'text');
-      wordInput.setAttribute('id', i);
-      wordInput.style.flex = 1;
+      console.log(words[i].definition.length)
+      for (let j = 0; j < words[i].definition.length; j++) {
+        const definition = document.createElement('td');
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.setAttribute('i', i);
+        input.setAttribute('j', j);
+        input.classList.add('isInput');
+        input.value = words[i].word[j];
+        input.addEventListener('keypress', e => checkAnswer(e.target, e.key == 'Enter', true));
+        input.addEventListener('blur', e => checkAnswer(e.target, true, false));
+        definition.appendChild(input);
+        row.appendChild(definition);
+      }
 
-      wordInput.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
-      wordInput.addEventListener('blur', e => checkAnswer(true, false));
-
-      wordDiv.append(wordDesc);
-      wordDiv.append(wordInput);
-
-      document.getElementById('questions').append(wordDiv);
+      table.appendChild(row);
     }
 
-    const div = document.getElementById(`div${i}`);
-    const desc = document.getElementById(`desc${i}`);
-    let question = document.getElementById(i);
+    for (const inputWord of document.getElementsByClassName('isInput')) {
+      const i = inputWord.getAttribute('i');
+      const j = inputWord.getAttribute('j');
 
-    if (desc.innerHTML != `${term} -&nbsp;`) {
-      desc.innerHTML = `${term} -&nbsp;`;
-      question.replaceWith(question.cloneNode(true));
-      question = document.getElementById(i);
-      question.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
-      question.addEventListener('blur', e => checkAnswer(true, false));
-      words[i].status = 0;
-      words[i].word = '';
-    }
-
-    question.value = words[i].word;
-
-    const wrong = document.getElementById(`wrong${i}`);
-    if (wrong != undefined)
-      div.removeChild(wrong);
-
-    if (showStatus) {
-      question.style.borderColor = words[i].status == 1 ? 'red' :
-        words[i].status == 2 ? 'lightgreen' :
-          words[i].status == 3 ? 'rgb(240, 240, 0)' :
+      if (showStatus) {
+        inputWord.style.borderColor = words[i].status[j] == 1 ? 'red' :
+          words[i].status[j] == 2 ? 'lightgreen' :
             'lightgray';
-    } else {
-      question.style.borderColor = 'lightgray';
-    }
+      } else {
+        inputWord.style.borderColor = 'lightgray';
+      }
 
-    if ((words[i].status == 1 || (words[i].status == 3 && showAnswerWhenSkipped)) && showStatus) {
-      const span = document.createElement('span');
-      if (flipped)
-        span.innerHTML = `&nbsp;${words[i].term}  `;
-      else
-        span.innerHTML = `&nbsp;${words[i].definition}  `;
-      span.style.color = 'red';
-      span.style.fontSize = '80%';
-      span.setAttribute('id', `wrong${i}`);
-      div.append(span);
+      if (inputWord.value != words[i].word[j]) {
+        inputWord.value = words[i].word[j];
+      }
     }
   }
 
-  // document.getElementById('total').textContent = words.length;
-  // document.getElementById('correct').textContent = words.filter(word => word.status == 2).length;
-  // document.getElementById('wrong').textContent = words.filter(word => word.status == 1).length;
-  // document.getElementById('unanswered').textContent = words.filter(word => word.status == 0).length;
+  let correct = 0, total = 0;
+  for (const word of words) {
+    for (const status of word.status) {
+      total++;
+      if (status == 2) correct++;
+    }
+  }
 
-  const percentage = words.filter(word => word.status == 2).length / words.length * 100;
-  const text = `${Math.floor(percentage)}% (${words.filter(word => word.status == 2).length}/${words.length})`;
+  const percentage = correct / total * 100;
+  const text = `${Math.floor(percentage)}% (${correct}/${total})`;
   if (!showStatus) {
     document.getElementById('outer-progress-text').textContent = 'Progress Hidden';
     document.getElementById('outer-progress-text').style.display = 'block';
@@ -726,22 +622,15 @@ function regenerateQuiz() {
     document.getElementById('progress-bar').style.display = 'block';
   }
 
-  // if (words.filter(word => word.status == 2).length == words.length) {
-  //   document.getElementById('stats').style.backgroundColor = 'green';
-  //   document.getElementById('stats').style.color = 'white';
-  // }
-  // else {
-  //   document.getElementById('stats').style.backgroundColor = 'inherit';
-  //   document.getElementById('stats').style.color = 'inherit';
-  // }
-
   setLocalStorage('words', JSON.stringify(words));
 }
 
 function solveQuiz() {
   for (let i = 0; i < words.length; i++) {
-    words[i].status = 2;
-    words[i].word = flipped ? words[i].term : words[i].definition;
+    for (let j = 0; j < words[i].definition.length; j++) {
+      words[i].status[j] = 2;
+      words[i].word[j] = words[i].definition[j];
+    }
   }
   regenerateQuiz();
   longSplashscreenAnimation('green', '100%..?');
@@ -774,22 +663,16 @@ if (tempSet != "") {
   setIsStillValid = false;
 }
 
-const tempFlipped = getLocalStorage('flipped');
-if (tempFlipped != "") {
-  flipQuiz(tempFlipped == 'true');
-  console.log('User has flipped quiz before.');
-}
-
 const tempStatus = getLocalStorage('status');
 if (tempStatus != "") {
   toggleStatus(tempStatus == 'true');
   console.log('User has toggled status before.')
 }
 
-const tempSkippedAnswer = getLocalStorage('skippedanswer');
-if (tempSkippedAnswer != "") {
-  toggleShowSkippedAnswer(tempSkippedAnswer == 'true');
-  console.log('User has toggled showing answers when skipped before.')
+const tempAccents = getLocalStorage('accents');
+if (tempAccents != "") {
+  toggleAccents(tempAccents == 'true');
+  console.log('User has toggled accents before.')
 }
 
 const tempMuteSound = getLocalStorage('mutesound');

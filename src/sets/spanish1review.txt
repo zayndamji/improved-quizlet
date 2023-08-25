@@ -1,0 +1,41 @@
+venir	to come	vengo	vienes	viene	venimos	vienen
+traer	to bring	traigo	traes	trae	traemos	traen
+ver	to see	veo	ves	ve	vemos	ven
+tener	to have	tengo	tienes	tiene	tenemos	tienen
+ser	to be	soy	eres	es	somos	son
+salir	to leave; to go out	salgo	sales	sale	salimos	salen
+saber	to know (information)	sé	sabes	sabe	sabemos	saben
+querer	to want	quiero	quieres	quiere	queremos	quieren
+poner	to put; to set	pongo	pones	pone	ponemos	ponen
+poder	to be able able to; can	puedo	puedes	puede	podemos	pueden
+oír	to hear	oigo	oyes	oye	oímos	oyen
+ir	to go	voy	vas	va	vamos	van
+hacer	to do; to make	hago	haces	hace	hacemos	hacen
+estar	to be (temporary)	estoy	estás	está	estamos	están
+decir	to tell; to say	digo	dices	dice	decimos	dicen
+dar	to give	doy	das	da	damos	dan
+conducir	to drive	conduzco	conduces	conduce	conducimos	conducen
+caer	to fall	caigo	caes	cae	caemos	caen
+entender	to understand	entiendo	entiendes	entiende	entendemos	entienden
+jugar	to play	juego	juegas	juega	jugamos	juegan
+pedir	to ask for; to order	pido	pides	pide	pedimos	piden
+pensar	to think	pienso	piensas	piensa	pensamos	piensan
+reír	to laugh	río	ríes	ríe	reímos	ríen
+seguir	to follow; to continue	sigo	sigues	sigue	seguimos	siguen
+sentir	to feel	siento	sientes	siente	sentimos	sienten
+contar	to count; to tell	cuento	cuentas	cuenta	contamos	cuentan
+dormir	to sleep	duermo	duermes	duerme	dormimos	duermen
+empezar	to start	empiezo	empiezas	empieza	empezamos	empiezan
+volver	to return	vuelvo	vuelves	vuelve	volvemos	vuelven
+poder	to be able to; can	puedo	puedes	puede	podemos	pueden
+almorzar	to have lunch	almuerzo	almuerzas	almuerza	almorzamos	almuerzan
+querer	to want; to love	quiero	quieres	quiere	queremos	quieren
+cerrar	to close	cierro	cierras	cierra	cerramos	cierran
+mentir	to lie	miento	mientes	miente	mentimos	mienten
+recomendar	to recommend	recomiendo	recomiendas	recomienda	recomendamos	recomiendan
+sentar	to sit	siento	sientas	sienta	sentamos	sientan
+morir	to die	muero	mueres	muere	morimos	mueren
+recordar	to remember	recuerdo	recuerdas	recuerda	recordamos	recuerdan
+probar	to try; to prove	pruebo	pruebas	prueba	probamos	prueban
+repetir	to repeat	repito	repites	repite	repetimos	repiten
+despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despedimos	despiden

@@ -15,22 +15,16 @@ if (tempSet != "") {
   setIsStillValid = false;
 }
 
-const tempFlipped = getLocalStorage('flipped');
-if (tempFlipped != "") {
-  flipQuiz(tempFlipped == 'true');
-  console.log('User has flipped quiz before.');
-}
-
 const tempStatus = getLocalStorage('status');
 if (tempStatus != "") {
   toggleStatus(tempStatus == 'true');
   console.log('User has toggled status before.')
 }
 
-const tempSkippedAnswer = getLocalStorage('skippedanswer');
-if (tempSkippedAnswer != "") {
-  toggleShowSkippedAnswer(tempSkippedAnswer == 'true');
-  console.log('User has toggled showing answers when skipped before.')
+const tempAccents = getLocalStorage('accents');
+if (tempAccents != "") {
+  toggleAccents(tempAccents == 'true');
+  console.log('User has toggled accents before.')
 }
 
 const tempMuteSound = getLocalStorage('mutesound');

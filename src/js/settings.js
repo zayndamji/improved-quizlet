@@ -14,14 +14,6 @@ function toggleAccents(newAccents) {
   document.getElementById('accents-selector').checked = ignoreAccents;
 }
 
-let showAnswerWhenSkipped = false;
-
-function toggleShowSkippedAnswer(newSkipped) {
-  showAnswerWhenSkipped = newSkipped ?? !showAnswerWhenSkipped;
-  setLocalStorage('skippedanswer', showAnswerWhenSkipped.toString());
-  document.getElementById('skipped-answer-selector').checked = showAnswerWhenSkipped;
-}
-
 let muteSound = false;
 
 function toggleMute(newMute) {
