@@ -1,8 +1,13 @@
-let words = [], content = '';
+let words = [], flipped = false, content = '';
 
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(|‎/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
 const convertToNoAccents = w => w.replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i');
+
+document.getElementById('spanish-english-toggle').addEventListener('change', e => {
+  flipQuiz(e.target.checked);
+  regenerateQuiz();
+});
 
 function selectSet() {
   const setValue = Array.from(document.querySelectorAll('input[name="set"]:checked')).map(e => e.value);
@@ -20,6 +25,7 @@ async function importFromFile(filename) {
 
   clearWords();
   generateWords();
+  shuffleWords();
   regenerateQuiz();
   restartQuiz();
 }
@@ -35,17 +41,35 @@ function restartQuiz() {
 }
 
 function clearWords() {
-  document.getElementById('main-table').textContent = '';
+  document.getElementById('questions').textContent = '';
   words = [];
 }
 
 function generateWords() {
   if (content.length > 0)
     content.split('\n').forEach(word => {
-      const term = word.split('\t')[0];
-      const definition = word.split('\t').slice(1);
-      words.push({ term, definition, status: Array(definition.length).fill(0), word: Array(definition.length).fill('') });
+      const [term, definition] = word.split('\t');
+      words.push({ term, definition, status: 0, word: '' });
     })
+}
+
+function shuffleWords() {
+  let newWords = [], oldWords = JSON.parse(JSON.stringify(words));
+  for (let i = 0; i < words.length; i++) {
+    const index = Math.floor(Math.random() * oldWords.length);
+    newWords.push(oldWords[index]);
+    oldWords.splice(index, 1);
+  }
+  words = newWords;
+}
+
+function flipQuiz(newValue) {
+  if (newValue == undefined)
+    flipped = !flipped;
+  else
+    flipped = newValue;
+  setLocalStorage('flipped', flipped.toString());
+  document.getElementById('flipped-or-not').checked = flipped;
 }
 
 function regenerateQuiz() {
@@ -54,112 +78,133 @@ function regenerateQuiz() {
   if (words.length == 0) return;
 
   for (let i = 0; i < words.length; i++) {
-    const checkAnswer = (target, check, skip) => {
-      if (check) {
-        const value = target.value;
-        let status = 0;
-        let word = '';
-        let definition = target.getAttribute('definition');
+    let { term, definition } = words[i];
 
-        if (value.trim() == '') {
+    if (flipped) {
+      const tempTerm = term;
+      term = definition;
+      definition = tempTerm;
+    }
+
+    const checkAnswer = (check, skip) => {
+      const question = document.getElementById(i);
+
+      if (check) {
+        if (question.value.trim() == '') {
           if (skip) {
-            status = 3;
+            words[i].status = 3;
             splashscreenAnimation('yellow', 'Skipped');
-            word = '‎';
+            words[i].word = '‎';
+          } else {
+            words[i].status = 0;
+            words[i].word = '';
           }
         }
-        else if (value.trim() == '‎') {
-          status = 3;
+        else if (question.value.trim() == '‎') {
+          words[i].status = 3;
           if (skip) {
             splashscreenAnimation('yellow', 'Skipped');
           }
-          word = '‎';
+          words[i].word = '‎';
         }
-        else if (convertToPlain(value) == convertToPlain(definition) ||
-                (ignoreAccents && (convertToNoAccents(convertToPlain(value)) == convertToNoAccents(convertToPlain(definition))))) {
-          status = 2;
+        else if (convertToPlain(question.value) == convertToPlain(definition) ||
+                (ignoreAccents && (convertToNoAccents(convertToPlain(question.value)) == convertToNoAccents(convertToPlain(definition))))) {
+          words[i].status = 2;
           if (skip) {
             splashscreenAnimation('green', 'Correct!');
             playSuccessSound();
           }
-          word = definition;
+          words[i].word = definition;
         }
         else {
-          status = 1;
+          words[i].status = 1;
           if (skip) {
             splashscreenAnimation('red', 'Wrong!');
             playFailureSound();
           }
-          word = value.trim();
+          words[i].word = question.value.trim();
         }
-
-        target.setAttribute('status', status);
-        target.setAttribute('word', word);
 
         regenerateQuiz();
 
-        // if (skip && i + 1 < words.length)
-        //   document.getElementById(i + 1).select();
+        if (skip && i + 1 < words.length)
+          document.getElementById(i + 1).select();
       }
     }
 
     if (document.getElementById(i) == undefined) {
-      const table = document.getElementById('main-table');
-      const row = document.createElement('tr');
-      row.id = i;
+      const wordDiv = document.createElement('div');
+      wordDiv.setAttribute('class', 'question');
+      wordDiv.setAttribute('id', `div${i}`);
 
-      const term = document.createElement('th');
-      term.textContent = words[i].term;
-      row.appendChild(term);
+      const wordDesc = document.createElement('span');
+      wordDesc.innerHTML = `${term} -&nbsp;`;
+      wordDesc.setAttribute('id', `desc${i}`);
 
-      for (let j = 0; j < words[i].definition.length; i++) {
-        const definition = document.createElement('td');
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.setAttribute('id', Math.floor(Math.random() * 10000000));
-        input.classList.add('isInput');
-        input.addEventListener('keypress', e => checkAnswer(e.target, e.key == 'Enter', true));
-        input.addEventListener('blur', e => checkAnswer(e.target, true, false));
-        definition.appendChild(input);
-        row.appendChild(definition);
-      }
+      const wordInput = document.createElement('input');
+      wordInput.style.borderColor = 'lightgray';
+      wordInput.setAttribute('type', 'text');
+      wordInput.setAttribute('id', i);
+      wordInput.style.flex = 1;
 
-      table.appendChild(row);
+      wordInput.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
+      wordInput.addEventListener('blur', e => checkAnswer(true, false));
+
+      wordDiv.append(wordDesc);
+      wordDiv.append(wordInput);
+
+      document.getElementById('questions').append(wordDiv);
     }
-  }
 
-  for (const input of document.getElementsByClassName('isInput')) {
-    input.value = input.getAttribute('word');
-    const id = input.getAttribute('id');
+    const div = document.getElementById(`div${i}`);
+    const desc = document.getElementById(`desc${i}`);
+    let question = document.getElementById(i);
 
-    const wrong = document.getElementById(`wrong${id}`);
+    if (desc.innerHTML != `${term} -&nbsp;`) {
+      desc.innerHTML = `${term} -&nbsp;`;
+      question.replaceWith(question.cloneNode(true));
+      question = document.getElementById(i);
+      question.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
+      question.addEventListener('blur', e => checkAnswer(true, false));
+      words[i].status = 0;
+      words[i].word = '';
+    }
+
+    question.value = words[i].word;
+
+    const wrong = document.getElementById(`wrong${i}`);
     if (wrong != undefined)
-      input.parentElement.removeChild(wrong);
+      div.removeChild(wrong);
 
-    const status = input.getAttribute('status');
     if (showStatus) {
-      input.style.borderColor = status == 1 ? 'red' :
-        status == 2 ? 'lightgreen' :
-          status == 3 ? 'rgb(240, 240, 0)' :
+      question.style.borderColor = words[i].status == 1 ? 'red' :
+        words[i].status == 2 ? 'lightgreen' :
+          words[i].status == 3 ? 'rgb(240, 240, 0)' :
             'lightgray';
     } else {
-      input.style.borderColor = 'lightgray';
+      question.style.borderColor = 'lightgray';
     }
 
-    if ((status == 1 || (status == 3 && showAnswerWhenSkipped)) && showStatus) {
+    if ((words[i].status == 1 || (words[i].status == 3 && showAnswerWhenSkipped)) && showStatus) {
       const span = document.createElement('span');
-      span.innerHTML = `&nbsp;${words[i].definition}  `;
+      if (flipped)
+        span.innerHTML = `&nbsp;${words[i].term}  `;
+      else
+        span.innerHTML = `&nbsp;${words[i].definition}  `;
       span.style.color = 'red';
       span.style.fontSize = '80%';
-      span.setAttribute('id', `wrong${id}`);
-      input.parentElement.append(span);
+      span.setAttribute('id', `wrong${i}`);
+      div.append(span);
     }
   }
 
-  const correctAmount = document.getElementsByClassName('isInput').filter(e => e.getAttribute('status') == 2).length;
-  const percentage = correctAmount / words.length * 100;
-  const text = `${Math.floor(percentage)}% (${correctAmount}/${words.length})`;
+  // document.getElementById('total').textContent = words.length;
+  // document.getElementById('correct').textContent = words.filter(word => word.status == 2).length;
+  // document.getElementById('wrong').textContent = words.filter(word => word.status == 1).length;
+  // document.getElementById('unanswered').textContent = words.filter(word => word.status == 0).length;
 
+  const percentage = words.filter(word => word.status == 2).length / words.length * 100;
+  const text = `${Math.floor(percentage)}% (${words.filter(word => word.status == 2).length}/${words.length})`;
   if (!showStatus) {
     document.getElementById('outer-progress-text').textContent = 'Progress Hidden';
     document.getElementById('outer-progress-text').style.display = 'block';
@@ -175,13 +220,22 @@ function regenerateQuiz() {
     document.getElementById('progress-bar').style.display = 'block';
   }
 
-  // setLocalStorage('words', JSON.stringify(words));
+  // if (words.filter(word => word.status == 2).length == words.length) {
+  //   document.getElementById('stats').style.backgroundColor = 'green';
+  //   document.getElementById('stats').style.color = 'white';
+  // }
+  // else {
+  //   document.getElementById('stats').style.backgroundColor = 'inherit';
+  //   document.getElementById('stats').style.color = 'inherit';
+  // }
+
+  setLocalStorage('words', JSON.stringify(words));
 }
 
 function solveQuiz() {
-  for (const input of document.getElementsByClassName('isInput')) {
-    input.setAttribute('status', 2);
-    input.setAttribute('word', words[i].definition);
+  for (let i = 0; i < words.length; i++) {
+    words[i].status = 2;
+    words[i].word = flipped ? words[i].term : words[i].definition;
   }
   regenerateQuiz();
   longSplashscreenAnimation('green', '100%..?');

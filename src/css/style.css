@@ -242,6 +242,20 @@ select {
   align-items: center;
 }
 
+#flipquiz {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .spanish-english-toggle {
+    display: none !important;
+  }
+
+  #flipquiz {
+    display: inline-block;
+  }
+}
+
 .navbar {
   position: fixed;
   width: 100%;

@@ -253,6 +253,20 @@ select {
   align-items: center;
 }
 
+#flipquiz {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .spanish-english-toggle {
+    display: none !important;
+  }
+
+  #flipquiz {
+    display: inline-block;
+  }
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -289,6 +303,67 @@ select {
 
 #set-parent:hover > div > div.responsive-grid-buttons {
   display: grid;
+}</style><style>/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1100ff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ff0000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff0000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }</style><meta id="meta-set-spanish1review.txt" content=""/></head>
 <body>
 <span id="splashscreen" class="fullscreen">
@@ -300,13 +375,27 @@ select {
 <span>Improved Quizlet</span>
 <span class="navbar-title-author">by Zayn Damji</span>
 </div>
+<div class="right-bar">
+<span class="spanish-english-toggle" id="spanish-english-toggle" style="flex: 1; margin-right: 25px; margin-top: 8px; display: flex; align-items: center;">
+<span style="font-size: 100%; margin-right: 10px;">English</span>
+<label class="switch">
+<input type="checkbox" id="flipped-or-not">
+<span class="slider round"></span>
+</label>
+<span style="font-size: 100%; margin-left: 10px;">Spanish</span>
+</span>
+</div>
 </div>
 <div style="height: 52px"></div>
 <span id="instructions" style="display: none; font-size: 15px;">
 <br>Once you've answered a question, click Enter.<br>If you are wrong, it will show the correct answer next to your answer.<br>To correct the answer, just type the correct answer where your wrong answer was previously!<br>Accents and special characters are mostly ignored, but once you've clicked Enter, it will correct it with the accents.
 </span>
+<span id="flipquiz">
 <br>
-<button onclick="restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>&nbsp;<button onclick="toggleInstructions();">Instructions</button>
+<button onclick="flipQuiz(false); regenerateQuiz();">English</button>&nbsp;<button onclick="flipQuiz(true); regenerateQuiz();">Spanish</button>
+</span>
+<br>
+<button onclick="shuffleWords(); restartQuiz();  regenerateQuiz();">Shuffle</button>&nbsp;<button onclick="restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>&nbsp;<button onclick="toggleInstructions();">Instructions</button>
 <br>
 <div id="set-parent">
 <button>Settings (hover to see)</button><div style="margin-bottom: 8px;"><label for="status-selector">Hide whether Correct or Incorrect</label>
@@ -322,9 +411,7 @@ select {
 <input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();"></div></div>
 <div id="set-parent">
 <button>Choose Sets (<span id="numberofsets">0</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Spanish 2&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;spanishtwo-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;spanishtwo-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="spanishtwo-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div></div></div></div>
-<table>
-<tbody id="main-table"></tbody>
-</table>
+<div id="questions" class="responsive-grid"></div>
 <div style="width: 100%; position: fixed; bottom: 0; height: 55px; background-color: white;">
 <div id="progress">
 <div id="outer-progress-text">0%</div>
@@ -417,11 +504,16 @@ function splashscreenAnimation(background, text, color = 'white') {
 
 function longSplashscreenAnimation(background, text, color = 'white') {
   customSplashScreenAnimation(background, text, color, 200, 600, 300);
-}</script><script>let words = [], content = '';
+}</script><script>let words = [], flipped = false, content = '';
 
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(|‎/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
 const convertToNoAccents = w => w.replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i');
+
+document.getElementById('spanish-english-toggle').addEventListener('change', e => {
+  flipQuiz(e.target.checked);
+  regenerateQuiz();
+});
 
 function selectSet() {
   const setValue = Array.from(document.querySelectorAll('input[name="set"]:checked')).map(e => e.value);
@@ -439,6 +531,7 @@ async function importFromFile(filename) {
 
   clearWords();
   generateWords();
+  shuffleWords();
   regenerateQuiz();
   restartQuiz();
 }
@@ -454,17 +547,35 @@ function restartQuiz() {
 }
 
 function clearWords() {
-  document.getElementById('main-table').textContent = '';
+  document.getElementById('questions').textContent = '';
   words = [];
 }
 
 function generateWords() {
   if (content.length > 0)
     content.split('\n').forEach(word => {
-      const term = word.split('\t')[0];
-      const definition = word.split('\t').slice(1);
-      words.push({ term, definition, status: Array(definition.length).fill(0), word: Array(definition.length).fill('') });
+      const [term, definition] = word.split('\t');
+      words.push({ term, definition, status: 0, word: '' });
     })
+}
+
+function shuffleWords() {
+  let newWords = [], oldWords = JSON.parse(JSON.stringify(words));
+  for (let i = 0; i < words.length; i++) {
+    const index = Math.floor(Math.random() * oldWords.length);
+    newWords.push(oldWords[index]);
+    oldWords.splice(index, 1);
+  }
+  words = newWords;
+}
+
+function flipQuiz(newValue) {
+  if (newValue == undefined)
+    flipped = !flipped;
+  else
+    flipped = newValue;
+  setLocalStorage('flipped', flipped.toString());
+  document.getElementById('flipped-or-not').checked = flipped;
 }
 
 function regenerateQuiz() {
@@ -473,112 +584,133 @@ function regenerateQuiz() {
   if (words.length == 0) return;
 
   for (let i = 0; i < words.length; i++) {
-    const checkAnswer = (target, check, skip) => {
-      if (check) {
-        const value = target.value;
-        let status = 0;
-        let word = '';
-        let definition = target.getAttribute('definition');
+    let { term, definition } = words[i];
 
-        if (value.trim() == '') {
+    if (flipped) {
+      const tempTerm = term;
+      term = definition;
+      definition = tempTerm;
+    }
+
+    const checkAnswer = (check, skip) => {
+      const question = document.getElementById(i);
+
+      if (check) {
+        if (question.value.trim() == '') {
           if (skip) {
-            status = 3;
+            words[i].status = 3;
             splashscreenAnimation('yellow', 'Skipped');
-            word = '‎';
+            words[i].word = '‎';
+          } else {
+            words[i].status = 0;
+            words[i].word = '';
           }
         }
-        else if (value.trim() == '‎') {
-          status = 3;
+        else if (question.value.trim() == '‎') {
+          words[i].status = 3;
           if (skip) {
             splashscreenAnimation('yellow', 'Skipped');
           }
-          word = '‎';
+          words[i].word = '‎';
         }
-        else if (convertToPlain(value) == convertToPlain(definition) ||
-                (ignoreAccents && (convertToNoAccents(convertToPlain(value)) == convertToNoAccents(convertToPlain(definition))))) {
-          status = 2;
+        else if (convertToPlain(question.value) == convertToPlain(definition) ||
+                (ignoreAccents && (convertToNoAccents(convertToPlain(question.value)) == convertToNoAccents(convertToPlain(definition))))) {
+          words[i].status = 2;
           if (skip) {
             splashscreenAnimation('green', 'Correct!');
             playSuccessSound();
           }
-          word = definition;
+          words[i].word = definition;
         }
         else {
-          status = 1;
+          words[i].status = 1;
           if (skip) {
             splashscreenAnimation('red', 'Wrong!');
             playFailureSound();
           }
-          word = value.trim();
+          words[i].word = question.value.trim();
         }
-
-        target.setAttribute('status', status);
-        target.setAttribute('word', word);
 
         regenerateQuiz();
 
-        // if (skip && i + 1 < words.length)
-        //   document.getElementById(i + 1).select();
+        if (skip && i + 1 < words.length)
+          document.getElementById(i + 1).select();
       }
     }
 
     if (document.getElementById(i) == undefined) {
-      const table = document.getElementById('main-table');
-      const row = document.createElement('tr');
-      row.id = i;
+      const wordDiv = document.createElement('div');
+      wordDiv.setAttribute('class', 'question');
+      wordDiv.setAttribute('id', `div${i}`);
 
-      const term = document.createElement('th');
-      term.textContent = words[i].term;
-      row.appendChild(term);
+      const wordDesc = document.createElement('span');
+      wordDesc.innerHTML = `${term} -&nbsp;`;
+      wordDesc.setAttribute('id', `desc${i}`);
 
-      for (let j = 0; j < words[i].definition.length; i++) {
-        const definition = document.createElement('td');
-        const input = document.createElement('input');
-        input.type = 'text';
-        input.setAttribute('id', Math.floor(Math.random() * 10000000));
-        input.classList.add('isInput');
-        input.addEventListener('keypress', e => checkAnswer(e.target, e.key == 'Enter', true));
-        input.addEventListener('blur', e => checkAnswer(e.target, true, false));
-        definition.appendChild(input);
-        row.appendChild(definition);
-      }
+      const wordInput = document.createElement('input');
+      wordInput.style.borderColor = 'lightgray';
+      wordInput.setAttribute('type', 'text');
+      wordInput.setAttribute('id', i);
+      wordInput.style.flex = 1;
 
-      table.appendChild(row);
+      wordInput.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
+      wordInput.addEventListener('blur', e => checkAnswer(true, false));
+
+      wordDiv.append(wordDesc);
+      wordDiv.append(wordInput);
+
+      document.getElementById('questions').append(wordDiv);
     }
-  }
 
-  for (const input of document.getElementsByClassName('isInput')) {
-    input.value = input.getAttribute('word');
-    const id = input.getAttribute('id');
+    const div = document.getElementById(`div${i}`);
+    const desc = document.getElementById(`desc${i}`);
+    let question = document.getElementById(i);
 
-    const wrong = document.getElementById(`wrong${id}`);
+    if (desc.innerHTML != `${term} -&nbsp;`) {
+      desc.innerHTML = `${term} -&nbsp;`;
+      question.replaceWith(question.cloneNode(true));
+      question = document.getElementById(i);
+      question.addEventListener('keypress', e => checkAnswer(e.key == 'Enter', true));
+      question.addEventListener('blur', e => checkAnswer(true, false));
+      words[i].status = 0;
+      words[i].word = '';
+    }
+
+    question.value = words[i].word;
+
+    const wrong = document.getElementById(`wrong${i}`);
     if (wrong != undefined)
-      input.parentElement.removeChild(wrong);
+      div.removeChild(wrong);
 
-    const status = input.getAttribute('status');
     if (showStatus) {
-      input.style.borderColor = status == 1 ? 'red' :
-        status == 2 ? 'lightgreen' :
-          status == 3 ? 'rgb(240, 240, 0)' :
+      question.style.borderColor = words[i].status == 1 ? 'red' :
+        words[i].status == 2 ? 'lightgreen' :
+          words[i].status == 3 ? 'rgb(240, 240, 0)' :
             'lightgray';
     } else {
-      input.style.borderColor = 'lightgray';
+      question.style.borderColor = 'lightgray';
     }
 
-    if ((status == 1 || (status == 3 && showAnswerWhenSkipped)) && showStatus) {
+    if ((words[i].status == 1 || (words[i].status == 3 && showAnswerWhenSkipped)) && showStatus) {
       const span = document.createElement('span');
-      span.innerHTML = `&nbsp;${words[i].definition}  `;
+      if (flipped)
+        span.innerHTML = `&nbsp;${words[i].term}  `;
+      else
+        span.innerHTML = `&nbsp;${words[i].definition}  `;
       span.style.color = 'red';
       span.style.fontSize = '80%';
-      span.setAttribute('id', `wrong${id}`);
-      input.parentElement.append(span);
+      span.setAttribute('id', `wrong${i}`);
+      div.append(span);
     }
   }
 
-  const correctAmount = document.getElementsByClassName('isInput').filter(e => e.getAttribute('status') == 2).length;
-  const percentage = correctAmount / words.length * 100;
-  const text = `${Math.floor(percentage)}% (${correctAmount}/${words.length})`;
+  // document.getElementById('total').textContent = words.length;
+  // document.getElementById('correct').textContent = words.filter(word => word.status == 2).length;
+  // document.getElementById('wrong').textContent = words.filter(word => word.status == 1).length;
+  // document.getElementById('unanswered').textContent = words.filter(word => word.status == 0).length;
 
+  const percentage = words.filter(word => word.status == 2).length / words.length * 100;
+  const text = `${Math.floor(percentage)}% (${words.filter(word => word.status == 2).length}/${words.length})`;
   if (!showStatus) {
     document.getElementById('outer-progress-text').textContent = 'Progress Hidden';
     document.getElementById('outer-progress-text').style.display = 'block';
@@ -594,13 +726,22 @@ function regenerateQuiz() {
     document.getElementById('progress-bar').style.display = 'block';
   }
 
-  // setLocalStorage('words', JSON.stringify(words));
+  // if (words.filter(word => word.status == 2).length == words.length) {
+  //   document.getElementById('stats').style.backgroundColor = 'green';
+  //   document.getElementById('stats').style.color = 'white';
+  // }
+  // else {
+  //   document.getElementById('stats').style.backgroundColor = 'inherit';
+  //   document.getElementById('stats').style.color = 'inherit';
+  // }
+
+  setLocalStorage('words', JSON.stringify(words));
 }
 
 function solveQuiz() {
-  for (const input of document.getElementsByClassName('isInput')) {
-    input.setAttribute('status', 2);
-    input.setAttribute('word', words[i].definition);
+  for (let i = 0; i < words.length; i++) {
+    words[i].status = 2;
+    words[i].word = flipped ? words[i].term : words[i].definition;
   }
   regenerateQuiz();
   longSplashscreenAnimation('green', '100%..?');
@@ -616,22 +757,28 @@ function toggleInstructions() {
 function selectAllSets(on, id) {
   Array.from(document.getElementById(id).children).forEach(e => e.children[0].checked = on);
   selectSet();
-}</script><script>// let setIsStillValid = true;
-// const tempSet = getLocalStorage('set');
-// if (tempSet != "") {
-//   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
-//   for (const set of tempSet.split(';')) {
-//     const prevSet = document.querySelector('input[type="checkbox"][name="set"]#' + set);
-//     if (prevSet != undefined) {
-//       prevSet.checked = true;
-//     } else {
-//       setIsStillValid = false;
-//     }
-//   }
-//   console.log('Fin.');
-// } else {
-//   setIsStillValid = false;
-// }
+}</script><script>let setIsStillValid = true;
+const tempSet = getLocalStorage('set');
+if (tempSet != "") {
+  Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
+  for (const set of tempSet.split(';')) {
+    const prevSet = document.querySelector('input[type="checkbox"][name="set"]#' + set);
+    if (prevSet != undefined) {
+      prevSet.checked = true;
+    } else {
+      setIsStillValid = false;
+    }
+  }
+  console.log('Fin.');
+} else {
+  setIsStillValid = false;
+}
+
+const tempFlipped = getLocalStorage('flipped');
+if (tempFlipped != "") {
+  flipQuiz(tempFlipped == 'true');
+  console.log('User has flipped quiz before.');
+}
 
 const tempStatus = getLocalStorage('status');
 if (tempStatus != "") {
@@ -651,19 +798,19 @@ if (tempMuteSound != "") {
   console.log('User has toggled muting sound before.')
 }
 
-// const tempWords = getLocalStorage('words');
-// const tempContent = getLocalStorage('content');
-// if (tempWords != "" && tempWords != '[]' && tempContent != "" && setIsStillValid) {
-//   content = tempContent;
-//   words = JSON.parse(tempWords);
-//   regenerateQuiz();
-//   console.log('User has previous data... regenerating quiz from saved data.');
-// } else {
-//   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
-//   document.querySelector('input[type="checkbox"][name="set"]').checked = true;
-//   selectSet();
-//   console.log('User is new... generating quiz from scratch.');
-// }
+const tempWords = getLocalStorage('words');
+const tempContent = getLocalStorage('content');
+if (tempWords != "" && tempWords != '[]' && tempContent != "" && setIsStillValid) {
+  content = tempContent;
+  words = JSON.parse(tempWords);
+  regenerateQuiz();
+  console.log('User has previous data... regenerating quiz from saved data.');
+} else {
+  Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
+  document.querySelector('input[type="checkbox"][name="set"]').checked = true;
+  selectSet();
+  console.log('User is new... generating quiz from scratch.');
+}
 
 function setLocalStorage(key, value) {
   localStorage.setItem(key, value);
