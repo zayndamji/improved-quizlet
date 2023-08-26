@@ -147,6 +147,7 @@ function regenerateQuiz() {
       if (wrong != undefined) {
         inputWord.parentElement.removeChild(wrong);
       }
+      inputWord.style.width = '95%';
 
       if (words[i].status[j] == 1 && showStatus) {
         const span = document.createElement('span');
@@ -156,6 +157,8 @@ function regenerateQuiz() {
         span.style.inlineSize = '35%';
         span.setAttribute('id', `wrong-${i}-${j}`);
         inputWord.parentElement.append(span);
+        inputWord.style.width = '60%';
+        console.log(span.innerText.length);
       }
     }
   }
