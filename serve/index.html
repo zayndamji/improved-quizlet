@@ -263,8 +263,6 @@ select {
 }
 
 .navbar-title {
-  margin: auto;
-  text-align: center;
   font-size: 200%;
   position: absolute;
 }
@@ -275,6 +273,17 @@ select {
 
 @media only screen and (max-width: 430px) {
   .navbar-title-author {
+    display: none;
+  }
+}
+
+.navbar-title-desc {
+  font-size: 40%;
+  margin: 0 0 0 -2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-title-desc {
     display: none;
   }
 }
@@ -363,6 +372,7 @@ despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despe
 <div class="navbar-title">
 <span>Improved Quizlet</span>
 <span class="navbar-title-author">by Zayn Damji</span>
+<span class="navbar-title-desc">for Spanish 2</span>
 </div>
 </div>
 <div style="height: 52px"></div>

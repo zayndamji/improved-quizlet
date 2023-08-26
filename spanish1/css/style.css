@@ -282,6 +282,17 @@ select {
   }
 }
 
+.navbar-title-desc {
+  font-size: 40%;
+  margin: 0 0 0 -2px;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar-title-desc {
+    display: none;
+  }
+}
+
 #set-parent > div {
   display: none;
 }
