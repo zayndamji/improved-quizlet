@@ -295,14 +295,20 @@ select {
   width: 950px;
 }
 
-#main-table > tr > td {
-  width: calc(90%/6);
-  text-align: left;
+#main-table > tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 950px;
 }
 
-#main-table > tr > th {
-  width: 10%;
-  text-align: center;
+#main-table > tr > td, #main-table > tr > th {
+  border: 1px gray solid;
+}
+
+#main-table > tr > td > input {
+  width: 100%;
+  height: 100%;
 }</style><meta id="meta-set-spanish1review.txt" content="venir	to come	vengo	vienes	viene	venimos	vienen
 traer	to bring	traigo	traes	trae	traemos	traen
 ver	to see	veo	ves	ve	vemos	ven
@@ -619,7 +625,6 @@ function regenerateQuiz() {
       if (wrong != undefined) {
         inputWord.parentElement.removeChild(wrong);
       }
-      inputWord.style.width = '95%';
 
       if (words[i].status[j] == 1 && showStatus) {
         const span = document.createElement('span');
@@ -629,8 +634,6 @@ function regenerateQuiz() {
         span.style.inlineSize = '35%';
         span.setAttribute('id', `wrong-${i}-${j}`);
         inputWord.parentElement.append(span);
-        inputWord.style.width = '60%';
-        console.log(span.innerText.length);
       }
     }
   }
