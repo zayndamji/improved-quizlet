@@ -292,16 +292,26 @@ select {
 }
 
 #main-table {
-  width: 950px;
+  width: 85vw;
+  font-size: 14px;
 }
 
-#main-table > tr > td {
-  width: calc(90%/6);
-  text-align: left;
+#main-table > tr > * {
+  border: 0.5px black solid;
+  text-align: center;
+  display: inline-flex;
+  width: calc(85vw/7);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  flex-direction: column;
+  height: 20px;
 }
 
-#main-table > tr > th {
-  width: 10%;
+#main-table > tr > * > input {
+  border: 1px gray solid;
+  font-size: 14px;
   text-align: center;
 }</style><meta id="meta-set-spanish1review.txt" content="venir	to come	vengo	vienes	viene	venimos	vienen
 traer	to bring	traigo	traes	trae	traemos	traen
@@ -378,11 +388,11 @@ despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despe
 <tr>
 <th>Verb</th>
 <th>Definition</th>
-<th>Yo form</th>
-<th>Tú form</th>
-<th>Él/Ella/Usted form</th>
-<th>Nosotros form</th>
-<th>Ellos/Ellas/Ustedes form</th>
+<th>Yo</th>
+<th>Tú</th>
+<th>Él/Usted</th>
+<th>Nosotros</th>
+<th>Ellos/Ustedes</th>
 </tr>
 </tbody>
 </table>
@@ -575,6 +585,7 @@ function regenerateQuiz() {
       const table = document.getElementById('main-table');
       const row = document.createElement('tr');
       row.id = i;
+      row.className = '';
 
       const term = document.createElement('th');
       term.textContent = words[i].term;
@@ -619,18 +630,18 @@ function regenerateQuiz() {
       if (wrong != undefined) {
         inputWord.parentElement.removeChild(wrong);
       }
-      inputWord.style.width = '95%';
 
       if (words[i].status[j] == 1 && showStatus) {
         const span = document.createElement('span');
         span.innerHTML = `&nbsp;${words[i].definition[j]}`;
         span.style.color = 'red';
         span.style.fontSize = '80%';
-        span.style.inlineSize = '35%';
         span.setAttribute('id', `wrong-${i}-${j}`);
         inputWord.parentElement.append(span);
-        inputWord.style.width = '60%';
-        console.log(span.innerText.length);
+        inputWord.parentElement.style.height = '40px';
+      } else {
+        inputWord.style.width = '95%';
+        inputWord.parentElement.style.height = '20px';
       }
     }
   }

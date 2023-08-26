@@ -281,15 +281,25 @@ select {
 }
 
 #main-table {
-  width: 950px;
+  width: 85vw;
+  font-size: 14px;
 }
 
-#main-table > tr > td {
-  width: calc(90%/6);
-  text-align: left;
+#main-table > tr > * {
+  border: 0.5px black solid;
+  text-align: center;
+  display: inline-flex;
+  width: calc(85vw/7);
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  flex-direction: column;
+  height: 20px;
 }
 
-#main-table > tr > th {
-  width: 10%;
+#main-table > tr > * > input {
+  border: 1px gray solid;
+  font-size: 14px;
   text-align: center;
 }
