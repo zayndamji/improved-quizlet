@@ -5,9 +5,8 @@ tener	to have	tengo	tienes	tiene	tenemos	tienen
 ser	to be	soy	eres	es	somos	son
 salir	to leave; to go out	salgo	sales	sale	salimos	salen
 saber	to know (information)	sé	sabes	sabe	sabemos	saben
-querer	to want	quiero	quieres	quiere	queremos	quieren
 poner	to put; to set	pongo	pones	pone	ponemos	ponen
-poder	to be able able to; can	puedo	puedes	puede	podemos	pueden
+poder	to be able to; can	puedo	puedes	puede	podemos	pueden
 oír	to hear	oigo	oyes	oye	oímos	oyen
 ir	to go	voy	vas	va	vamos	van
 hacer	to do; to make	hago	haces	hace	hacemos	hacen
@@ -27,7 +26,6 @@ contar	to count; to tell	cuento	cuentas	cuenta	contamos	cuentan
 dormir	to sleep	duermo	duermes	duerme	dormimos	duermen
 empezar	to start	empiezo	empiezas	empieza	empezamos	empiezan
 volver	to return	vuelvo	vuelves	vuelve	volvemos	vuelven
-poder	to be able to; can	puedo	puedes	puede	podemos	pueden
 almorzar	to have lunch	almuerzo	almuerzas	almuerza	almorzamos	almuerzan
 querer	to want; to love	quiero	quieres	quiere	queremos	quieren
 cerrar	to close	cierro	cierras	cierra	cerramos	cierran
