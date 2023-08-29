@@ -40,14 +40,14 @@
 
   <br>
 
-  <button onclick="restartQuiz(); regenerateQuiz();">Restart</button>
+  <button onclick="resetScreen(); restartQuiz(); regenerateQuiz();">Restart</button>
   |&nbsp;
-  <button onclick="resetScreen(); shuffleWords(); regenerateQuiz(); restartQuiz();">Shuffle</button>
+  <button onclick="clearWords(); generateWords(); shuffleWords(); regenerateQuiz();">Shuffle</button>
   |&nbsp;
   <button onclick="solveQuiz();">Solve All</button>
 
   <br>
-  <button onclick="switchTermAndDefinition(); resetScreen(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
+  <button onclick="resetScreen(); restartQuiz(); switchTermAndDefinition(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
   <br>
 
   <div id="set-parent">

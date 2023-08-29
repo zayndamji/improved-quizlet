@@ -16,7 +16,6 @@ async function importFromFile(filename) {
     content += document.getElementById(`meta-set-${filename[i]}.txt`).getAttribute('content') + '\n';
   }
   content = content.trim();
-  setLocalStorage('content', content);
 
   clearWords();
   generateWords();

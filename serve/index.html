@@ -375,9 +375,9 @@ despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despe
 </div>
 <div style="height: 52px"></div>
 <br>
-<button onclick="restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="resetScreen(); shuffleWords(); regenerateQuiz(); restartQuiz();">Shuffle</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>
+<button onclick="resetScreen(); restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="clearWords(); generateWords(); shuffleWords(); regenerateQuiz();">Shuffle</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>
 <br>
-<button onclick="switchTermAndDefinition(); resetScreen(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
+<button onclick="resetScreen(); restartQuiz(); switchTermAndDefinition(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
 <br>
 <div id="set-parent">
 <button>Settings (hover to see)</button><div style="margin-bottom: 8px;"><label for="status-selector">Hide whether Correct or Incorrect</label>
@@ -527,7 +527,6 @@ async function importFromFile(filename) {
     content += document.getElementById(`meta-set-${filename[i]}.txt`).getAttribute('content') + '\n';
   }
   content = content.trim();
-  setLocalStorage('content', content);
 
   clearWords();
   generateWords();
@@ -799,10 +798,10 @@ if (tempSplashscreen != "") {
 }
 
 const tempWords = getLocalStorage('words');
-const tempContent = getLocalStorage('content');
-if (tempWords != "" && tempWords != '[]' && tempContent != "" && setIsStillValid) {
-  content = tempContent;
+if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
+  selectSet();
   words = JSON.parse(tempWords);
+  resetScreen();
   regenerateQuiz();
   console.log('User has previous data... regenerating quiz from saved data.');
 } else {

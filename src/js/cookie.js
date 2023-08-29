@@ -46,10 +46,10 @@ if (tempSplashscreen != "") {
 }
 
 const tempWords = getLocalStorage('words');
-const tempContent = getLocalStorage('content');
-if (tempWords != "" && tempWords != '[]' && tempContent != "" && setIsStillValid) {
-  content = tempContent;
+if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
+  selectSet();
   words = JSON.parse(tempWords);
+  resetScreen();
   regenerateQuiz();
   console.log('User has previous data... regenerating quiz from saved data.');
 } else {
