@@ -29,3 +29,11 @@ function toggleColumns(newColumns) {
   setLocalStorage('columns', testInColumns.toString());
   document.getElementById('column-selector').checked = testInColumns;
 }
+
+let splashscreenEnabled = true;
+
+function toggleSplashscreen(newSplashscreen) {
+  splashscreenEnabled = newSplashscreen ?? !splashscreenEnabled;
+  setLocalStorage('splashscreen', splashscreenEnabled.toString());
+  document.getElementById('splashscreen-selector').checked = splashscreenEnabled;
+}

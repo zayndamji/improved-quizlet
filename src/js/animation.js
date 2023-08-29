@@ -1,7 +1,7 @@
 let doingAnimation = false;
 
 function customSplashScreenAnimation(background, text, color = 'white', onDuration, midDuration, offDuration) {
-  if (doingAnimation || !showStatus) return;
+  if (doingAnimation || !showStatus || !splashscreenEnabled) return;
 
   doingAnimation = true;
   const id = 'splashscreen';

@@ -39,6 +39,12 @@ if (tempColumns != "") {
   console.log('User has toggled columns before.')
 }
 
+const tempSplashscreen = getLocalStorage('splashscreen');
+if (tempSplashscreen != "") {
+  toggleSplashscreen(tempSplashscreen == 'true');
+  console.log('User has toggled splashscreen before.')
+}
+
 const tempWords = getLocalStorage('words');
 const tempContent = getLocalStorage('content');
 if (tempWords != "" && tempWords != '[]' && tempContent != "" && setIsStillValid) {
