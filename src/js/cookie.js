@@ -33,6 +33,12 @@ if (tempMuteSound != "") {
   console.log('User has toggled muting sound before.')
 }
 
+const tempColumns = getLocalStorage('columns');
+if (tempColumns != "") {
+  toggleColumns(tempColumns == 'true');
+  console.log('User has toggled columns before.')
+}
+
 const tempWords = getLocalStorage('words');
 const tempContent = getLocalStorage('content');
 if (tempWords != "" && tempWords != '[]' && tempContent != "" && setIsStillValid) {

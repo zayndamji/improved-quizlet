@@ -89,11 +89,19 @@ function regenerateQuiz() {
 
         regenerateQuiz();
 
-        if (skip && parseInt(i) + 1 < words.length) {
-          if (document.getElementById(`input-${i}-${j+1}`) == undefined) {
-            document.getElementById(`input-${i+1}-0`).select();
+        if (skip && (i + 1 < words.length || j + 1 < words[i].definition.length)) {
+          if (testInColumns) {
+            if (document.getElementById(`input-${i+1}-${j}`) == undefined) {
+              document.getElementById(`input-0-${j+1}`).select();
+            } else {
+              document.getElementById(`input-${i+1}-${j}`).select();
+            }
           } else {
-            document.getElementById(`input-${i}-${j+1}`).select();
+            if (document.getElementById(`input-${i}-${j+1}`) == undefined) {
+              document.getElementById(`input-${i+1}-0`).select();
+            } else {
+              document.getElementById(`input-${i}-${j+1}`).select();
+            }
           }
         }
       }

@@ -21,3 +21,11 @@ function toggleMute(newMute) {
   setLocalStorage('mutesound', muteSound.toString());
   document.getElementById('mute-selector').checked = muteSound;
 }
+
+let testInColumns = false;
+
+function toggleColumns(newColumns) {
+  testInColumns = newColumns ?? !testInColumns;
+  setLocalStorage('columns', testInColumns.toString());
+  document.getElementById('column-selector').checked = testInColumns;
+}
