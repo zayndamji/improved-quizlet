@@ -378,7 +378,7 @@ despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despe
 <br>Once you've answered a question, click Enter.<br>If you are wrong, it will show the correct answer next to your answer.<br>To correct the answer, just type the correct answer where your wrong answer was previously!<br>Accents and special characters are mostly ignored, but once you've clicked Enter, it will correct it with the accents.
 </span>
 <br>
-<button onclick="restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>&nbsp;<button onclick="toggleInstructions();">Instructions</button>
+<button onclick="restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="resetScreen(); shuffleWords(); regenerateQuiz(); restartQuiz();">Shuffle</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>&nbsp;<button onclick="toggleInstructions();">Instructions</button>
 <br>
 <div id="set-parent">
 <button>Settings (hover to see)</button><div style="margin-bottom: 8px;"><label for="status-selector">Hide whether Correct or Incorrect</label>
@@ -521,6 +521,7 @@ async function importFromFile(filename) {
 
   clearWords();
   generateWords();
+  shuffleWords();
   regenerateQuiz();
   restartQuiz();
 }
@@ -535,10 +536,16 @@ function restartQuiz() {
     document.getElementById(0).children[1].children[0].select();
 }
 
-function clearWords() {
+function resetScreen() {
   for (let i = 1; i < document.getElementById('main-table').children.length; i++) {
-    document.getElementById('main-table').removeChild(document.getElementById('main-table').children[i]);
+    const topRow = document.getElementById('main-table').firstElementChild;
+    document.getElementById('main-table').textContent = '';
+    document.getElementById('main-table').append(topRow);
   }
+}
+
+function clearWords() {
+  resetScreen();
   words = [];
 }
 
@@ -550,6 +557,26 @@ function generateWords() {
       const definition = word.split('\t').slice(1);
       words.push({ term, definition, status: Array(definition.length).fill(0), word: Array(definition.length).fill('') });
     })
+}
+
+function shuffleWords() {
+  let newWords = [], oldWords = JSON.parse(JSON.stringify(words));
+  for (let i = 0; i < words.length; i++) {
+    const index = Math.floor(Math.random() * oldWords.length);
+    newWords.push(oldWords[index]);
+    oldWords.splice(index, 1);
+  }
+  words = newWords;
+}
+
+function switchTermAndDefinition() {
+  for (let i = 0; i < words.length; i++) {
+    const tempTerm = words[i].term;
+    words[i].term = words[i].definition[0];
+    words[i].definition[0] = tempTerm;
+  }
+  resetScreen();
+  regenerateQuiz();
 }
 
 function regenerateQuiz() {

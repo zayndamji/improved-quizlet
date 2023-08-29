@@ -20,6 +20,7 @@ async function importFromFile(filename) {
 
   clearWords();
   generateWords();
+  shuffleWords();
   regenerateQuiz();
   restartQuiz();
 }
@@ -34,10 +35,16 @@ function restartQuiz() {
     document.getElementById(0).children[1].children[0].select();
 }
 
-function clearWords() {
+function resetScreen() {
   for (let i = 1; i < document.getElementById('main-table').children.length; i++) {
-    document.getElementById('main-table').removeChild(document.getElementById('main-table').children[i]);
+    const topRow = document.getElementById('main-table').firstElementChild;
+    document.getElementById('main-table').textContent = '';
+    document.getElementById('main-table').append(topRow);
   }
+}
+
+function clearWords() {
+  resetScreen();
   words = [];
 }
 
@@ -49,6 +56,26 @@ function generateWords() {
       const definition = word.split('\t').slice(1);
       words.push({ term, definition, status: Array(definition.length).fill(0), word: Array(definition.length).fill('') });
     })
+}
+
+function shuffleWords() {
+  let newWords = [], oldWords = JSON.parse(JSON.stringify(words));
+  for (let i = 0; i < words.length; i++) {
+    const index = Math.floor(Math.random() * oldWords.length);
+    newWords.push(oldWords[index]);
+    oldWords.splice(index, 1);
+  }
+  words = newWords;
+}
+
+function switchTermAndDefinition() {
+  for (let i = 0; i < words.length; i++) {
+    const tempTerm = words[i].term;
+    words[i].term = words[i].definition[0];
+    words[i].definition[0] = tempTerm;
+  }
+  resetScreen();
+  regenerateQuiz();
 }
 
 function regenerateQuiz() {
