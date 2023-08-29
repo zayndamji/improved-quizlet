@@ -74,8 +74,7 @@ function switchTermAndDefinition() {
     words[i].term = words[i].definition[0];
     words[i].definition[0] = tempTerm;
   }
-  resetScreen();
-  regenerateQuiz();
+  document.getElementById('current-lang').textContent = document.getElementById('current-lang').textContent == 'Spanish' ? 'English' : 'Spanish';
 }
 
 function regenerateQuiz() {
@@ -236,13 +235,6 @@ function solveQuiz() {
   }
   regenerateQuiz();
   longSplashscreenAnimation('green', '100%..?');
-}
-
-function toggleInstructions() {
-  if (document.getElementById('instructions').style.display == 'none')
-    document.getElementById('instructions').style.display = 'block';
-  else
-    document.getElementById('instructions').style.display = 'none';
 }
 
 function selectAllSets(on, id) {
