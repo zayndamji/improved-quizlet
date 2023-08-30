@@ -16,6 +16,9 @@
   
   style
     include ./css/style.css
+  
+  style
+    include ./css/toggle.css
 
   each e in setData
     - const metaId = 'meta-set-' + e.name
@@ -32,7 +35,16 @@
     <div class="navbar-title">
       <span>Improved Quizlet</span>
       <span class="navbar-title-author">by Zayn Damji</span>
-      <span class="navbar-title-desc">for Spanish 2</span>
+    </div>
+    <div class="right-bar">
+      <span class="spanish-english-toggle" id="spanish-english-toggle" style="flex: 1; margin-right: 25px; margin-top: 8px; display: flex; align-items: center;">
+        <span style="font-size: 100%; margin-right: 10px;">English</span>
+        <label class="switch">
+          <input type="checkbox" id="flipped-or-not">
+          <span class="slider round"></span>
+        </label>
+        <span style="font-size: 100%; margin-left: 10px;">Spanish</span>
+      </span>
     </div>
   </div>
 
@@ -40,14 +52,14 @@
 
   <br>
 
-  <button onclick="resetScreen(); restartQuiz(); regenerateQuiz();">Restart</button>
+  <button onclick="resetScreen(); restartQuiz(); updateFlipped(); regenerateQuiz();">Restart</button>
   |&nbsp;
-  <button onclick="clearWords(); generateWords(); shuffleWords(); regenerateQuiz();">Shuffle</button>
+  <button onclick="clearWords(); generateWords(); shuffleWords(); updateFlipped(); regenerateQuiz();">Shuffle</button>
   |&nbsp;
   <button onclick="solveQuiz();">Solve All</button>
 
   <br>
-  <button onclick="resetScreen(); restartQuiz(); switchTermAndDefinition(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
+  <button onclick="switchTermAndDefinition(); resetScreen(); restartQuiz(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
   <br>
 
   <div id="set-parent">

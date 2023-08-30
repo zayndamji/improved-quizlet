@@ -305,6 +305,12 @@ select {
   font-size: 14px;
 }
 
+#main-table > tr {
+  display: inline-flex;
+  justify-content: stretch;
+  flex-direction: row;
+}
+
 #main-table > tr > * {
   border: 0.5px black solid;
   text-align: center;
@@ -315,13 +321,74 @@ select {
   align-items: center;
   padding: 1px;
   flex-direction: column;
-  height: 20px;
 }
 
 #main-table > tr > * > input {
   border: 1px gray solid;
   font-size: 14px;
   text-align: center;
+  width: 95%;
+}</style><style>/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1100ff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ff0000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff0000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }</style><meta id="meta-set-spanish1review.txt" content="venir	to come	vengo	vienes	viene	venimos	vienen
 traer	to bring	traigo	traes	trae	traemos	traen
 ver	to see	veo	ves	ve	vemos	ven
@@ -370,14 +437,23 @@ despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despe
 <div class="navbar-title">
 <span>Improved Quizlet</span>
 <span class="navbar-title-author">by Zayn Damji</span>
-<span class="navbar-title-desc">for Spanish 2</span>
+</div>
+<div class="right-bar">
+<span class="spanish-english-toggle" id="spanish-english-toggle" style="flex: 1; margin-right: 25px; margin-top: 8px; display: flex; align-items: center;">
+<span style="font-size: 100%; margin-right: 10px;">English</span>
+<label class="switch">
+<input type="checkbox" id="flipped-or-not">
+<span class="slider round"></span>
+</label>
+<span style="font-size: 100%; margin-left: 10px;">Spanish</span>
+</span>
 </div>
 </div>
 <div style="height: 52px"></div>
 <br>
-<button onclick="resetScreen(); restartQuiz(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="clearWords(); generateWords(); shuffleWords(); regenerateQuiz();">Shuffle</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>
+<button onclick="resetScreen(); restartQuiz(); updateFlipped(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="clearWords(); generateWords(); shuffleWords(); updateFlipped(); regenerateQuiz();">Shuffle</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>
 <br>
-<button onclick="resetScreen(); restartQuiz(); switchTermAndDefinition(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
+<button onclick="switchTermAndDefinition(); resetScreen(); restartQuiz(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
 <br>
 <div id="set-parent">
 <button>Settings (hover to see)</button><div style="margin-bottom: 8px;"><label for="status-selector">Hide whether Correct or Incorrect</label>
@@ -509,7 +585,7 @@ function splashscreenAnimation(background, text, color = 'white') {
 
 function longSplashscreenAnimation(background, text, color = 'white') {
   customSplashScreenAnimation(background, text, color, 200, 600, 300);
-}</script><script>let words = [], content = '';
+}</script><script>let words = [], content = '', flipped = false;
 
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(|‎/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
@@ -531,8 +607,9 @@ async function importFromFile(filename) {
   clearWords();
   generateWords();
   shuffleWords();
-  regenerateQuiz();
   restartQuiz();
+  updateFlipped();
+  regenerateQuiz();
 }
 
 function restartQuiz() {
@@ -553,6 +630,21 @@ function resetScreen() {
   }
 }
 
+function updateFlipped() {
+  for (let i = 0; i < words.length; i++) {
+    const originalTerm = words[i].originalTerm;
+    if (originalTerm == words[i].term && flipped) {
+      const tempTerm = words[i].term;
+      words[i].term = words[i].definition[0];
+      words[i].definition[0] = tempTerm;
+    } else if (originalTerm == words[i].definition[0] && !flipped) {
+      const tempTerm = words[i].term;
+      words[i].term = words[i].definition[0];
+      words[i].definition[0] = tempTerm;
+    }
+  }
+}
+
 function clearWords() {
   resetScreen();
   words = [];
@@ -562,9 +654,10 @@ function generateWords() {
   if (content.length > 0)
     content.split('\n').forEach(word => {
       const term = word.split('\t')[0];
+      const originalTerm = '' + term;
       console.log(term);
       const definition = word.split('\t').slice(1);
-      words.push({ term, definition, status: Array(definition.length).fill(0), word: Array(definition.length).fill('') });
+      words.push({ originalTerm, term, definition, status: Array(definition.length).fill(0), word: Array(definition.length).fill('') });
     })
 }
 
@@ -579,12 +672,10 @@ function shuffleWords() {
 }
 
 function switchTermAndDefinition() {
-  for (let i = 0; i < words.length; i++) {
-    const tempTerm = words[i].term;
-    words[i].term = words[i].definition[0];
-    words[i].definition[0] = tempTerm;
-  }
-  document.getElementById('current-lang').textContent = document.getElementById('current-lang').textContent == 'Spanish' ? 'English' : 'Spanish';
+  flipped = !flipped;
+  document.getElementById('current-lang').textContent = flipped ? 'English' : 'Spanish';
+  document.getElementById('flipped-or-not').checked = flipped;
+  updateFlipped();
 }
 
 function regenerateQuiz() {
@@ -700,10 +791,6 @@ function regenerateQuiz() {
         span.style.fontSize = '80%';
         span.setAttribute('id', `wrong-${i}-${j}`);
         inputWord.parentElement.append(span);
-        inputWord.parentElement.style.height = '40px';
-      } else {
-        inputWord.style.width = '95%';
-        inputWord.parentElement.style.height = '20px';
       }
     }
   }
@@ -750,7 +837,14 @@ function solveQuiz() {
 function selectAllSets(on, id) {
   Array.from(document.getElementById(id).children).forEach(e => e.children[0].checked = on);
   selectSet();
-}</script><script>let setIsStillValid = true;
+}
+
+document.getElementById('flipped-or-not').addEventListener('change', () => {
+  switchTermAndDefinition();
+  resetScreen();
+  restartQuiz();
+  regenerateQuiz();
+})</script><script>let setIsStillValid = true;
 const tempSet = getLocalStorage('set');
 if (tempSet != "") {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);

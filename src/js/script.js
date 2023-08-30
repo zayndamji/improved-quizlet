@@ -1,4 +1,4 @@
-let words = [], content = '';
+let words = [], content = '', flipped = false;
 
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(|‎/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
@@ -20,8 +20,9 @@ async function importFromFile(filename) {
   clearWords();
   generateWords();
   shuffleWords();
-  regenerateQuiz();
   restartQuiz();
+  updateFlipped();
+  regenerateQuiz();
 }
 
 function restartQuiz() {
@@ -42,6 +43,21 @@ function resetScreen() {
   }
 }
 
+function updateFlipped() {
+  for (let i = 0; i < words.length; i++) {
+    const originalTerm = words[i].originalTerm;
+    if (originalTerm == words[i].term && flipped) {
+      const tempTerm = words[i].term;
+      words[i].term = words[i].definition[0];
+      words[i].definition[0] = tempTerm;
+    } else if (originalTerm == words[i].definition[0] && !flipped) {
+      const tempTerm = words[i].term;
+      words[i].term = words[i].definition[0];
+      words[i].definition[0] = tempTerm;
+    }
+  }
+}
+
 function clearWords() {
   resetScreen();
   words = [];
@@ -51,9 +67,10 @@ function generateWords() {
   if (content.length > 0)
     content.split('\n').forEach(word => {
       const term = word.split('\t')[0];
+      const originalTerm = '' + term;
       console.log(term);
       const definition = word.split('\t').slice(1);
-      words.push({ term, definition, status: Array(definition.length).fill(0), word: Array(definition.length).fill('') });
+      words.push({ originalTerm, term, definition, status: Array(definition.length).fill(0), word: Array(definition.length).fill('') });
     })
 }
 
@@ -68,12 +85,10 @@ function shuffleWords() {
 }
 
 function switchTermAndDefinition() {
-  for (let i = 0; i < words.length; i++) {
-    const tempTerm = words[i].term;
-    words[i].term = words[i].definition[0];
-    words[i].definition[0] = tempTerm;
-  }
-  document.getElementById('current-lang').textContent = document.getElementById('current-lang').textContent == 'Spanish' ? 'English' : 'Spanish';
+  flipped = !flipped;
+  document.getElementById('current-lang').textContent = flipped ? 'English' : 'Spanish';
+  document.getElementById('flipped-or-not').checked = flipped;
+  updateFlipped();
 }
 
 function regenerateQuiz() {
@@ -189,10 +204,6 @@ function regenerateQuiz() {
         span.style.fontSize = '80%';
         span.setAttribute('id', `wrong-${i}-${j}`);
         inputWord.parentElement.append(span);
-        inputWord.parentElement.style.height = '40px';
-      } else {
-        inputWord.style.width = '95%';
-        inputWord.parentElement.style.height = '20px';
       }
     }
   }
@@ -240,3 +251,10 @@ function selectAllSets(on, id) {
   Array.from(document.getElementById(id).children).forEach(e => e.children[0].checked = on);
   selectSet();
 }
+
+document.getElementById('flipped-or-not').addEventListener('change', () => {
+  switchTermAndDefinition();
+  resetScreen();
+  restartQuiz();
+  regenerateQuiz();
+})
