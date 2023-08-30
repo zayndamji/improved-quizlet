@@ -389,6 +389,12 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+  .spanish-english-toggle {
+    display: none !important;
+  }
 }</style><meta id="meta-set-spanish1review.txt" content="venir	to come	vengo	vienes	viene	venimos	vienen
 traer	to bring	traigo	traes	trae	traemos	traen
 ver	to see	veo	ves	ve	vemos	ven
@@ -631,6 +637,9 @@ function resetScreen() {
 }
 
 function updateFlipped() {
+  document.getElementById('current-lang').textContent = flipped ? 'English' : 'Spanish';
+  document.getElementById('flipped-or-not').checked = flipped;
+  
   for (let i = 0; i < words.length; i++) {
     const originalTerm = words[i].originalTerm;
     if (originalTerm == words[i].term && flipped) {
@@ -673,9 +682,8 @@ function shuffleWords() {
 
 function switchTermAndDefinition() {
   flipped = !flipped;
-  document.getElementById('current-lang').textContent = flipped ? 'English' : 'Spanish';
-  document.getElementById('flipped-or-not').checked = flipped;
   updateFlipped();
+  setLocalStorage('flipped', flipped.toString());
 }
 
 function regenerateQuiz() {
@@ -889,6 +897,13 @@ const tempSplashscreen = getLocalStorage('splashscreen');
 if (tempSplashscreen != "") {
   toggleSplashscreen(tempSplashscreen == 'true');
   console.log('User has toggled splashscreen before.')
+}
+
+const tempFlipped = getLocalStorage('flipped');
+if (tempFlipped != "") {
+  flipped = tempFlipped == 'true';
+  updateFlipped();
+  console.log('User has toggled language before.')
 }
 
 const tempWords = getLocalStorage('words');

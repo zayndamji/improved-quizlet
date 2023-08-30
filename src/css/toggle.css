@@ -60,3 +60,9 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+@media only screen and (max-width: 700px) {
+  .spanish-english-toggle {
+    display: none !important;
+  }
+}

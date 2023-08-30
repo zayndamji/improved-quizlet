@@ -45,6 +45,13 @@ if (tempSplashscreen != "") {
   console.log('User has toggled splashscreen before.')
 }
 
+const tempFlipped = getLocalStorage('flipped');
+if (tempFlipped != "") {
+  flipped = tempFlipped == 'true';
+  updateFlipped();
+  console.log('User has toggled language before.')
+}
+
 const tempWords = getLocalStorage('words');
 if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
   selectSet();

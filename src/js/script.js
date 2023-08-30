@@ -44,6 +44,9 @@ function resetScreen() {
 }
 
 function updateFlipped() {
+  document.getElementById('current-lang').textContent = flipped ? 'English' : 'Spanish';
+  document.getElementById('flipped-or-not').checked = flipped;
+  
   for (let i = 0; i < words.length; i++) {
     const originalTerm = words[i].originalTerm;
     if (originalTerm == words[i].term && flipped) {
@@ -86,9 +89,8 @@ function shuffleWords() {
 
 function switchTermAndDefinition() {
   flipped = !flipped;
-  document.getElementById('current-lang').textContent = flipped ? 'English' : 'Spanish';
-  document.getElementById('flipped-or-not').checked = flipped;
   updateFlipped();
+  setLocalStorage('flipped', flipped.toString());
 }
 
 function regenerateQuiz() {
