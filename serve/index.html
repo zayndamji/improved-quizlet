@@ -315,7 +315,7 @@ select {
   border: 0.5px black solid;
   text-align: center;
   display: inline-flex;
-  width: calc(85vw/7);
+  width: calc(85vw/8);
   overflow: hidden;
   justify-content: center;
   align-items: center;
@@ -395,7 +395,19 @@ input:checked + .slider:before {
   .spanish-english-toggle {
     display: none !important;
   }
-}</style><meta id="meta-set-spanish1review.txt" content="venir	to come	vengo	vienes	viene	venimos	vienen
+}</style><meta id="meta-set-contextclues.txt" content="de repente	suddenly
+desde	from, since
+hasta	until
+una vez	once
+ya	already
+ayer	yesterday
+anteayer	the day before yesterday
+anoche	last night
+anteanoche	the night before last
+la semana pasada	last week
+el año pasado	last year
+el mes pasado	last month
+dos veces	twice"/><meta id="meta-set-spanish1review.txt" content="venir	to come	vengo	vienes	viene	venimos	vienen
 traer	to bring	traigo	traes	trae	traemos	traen
 ver	to see	veo	ves	ve	vemos	ven
 tener	to have	tengo	tienes	tiene	tenemos	tienen
@@ -475,12 +487,12 @@ despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despe
 <input id="column-selector" name="column-selector" type="checkbox" onclick="toggleColumns(); regenerateQuiz();">
 <br>
 <label for="splashscreen-selector">Show Splashscreen</label>
-<input id="splashscreen-selector" name="splashscreen-selector" type="checkbox" onclick="toggleSplashscreen(); regenerateQuiz();" checked></div></div>
+<input id="splashscreen-selector" name="splashscreen-selector" type="checkbox" onclick="toggleSplashscreen(); regenerateQuiz();"></div></div>
 <div id="set-parent">
-<button>Choose Sets (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Spanish 2&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;spanishtwo-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;spanishtwo-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="spanishtwo-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div></div></div></div>
+<button>Choose Sets (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Spanish 2&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;spanishtwo-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;spanishtwo-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="spanishtwo-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div><div><input style="width: 10px;" type="checkbox" id="contextclues" name="set" value="contextclues" onchange="selectSet()"/><label style="font-size: 15px;" for="contextclues">Preterite Context Clues</label></div></div></div></div>
 <table class="main-table-parent">
 <tbody id="main-table">
-<tr>
+<tr id="firstrow">
 <th>Verb</th>
 <th>Definition</th>
 <th>Yo</th>
@@ -547,11 +559,11 @@ function toggleColumns(newColumns) {
   document.getElementById('column-selector').checked = testInColumns;
 }
 
-let splashscreenEnabled = true;
+let splashscreenEnabled = false;
 
 function toggleSplashscreen(newSplashscreen) {
   splashscreenEnabled = newSplashscreen ?? !splashscreenEnabled;
-  setLocalStorage('splashscreen', splashscreenEnabled.toString());
+  setLocalStorage('splash', splashscreenEnabled.toString());
   document.getElementById('splashscreen-selector').checked = splashscreenEnabled;
 }</script><script>function playSound(id, universal = false) {
   if ((showStatus || universal) && !muteSound) {
@@ -646,10 +658,13 @@ function restartQuiz() {
 }
 
 function resetScreen() {
-  for (let i = 1; i < document.getElementById('main-table').children.length; i++) {
-    const topRow = document.getElementById('main-table').firstElementChild;
-    document.getElementById('main-table').textContent = '';
-    document.getElementById('main-table').append(topRow);
+  const topRow = document.getElementById('main-table').firstElementChild;
+  document.getElementById('main-table').textContent = '';
+  document.getElementById('main-table').append(topRow);
+  if (getLocalStorage('set') == 'spanish1review') {
+    document.getElementById('firstrow').style.display = 'flex';
+  } else {
+    document.getElementById('firstrow').style.display = 'none';
   }
 }
 
@@ -910,7 +925,7 @@ if (tempColumns != "") {
   console.log('User has toggled columns before.')
 }
 
-const tempSplashscreen = getLocalStorage('splashscreen');
+const tempSplashscreen = getLocalStorage('splash');
 if (tempSplashscreen != "") {
   toggleSplashscreen(tempSplashscreen == 'true');
   console.log('User has toggled splashscreen before.')

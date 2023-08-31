@@ -30,10 +30,10 @@ function toggleColumns(newColumns) {
   document.getElementById('column-selector').checked = testInColumns;
 }
 
-let splashscreenEnabled = true;
+let splashscreenEnabled = false;
 
 function toggleSplashscreen(newSplashscreen) {
   splashscreenEnabled = newSplashscreen ?? !splashscreenEnabled;
-  setLocalStorage('splashscreen', splashscreenEnabled.toString());
+  setLocalStorage('splash', splashscreenEnabled.toString());
   document.getElementById('splashscreen-selector').checked = splashscreenEnabled;
 }

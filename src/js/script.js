@@ -36,10 +36,13 @@ function restartQuiz() {
 }
 
 function resetScreen() {
-  for (let i = 1; i < document.getElementById('main-table').children.length; i++) {
-    const topRow = document.getElementById('main-table').firstElementChild;
-    document.getElementById('main-table').textContent = '';
-    document.getElementById('main-table').append(topRow);
+  const topRow = document.getElementById('main-table').firstElementChild;
+  document.getElementById('main-table').textContent = '';
+  document.getElementById('main-table').append(topRow);
+  if (getLocalStorage('set') == 'spanish1review') {
+    document.getElementById('firstrow').style.display = 'flex';
+  } else {
+    document.getElementById('firstrow').style.display = 'none';
   }
 }
 

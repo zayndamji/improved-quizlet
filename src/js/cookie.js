@@ -39,7 +39,7 @@ if (tempColumns != "") {
   console.log('User has toggled columns before.')
 }
 
-const tempSplashscreen = getLocalStorage('splashscreen');
+const tempSplashscreen = getLocalStorage('splash');
 if (tempSplashscreen != "") {
   toggleSplashscreen(tempSplashscreen == 'true');
   console.log('User has toggled splashscreen before.')
