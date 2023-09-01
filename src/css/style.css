@@ -13,11 +13,6 @@ body {
   padding-left: 1em;
 }
 
-input[type='text'] {
-  border: 2px solid black;
-  border-radius: 5px;
-}
-
 @keyframes splashscreen-on {
   from {opacity: 0%;}
   to {opacity: 100%;}
@@ -298,10 +293,12 @@ select {
   display: inline-flex;
   justify-content: stretch;
   flex-direction: row;
+  margin-right: 8px;
+  margin-bottom: 4px;
 }
 
 #main-table > tr > * {
-  border: 0.5px black solid;
+  border: 0.5px gray solid;
   text-align: center;
   display: inline-flex;
   width: calc(85vw/8);
@@ -313,7 +310,7 @@ select {
 }
 
 #main-table > tr > * > input {
-  border: 1px gray solid;
+  border: none;
   font-size: 14px;
   text-align: center;
   width: 95%;
