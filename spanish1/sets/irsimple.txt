@@ -1,8 +1,0 @@
-abrir	to open
-asistir	to attend
-compartir	to share
-decidir	to decide
-describir	to describe
-escribir	to write
-recibir	to receive
-vivir	to live

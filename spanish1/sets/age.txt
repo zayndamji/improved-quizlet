@@ -1,4 +1,0 @@
-el año	year
-¿Cuántos años tienes?	How old are you? (familiar)
-¿Cuántos años tiene usted?	How old are you? (formal)
-Yo tengo (número) años	I am (number) years old

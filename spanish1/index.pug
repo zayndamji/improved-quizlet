@@ -69,8 +69,6 @@
   <button onclick="restartQuiz(); regenerateQuiz();">Restart</button>
   |&nbsp;
   <button onclick="solveQuiz();">Solve All</button>
-  |&nbsp;
-  <button onclick="toggleInstructions();">Instructions</button>
   <br>
 
   <div id="set-parent">
@@ -90,7 +88,7 @@
   </div>
 
   <div id="set-parent">
-    <button>Choose Sets (<span id="numberofsets">0</span> chosen) (hover to see)</button>
+    <button>Change which topic(s) you are studying (<span id="numberofsets">0</span> chosen) (hover to see)</button>
     div(id="set")
       each sec in options
         - const secId = `${sec.name}-setchooser`

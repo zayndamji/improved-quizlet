@@ -1,5 +1,0 @@
-juego	to play/yo
-juega	to play/él
-juegas	to play/tú
-jugamos	to play/nos
-juegan	to play/ellos
