@@ -285,7 +285,6 @@ select {
 }
 
 #main-table {
-  width: 85vw;
   font-size: 14px;
 }
 
@@ -301,16 +300,15 @@ select {
   border: 0.5px gray solid;
   text-align: center;
   display: inline-flex;
-  width: calc(85vw/8);
+  width: calc(calc(100vw - 2em - 64px) / 8);
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  padding: 1px;
   flex-direction: column;
 }
 
 #main-table > tr > * > input {
-  border: none;
+  border: solid 1px;
   font-size: 14px;
   text-align: center;
   width: 95%;
