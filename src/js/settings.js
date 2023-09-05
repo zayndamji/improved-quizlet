@@ -14,7 +14,7 @@ function toggleAccents(newAccents) {
   document.getElementById('accents-selector').checked = ignoreAccents;
 }
 
-let muteSound = false;
+let muteSound = true;
 
 function toggleMute(newMute) {
   muteSound = newMute ?? !muteSound;
