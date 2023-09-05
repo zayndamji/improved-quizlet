@@ -1,0 +1,18 @@
+traer	to bring	traje	trajiste	trajo	trajimos	trajeron
+decir	to tell; to say	dije	dijiste	dijo	dijimos	dijeron
+conducir	to drive	conduje	condujiste	condujo	condujimos	condujeron
+traducir	to translate	traduje	tradujiste	tradujo	tradujimos	tradujeron
+producir	to produce	produje	produjiste	produjo	produjimos	produjeron
+estar	to be (temporary)	estuve	estuviste	estuvo	estuvimos	estuvieron
+poner	to put; to set	puse	pusiste	puso	pusimos	pusieron
+poder	to be able to; can	pude	pudiste	pudo	pudimos	pudieron
+saber	to know (information)	supe	supiste	supo	supimos	supieron
+tener	to have	tuve	tuviste	tuvo	tuvimos	tuvieron
+obtener	to get; to obtain	obtuve	obtuviste	obtuvo	obtuvimos	obtuvieron
+caber	to fit	cupe	cupiste	cupo	cupimos	cupieron
+andar	to walk	anduve	anduviste	anduvo	anduvimos	anduvieron
+querer	to want; to love	quise	quisiste	quiso	quisimos	quisieron
+venir	to come	vine	viniste	vino	vinimos	vinieron
+hacer	to do; to make	hice	hiciste	hizo	hicimos	hicieron
+dar	to give	di	diste	dio	dimos	dieron
+ver	to see	vi	viste	vio	vimos	vieron

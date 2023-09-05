@@ -10,11 +10,14 @@
       [
         "contextclues",
         "Preterite Context Clues"
-      ]
-      ,
+      ],
       [
         "stemchanging",
-        "Stem Changing Verbs (e:i, o:u, reflexive)"
+        "Stem Changing Verbs (preterite)"
+      ],
+      [
+        "irregular",
+        "Irregular Verbs (preterite)"
       ]
     ]
   }
