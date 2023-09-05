@@ -973,6 +973,7 @@ if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
 } else {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
   document.querySelectorAll('input[type="checkbox"][name="set"]')[2].checked = true;
+  document.querySelectorAll('input[type="checkbox"][name="set"]')[3].checked = true;
   selectSet();
   console.log('User is new... generating quiz from scratch.');
 }</script></body>
