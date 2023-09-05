@@ -1,0 +1,14 @@
+servir	to serve	serví	serviste	sirvió	servimos	sirvieron
+pedir	to ask for; to order	pedí	pediste	pidió	pedimos	pidieron
+mentir	to lie	mentí	mentiste	mintió	mentimos	mintieron
+medir	to measure	medí	mediste	midió	medimos	midieron
+preferir	to prefer	preferí	preferiste	prefirió	preferimos	prefirieron
+seguir	to follow; to continue	seguí	seguiste	siguió	seguimos	siguieron
+conseguir	to get; to obtain	conseguí	conseguiste	consiguió	conseguimos	consiguieron
+repetir	to repeat	repetí	repetiste	repitió	repetimos	repitieron
+dormir	to sleep	dormí	dormiste	durmió	dormimos	durmieron
+morir	to die	morí	moriste	murió	morimos	murieron
+divertirse	to have fun	me divertí	te divertiste	se divirtió	nos divertimos	se divirtieron
+despedirse	to say goodbye	me despedí	te despediste	se despidió	nos despedimos	se despidieron
+vestirse	to get dressed	me vestí	te vestiste	se vistió	nos vestimos	se vistieron
+dormirse	to fall asleep	me dormí	te dormiste	se durmió	nos dormimos	se durmieron
