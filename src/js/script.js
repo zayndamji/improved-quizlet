@@ -39,10 +39,10 @@ function resetScreen() {
   const topRow = document.getElementById('main-table').firstElementChild;
   document.getElementById('main-table').textContent = '';
   document.getElementById('main-table').append(topRow);
-  if (getLocalStorage('set') == 'spanish1review') {
-    document.getElementById('firstrow').style.display = 'flex';
-  } else {
+  if (getLocalStorage('set').includes('contextclues')) {
     document.getElementById('firstrow').style.display = 'none';
+  } else {
+    document.getElementById('firstrow').style.display = 'flex';
   }
 }
 

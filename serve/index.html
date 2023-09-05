@@ -669,10 +669,10 @@ function resetScreen() {
   const topRow = document.getElementById('main-table').firstElementChild;
   document.getElementById('main-table').textContent = '';
   document.getElementById('main-table').append(topRow);
-  if (getLocalStorage('set') == 'spanish1review') {
-    document.getElementById('firstrow').style.display = 'flex';
-  } else {
+  if (getLocalStorage('set').includes('contextclues')) {
     document.getElementById('firstrow').style.display = 'none';
+  } else {
+    document.getElementById('firstrow').style.display = 'flex';
   }
 }
 
@@ -955,7 +955,7 @@ if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
   console.log('User has previous data... regenerating quiz from saved data.');
 } else {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
-  document.querySelector('input[type="checkbox"][name="set"]').checked = true;
+  document.querySelectorAll('input[type="checkbox"][name="set"]')[2].checked = true;
   selectSet();
   console.log('User is new... generating quiz from scratch.');
 }</script></body>
