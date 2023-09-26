@@ -1,0 +1,26 @@
+el accidente	accident
+el antibiótico	antibiotic
+la aspirina	aspirin
+la clínica	clinic
+el consultorio	doctor's office
+el/la dentista	dentist
+el/la doctor(a)	doctor
+el dolor (de cabeza)	(head)ache; pain
+el/la enfermero/a	nurse
+el examen médico	physical exam
+la farmacia	pharmacy
+la gripe	flu
+el hospital	hospital
+la infección	infection
+el medicamento	medication
+la medicina	medicine
+la operación	operation
+el/la paciente	patient
+la pastilla	pill; tablet
+la radiografía	X-ray
+la receta	prescription
+el resfriado	cold (illness)
+la sala de emergencia(s)	emergency room
+la salud	health
+el síntoma	symptom
+la tos	cough
