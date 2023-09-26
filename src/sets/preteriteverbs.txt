@@ -30,3 +30,28 @@ venir	to come	vine	viniste	vino	vinimos	vinieron
 hacer	to do; to make	hice	hiciste	hizo	hicimos	hicieron
 dar	to give	di	diste	dio	dimos	dieron
 ver	to see	vi	viste	vio	vimos	vieron
+aprender	to learn	aprendí	aprendiste	aprendió	aprendimos	aprendieron
+asistir	to attend	asistí	asististe	asistió	asistimos	asistieron
+borrar	to erase	borré	borraste	borró	borramos	borraron
+buscar	to look for	busqué	buscaste	buscó	buscamos	buscaron
+cocinar	to cook	cociné	cocinaste	cocinó	cocinamos	cocinaron
+comer	to eat	comí	comiste	comió	comimos	comieron
+comprender	to understand	comprendí	comprendiste	comprendió	comprendimos	comprendieron
+correr	to run	corrí	corriste	corrió	corrimos	corrieron
+creer	to believe	creí	creíste	creyó	creímos	creyeron
+empezar	to start	empecé	empezaste	empezó	empezamos	empezaron
+escribir	to write	escribí	escribiste	escribió	escribimos	escribieron
+hablar	to talk	hablé	hablaste	habló	hablamos	hablaron
+ir	to go	fui	fuiste	fue	fuimos	fueron
+jugar	to play	jugué	jugaste	jugó	jugamos	jugaron
+leer	to read	leí	leíste	leyó	leímos	leyeron
+llevar	to wear/to bring	llevé	llevaste	llevó	llevamos	llevaron
+mirar	to look	miré	miraste	miró	miramos	miraron
+montar	to get on	monté	montaste	montó	montamos	montaron
+nadar	to swim	nadé	nadaste	nadó	nadamos	nadaron
+oír	to hear	oí	oíste	oyó	oímos	oyeron
+pagar	to pay	pagué	pagaste	pagó	pagamos	pagaron
+prestar	to lend	presté	prestaste	prestó	prestamos	prestaron
+reducir	to reduce	reduje	redujiste	redujo	redujimos	redujeron
+ser	to be	fui	fuiste	fue	fuimos	fueron
+tocar	to touch/to play an instrument	toqué	tocaste	tocó	tocamos	tocaron

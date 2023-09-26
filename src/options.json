@@ -4,7 +4,7 @@
     "display": "Imperfect Verbs",
     "sets": [
       [
-        "imperfect",
+        "imperfectverbs",
         "Imperfect Verbs"
       ]
     ]
@@ -14,7 +14,7 @@
     "display": "Preterite Verbs",
     "sets": [
       [
-        "preterite",
+        "preteriteverbs",
         "Preterite Verbs"
       ],
       [
