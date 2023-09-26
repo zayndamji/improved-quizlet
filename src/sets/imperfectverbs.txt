@@ -9,7 +9,7 @@ estar	to be (location)	estaba	estabas	estaba	estábamos	estaban
 hablar	to talk	hablaba	hablabas	hablaba	hablábamos	hablaban
 ir	to go	iba	ibas	iba	íbamos	iban
 leer	to read	leía	leías	leía	leíamos	leían
-llevar	to wear/to bring	llevaba	llevabas	llevaba	llevábamos	llevaban
+llevar	to wear; to bring	llevaba	llevabas	llevaba	llevábamos	llevaban
 mirar	to look	miraba	mirabas	miraba	mirábamos	miraban
 montar	to get on	montaba	montabas	montaba	montábamos	montaban
 ser	to be (permanent)	era	eras	era	éramos	eran
