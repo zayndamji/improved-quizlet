@@ -1,11 +1,21 @@
 [
   {
+    "name": "imperfecttense",
+    "display": "Imperfect Verbs",
+    "sets": [
+      [
+        "imperfect",
+        "Imperfect Verbs"
+      ]
+    ]
+  },
+  {
     "name": "preteritetense",
     "display": "Preterite Verbs",
     "sets": [
       [
         "preterite",
-        "All Preterite Verbs"
+        "Preterite Verbs"
       ],
       [
         "contextclues",

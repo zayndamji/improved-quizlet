@@ -1,0 +1,17 @@
+aprender	to learn	aprendía	aprendías	aprendía	aprendíamos	aprendían
+asistir	to attend	asistía	asistías	asistía	asistíamos	asistían
+borrar	to erase	borraba	borrabas	borraba	borrábamos	borraban
+comer	to eat	comía	comías	comía	comíamos	comían
+comprender	to understand	comprendía	comprendías	comprendía	comprendíamos	comprendían
+correr	to run	corría	corrías	corría	corríamos	corrían
+escribir	to write	escribía	escribías	escribía	escribíamos	escribían
+estar	to be (location)	estaba	estabas	estaba	estábamos	estaban
+hablar	to talk	hablaba	hablabas	hablaba	hablábamos	hablaban
+ir	to go	iba	ibas	iba	íbamos	iban
+leer	to read	leía	leías	leía	leíamos	leían
+llevar	to wear/to bring	llevaba	llevabas	llevaba	llevábamos	llevaban
+mirar	to look	miraba	mirabas	miraba	mirábamos	miraban
+montar	to get on	montaba	montabas	montaba	montábamos	montaban
+ser	to be (permanent)	era	eras	era	éramos	eran
+ver	to see	veía	veías	veía	veíamos	veían
+vivir	to live	vivía	vivías	vivía	vivíamos	vivían
