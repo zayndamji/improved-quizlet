@@ -39,10 +39,12 @@ function resetScreen() {
   const topRow = document.getElementById('main-table').firstElementChild;
   document.getElementById('main-table').textContent = '';
   document.getElementById('main-table').append(topRow);
-  if (getLocalStorage('set').includes('contextclues')) {
-    document.getElementById('firstrow').style.display = 'none';
-  } else {
+  if (getLocalStorage('set').includes('imperfectverbs') ||
+      getLocalStorage('set').includes('spanish1review') ||
+      getLocalStorage('set').includes('preteriteverbs')) {
     document.getElementById('firstrow').style.display = 'flex';
+  } else {
+    document.getElementById('firstrow').style.display = 'none';
   }
 }
 

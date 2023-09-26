@@ -1,5 +1,15 @@
 [
   {
+    "name": "vocabulary",
+    "display": "Vocabulary",
+    "sets": [
+      [
+        "bodyparts",
+        "Body Parts"
+      ]
+    ]
+  },
+  {
     "name": "imperfecttense",
     "display": "Imperfect Verbs",
     "sets": [
