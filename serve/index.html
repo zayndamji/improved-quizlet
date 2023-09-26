@@ -402,7 +402,21 @@ anteanoche	the night before last
 la semana pasada	last week
 el año pasado	last year
 el mes pasado	last month
-dos veces	twice"/><meta id="meta-set-irregular.txt" content="traer	to bring	traje	trajiste	trajo	trajimos	trajeron
+dos veces	twice"/><meta id="meta-set-preterite.txt" content="servir	to serve	serví	serviste	sirvió	servimos	sirvieron
+pedir	to ask for; to order	pedí	pediste	pidió	pedimos	pidieron
+mentir	to lie	mentí	mentiste	mintió	mentimos	mintieron
+medir	to measure	medí	mediste	midió	medimos	midieron
+preferir	to prefer	preferí	preferiste	prefirió	preferimos	prefirieron
+seguir	to follow; to continue	seguí	seguiste	siguió	seguimos	siguieron
+conseguir	to get; to obtain	conseguí	conseguiste	consiguió	conseguimos	consiguieron
+repetir	to repeat	repetí	repetiste	repitió	repetimos	repitieron
+dormir	to sleep	dormí	dormiste	durmió	dormimos	durmieron
+morir	to die	morí	moriste	murió	morimos	murieron
+divertirse	to have fun	me divertí	te divertiste	se divirtió	nos divertimos	se divirtieron
+despedirse	to say goodbye	me despedí	te despediste	se despidió	nos despedimos	se despidieron
+vestirse	to get dressed	me vestí	te vestiste	se vistió	nos vestimos	se vistieron
+dormirse	to fall asleep	me dormí	te dormiste	se durmió	nos dormimos	se durmieron
+traer	to bring	traje	trajiste	trajo	trajimos	trajeron
 decir	to tell; to say	dije	dijiste	dijo	dijimos	dijeron
 conducir	to drive	conduje	condujiste	condujo	condujimos	condujeron
 traducir	to translate	traduje	tradujiste	tradujo	tradujimos	tradujeron
@@ -457,20 +471,7 @@ morir	to die	muero	mueres	muere	morimos	mueren
 recordar	to remember	recuerdo	recuerdas	recuerda	recordamos	recuerdan
 probar	to try; to prove	pruebo	pruebas	prueba	probamos	prueban
 repetir	to repeat	repito	repites	repite	repetimos	repiten
-despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despedimos	despiden"/><meta id="meta-set-stemchanging.txt" content="servir	to serve	serví	serviste	sirvió	servimos	sirvieron
-pedir	to ask for; to order	pedí	pediste	pidió	pedimos	pidieron
-mentir	to lie	mentí	mentiste	mintió	mentimos	mintieron
-medir	to measure	medí	mediste	midió	medimos	midieron
-preferir	to prefer	preferí	preferiste	prefirió	preferimos	prefirieron
-seguir	to follow; to continue	seguí	seguiste	siguió	seguimos	siguieron
-conseguir	to get; to obtain	conseguí	conseguiste	consiguió	conseguimos	consiguieron
-repetir	to repeat	repetí	repetiste	repitió	repetimos	repitieron
-dormir	to sleep	dormí	dormiste	durmió	dormimos	durmieron
-morir	to die	morí	moriste	murió	morimos	murieron
-divertirse	to have fun	me divertí	te divertiste	se divirtió	nos divertimos	se divirtieron
-despedirse	to say goodbye	me despedí	te despediste	se despidió	nos despedimos	se despidieron
-vestirse	to get dressed	me vestí	te vestiste	se vistió	nos vestimos	se vistieron
-dormirse	to fall asleep	me dormí	te dormiste	se durmió	nos dormimos	se durmieron"/></head>
+despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despedimos	despiden"/></head>
 <body>
 <span id="splashscreen" class="fullscreen">
 <span id="splashscreen-inner" style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></span>
@@ -506,7 +507,7 @@ dormirse	to fall asleep	me dormí	te dormiste	se durmió	nos dormimos	se durmier
 <input id="accents-selector" name="accents-selector" type="checkbox" onclick="toggleAccents(); regenerateQuiz();">
 <br>
 <label for="mute-selector">Mute Sounds</label>
-<input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();">
+<input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();" checked>
 <br>
 <label for="column-selector">Test in Columns</label>
 <input id="column-selector" name="column-selector" type="checkbox" onclick="toggleColumns(); regenerateQuiz();">
@@ -514,7 +515,7 @@ dormirse	to fall asleep	me dormí	te dormiste	se durmió	nos dormimos	se durmier
 <label for="splashscreen-selector">Show Splashscreen</label>
 <input id="splashscreen-selector" name="splashscreen-selector" type="checkbox" onclick="toggleSplashscreen(); regenerateQuiz();"></div></div>
 <div id="set-parent">
-<button>Change which topic(s) you are studying (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Spanish 2&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;spanishtwo-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;spanishtwo-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="spanishtwo-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div><div><input style="width: 10px;" type="checkbox" id="contextclues" name="set" value="contextclues" onchange="selectSet()"/><label style="font-size: 15px;" for="contextclues">Preterite Context Clues</label></div><div><input style="width: 10px;" type="checkbox" id="stemchanging" name="set" value="stemchanging" onchange="selectSet()"/><label style="font-size: 15px;" for="stemchanging">Stem Changing Verbs (preterite)</label></div><div><input style="width: 10px;" type="checkbox" id="irregular" name="set" value="irregular" onchange="selectSet()"/><label style="font-size: 15px;" for="irregular">Irregular Verbs (preterite)</label></div></div></div></div>
+<button>Change which topic(s) you are studying (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Preterite Verbs&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;preteritetense-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;preteritetense-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="preteritetense-setchooser"><div><input style="width: 10px;" type="checkbox" id="preterite" name="set" value="preterite" onchange="selectSet()"/><label style="font-size: 15px;" for="preterite">All Preterite Verbs</label></div><div><input style="width: 10px;" type="checkbox" id="contextclues" name="set" value="contextclues" onchange="selectSet()"/><label style="font-size: 15px;" for="contextclues">Preterite Context Clues</label></div></div><div><span style="font-size: 18px;">Present Verbs&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;presenttense-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;presenttense-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="presenttense-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div></div></div></div>
 <table class="main-table-parent">
 <tbody id="main-table">
 <tr id="firstrow">
@@ -568,7 +569,7 @@ function toggleAccents(newAccents) {
   document.getElementById('accents-selector').checked = ignoreAccents;
 }
 
-let muteSound = false;
+let muteSound = true;
 
 function toggleMute(newMute) {
   muteSound = newMute ?? !muteSound;
@@ -972,8 +973,7 @@ if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
   console.log('User has previous data... regenerating quiz from saved data.');
 } else {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
-  document.querySelectorAll('input[type="checkbox"][name="set"]')[2].checked = true;
-  document.querySelectorAll('input[type="checkbox"][name="set"]')[3].checked = true;
+  document.getElementById('preteritetense-setchooser').children[0].children[0].checked = true;
   selectSet();
   console.log('User is new... generating quiz from scratch.');
 }</script></body>

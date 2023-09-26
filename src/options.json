@@ -1,23 +1,25 @@
 [
   {
-    "name": "spanishtwo",
-    "display": "Spanish 2",
+    "name": "preteritetense",
+    "display": "Preterite Verbs",
     "sets": [
       [
-        "spanish1review",
-        "Spanish 1 Review"
+        "preterite",
+        "All Preterite Verbs"
       ],
       [
         "contextclues",
         "Preterite Context Clues"
-      ],
+      ]
+    ]
+  },
+  {
+    "name": "presenttense",
+    "display": "Present Verbs",
+    "sets": [
       [
-        "stemchanging",
-        "Stem Changing Verbs (preterite)"
-      ],
-      [
-        "irregular",
-        "Irregular Verbs (preterite)"
+        "spanish1review",
+        "Spanish 1 Review"
       ]
     ]
   }
