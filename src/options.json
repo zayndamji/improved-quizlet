@@ -5,15 +5,11 @@
     "sets": [
       [
         "body",
-        "Body Parts (el cuerpo)"
+        "Body Parts"
       ],
       [
-        "medical",
-        "Medical (la salud)"
-      ],
-      [
-        "verbos",
-        "Verbs (verbos)"
+        "verbs",
+        "Medical Verbs"
       ]
     ]
   },
