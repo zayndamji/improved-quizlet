@@ -1,0 +1,23 @@
+el ojo	eye
+la nariz	the nose
+la boca	mouth
+la garganta	throat
+el cuello	neck
+el estómago	stomach
+el dedo	finger
+el dedo de pie	the toe
+la oreja	ear
+el brazo	arm
+la pierna	leg
+el hueso	bone
+el cuerpo	body
+el pecho	chest
+el codo	elbow
+el corazón	heart
+muscle	el musculo
+el cerebro	brain
+los hombros	shoulders
+el tobillo	ankle
+la rodilla	knee
+el codo	elbow
+el pecho	chest

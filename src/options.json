@@ -4,16 +4,8 @@
     "display": "Vocabulary",
     "sets": [
       [
-        "parts",
-        "Body Parts"
-      ],
-      [
-        "medverbs",
-        "Medical Verbs"
-      ],
-      [
-        "mednouns",
-        "Medical Nouns"
+        "elcuerpo",
+        "Body Parts (el cuerpo)"
       ]
     ]
   },
