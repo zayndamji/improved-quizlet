@@ -12,3 +12,5 @@ sacarse un diente	to have a tooth removed
 sufrir una enfermedad	to suffer an illness
 torcerse el tobillo	to sprain one's ankle
 toser	to cough
+estornudar	to sneeze
+tomar la temperatura	to take someone's temperature

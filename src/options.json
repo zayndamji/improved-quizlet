@@ -4,12 +4,16 @@
     "display": "Vocabulary",
     "sets": [
       [
-        "body",
+        "parts",
         "Body Parts"
       ],
       [
-        "verbs",
+        "medverbs",
         "Medical Verbs"
+      ],
+      [
+        "mednouns",
+        "Medical Nouns"
       ]
     ]
   },

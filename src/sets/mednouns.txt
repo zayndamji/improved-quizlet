@@ -1,0 +1,19 @@
+la radiografía	X-ray
+el doctor	doctor
+la doctora	doctor (female)
+el enfermero	nurse
+la enfermera	nurse (female)
+el paciente	patient
+la paciente	patient (female)
+la clínica	clinic
+el consultorio	doctor's office
+el dentista	dentist
+la dentista	dentist (female)
+el examen médico	physical exam
+la farmacia	pharmacy
+el hospital	hospital
+la operación	operation
+la sala de emergencias	emergency room
+el accidente	accident
+la salud	health
+el síntoma	symptom

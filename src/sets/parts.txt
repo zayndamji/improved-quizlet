@@ -13,3 +13,6 @@ la rodilla	knee
 la pierna	leg
 el tobillo	ankle
 el dedo del pie	toe
+el hueso	bone
+el cuerpo	body
+el oído	(sense of) hearing; inner ear
