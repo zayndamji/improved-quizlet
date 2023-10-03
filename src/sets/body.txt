@@ -1,0 +1,15 @@
+la cabeza	head
+el ojo	eye
+la nariz	nose
+la oreja	(outer) ear
+la boca	mouth
+el cuello	neck
+la garganta	throat
+el corazón	heart
+el estómago	stomach
+el brazo	arm
+el dedo	finger
+la rodilla	knee
+la pierna	leg
+el tobillo	ankle
+el dedo del pie	toe
