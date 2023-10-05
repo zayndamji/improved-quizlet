@@ -1,6 +1,10 @@
 const pug = require('pug');
 const fs = require('fs');
 
+if (!fs.existsSync('serve')) {
+  fs.mkdirSync('serve');
+}
+
 function audioToBase64(audioFile) {
   return 'data:audio/mpeg;base64,' + fs.readFileSync(audioFile).toString('base64');
 }
@@ -41,3 +45,9 @@ fs.writeFileSync('serve/spanish1/index.html',
     options: JSON.parse(fs.readFileSync('spanish1/options.json', { encoding: 'utf-8' }))
   }
   ));
+
+if (!fs.existsSync('serve/copy')) {
+  fs.mkdirSync('serve/copy');
+}
+
+fs.copyFileSync('copy/index.html', 'serve/copy/index.html');
