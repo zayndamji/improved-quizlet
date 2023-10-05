@@ -1,11 +1,11 @@
 el ojo	eye
-la nariz	the nose
+la nariz	nose
 la boca	mouth
 la garganta	throat
 el cuello	neck
 el estómago	stomach
 el dedo	finger
-el dedo de pie	the toe
+el dedo de pie	toe
 la oreja	ear
 el brazo	arm
 la pierna	leg
