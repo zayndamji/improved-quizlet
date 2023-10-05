@@ -21,3 +21,4 @@ el tobillo	ankle
 la rodilla	knee
 la cabeza	head
 el pie	foot
+el oído	inner ear (hearing)
