@@ -5,7 +5,7 @@ la garganta	throat
 el cuello	neck
 el estómago	stomach
 el dedo	finger
-el dedo de pie	toe
+el dedo del pie	toe
 la oreja	ear
 el brazo	arm
 la pierna	leg
