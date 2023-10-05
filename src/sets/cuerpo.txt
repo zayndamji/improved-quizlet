@@ -14,10 +14,10 @@ el cuerpo	body
 el pecho	chest
 el codo	elbow
 el corazón	heart
-muscle	el musculo
+el musculo	muscle
 el cerebro	brain
 los hombros	shoulders
 el tobillo	ankle
 la rodilla	knee
-el codo	elbow
-el pecho	chest
+la cabeza	head
+el pie	foot
