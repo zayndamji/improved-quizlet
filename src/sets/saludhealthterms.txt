@@ -3,13 +3,10 @@ el antibiótico	antibiotic
 la aspirina	aspirin
 la clínica	clinic
 el consultorio	doctor's office
-el dentista	dentist
-la dentista	dentist (female)
-el doctor	doctor
-la doctora	doctor (female)
+el/la dentista	dentist
+el/la doctor/a	doctor
 el dolor (de cabeza)	headache
-el enfermero	nurse
-la enfermera	nurse (female)
+el/la enfermero/a	nurse
 el examen médico	physical exam
 la farmacia	pharmacy
 la gripe	flu
@@ -18,8 +15,7 @@ la infección	infection
 el medicamento	medication
 la medicina	medicine
 la operación	operation
-el paciente	patient
-la paciente	patient (female)
+el/la paciente	patient
 la pastilla	pill
 la radiografía	x-ray
 la receta	prescription
