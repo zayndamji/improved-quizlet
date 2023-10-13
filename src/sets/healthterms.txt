@@ -5,6 +5,7 @@ la clínica	clinic
 el consultorio	doctor's office
 el/la dentista	dentist
 el/la doctor/a	doctor
+el dolor	pain
 el dolor (de cabeza)	headache
 el/la enfermero/a	nurse
 el examen médico	physical exam
