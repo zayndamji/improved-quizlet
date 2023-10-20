@@ -19,4 +19,4 @@ tener fiebre	to have a fever
 tomar la temperatura	to take someone's temperature
 torcerse (el tobillo)	to sprain (one's ankle)
 toser	to cough
-estar alérgico/a	to be allergic
+ser alérgico/a	to be allergic
