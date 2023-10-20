@@ -16,7 +16,7 @@ html {
   width: 100%;
 }
 
-body, button, select, input {
+body, button, select, input, a.button-anchor {
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif !important;
 }
 
@@ -107,7 +107,10 @@ div.question {
   white-space: nowrap;
 }
 
-button {
+button, a.button-anchor {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
   margin-bottom: 0.5em;
   background-color: inherit;
   font-size: 18px;
@@ -604,6 +607,8 @@ despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despe
 </div>
 </div>
 <div style="height: 52px"></div>
+<br>
+<a href="/copy" target="_blank" class="button-anchor">Copy Accents (useful on Chromebooks)</a>
 <br>
 <button onclick="resetScreen(); restartQuiz(); updateFlipped(); regenerateQuiz();">Restart</button>&nbsp;<button onclick="clearWords(); generateWords(); shuffleWords(); updateFlipped(); regenerateQuiz();">Shuffle</button>&nbsp;<button onclick="solveQuiz();">Solve All</button>
 <br>
