@@ -470,27 +470,7 @@ mirar	to look	miraba	mirabas	miraba	mirábamos	miraban
 montar	to get on	montaba	montabas	montaba	montábamos	montaban
 ser	to be (permanent)	era	eras	era	éramos	eran
 ver	to see	veía	veías	veía	veíamos	veían
-vivir	to live	vivía	vivías	vivía	vivíamos	vivían"/><meta id="meta-set-losverbos.txt" content="caerse	to fall
-dañar	to damage
-darse con	to bump into; to run into
-doler	to hurt
-enfermarse	to get sick
-estar enfermo/a	to be sick
-estornudar	to sneeze
-lastimarse (el pie)	to injure (one's foot)
-olvidar	to forget
-poner una inyección	to give an injection
-prohibir	to prohibit, forbid
-recetar	to prescribe
-romper	to break
-romperse (la pierna)	to break (one's leg)
-sacarse un diente	to have a tooth removed
-sufrir una enfermedad	to suffer an illness
-tener dolor	to have pain
-tener fiebre	to have a fever
-tomar la temperatura	to take someone's temperature
-torcerse (el tobillo)	to sprain (one's ankle)
-toser	to cough"/><meta id="meta-set-preteriteverbs.txt" content="servir	to serve	serví	serviste	sirvió	servimos	sirvieron
+vivir	to live	vivía	vivías	vivía	vivíamos	vivían"/><meta id="meta-set-preteriteverbs.txt" content="servir	to serve	serví	serviste	sirvió	servimos	sirvieron
 pedir	to ask for; to order	pedí	pediste	pidió	pedimos	pidieron
 mentir	to lie	mentí	mentiste	mintió	mentimos	mintieron
 medir	to measure	medí	mediste	midió	medimos	midieron
@@ -584,7 +564,28 @@ morir	to die	muero	mueres	muere	morimos	mueren
 recordar	to remember	recuerdo	recuerdas	recuerda	recordamos	recuerdan
 probar	to try; to prove	pruebo	pruebas	prueba	probamos	prueban
 repetir	to repeat	repito	repites	repite	repetimos	repiten
-despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despedimos	despiden"/></head>
+despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despedimos	despiden"/><meta id="meta-set-verbos.txt" content="caerse	to fall
+dañar	to damage
+darse con	to bump into; to run into
+doler (o:ue)	to hurt
+enfermarse	to get sick
+estar enfermo/a	to be sick
+estornudar	to sneeze
+lastimarse (el pie)	to injure (one's foot)
+olvidar	to forget
+poner una inyección	to give an injection
+prohibir	to prohibit, forbid
+recetar	to prescribe
+romper	to break
+romperse (la pierna)	to break (one's leg)
+sacarse un diente	to have a tooth removed
+sufrir una enfermedad	to suffer an illness
+tener dolor	to have pain
+tener fiebre	to have a fever
+tomar la temperatura	to take someone's temperature
+torcerse (el tobillo)	to sprain (one's ankle)
+toser	to cough
+estar alérgico/a	to be allergic"/></head>
 <body>
 <span id="splashscreen" class="fullscreen">
 <span id="splashscreen-inner" style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></span>
@@ -630,7 +631,7 @@ despedir (se)	to dismiss; to fire; to say goodbye	despido	despides	despide	despe
 <label for="splashscreen-selector">Show Splashscreen</label>
 <input id="splashscreen-selector" name="splashscreen-selector" type="checkbox" onclick="toggleSplashscreen(); regenerateQuiz();"></div></div>
 <div id="set-parent">
-<button>Change which topic(s) you are studying (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Vocabulary&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;vocabulary-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;vocabulary-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="vocabulary-setchooser"><div><input style="width: 10px;" type="checkbox" id="cuerpobodyparts" name="set" value="cuerpobodyparts" onchange="selectSet()"/><label style="font-size: 15px;" for="cuerpobodyparts">Body Parts (el cuerpo)</label></div><div><input style="width: 10px;" type="checkbox" id="healthterms" name="set" value="healthterms" onchange="selectSet()"/><label style="font-size: 15px;" for="healthterms">Health Terms (la salud)</label></div><div><input style="width: 10px;" type="checkbox" id="losverbos" name="set" value="losverbos" onchange="selectSet()"/><label style="font-size: 15px;" for="losverbos">Verbs (los verbos)</label></div></div><div><span style="font-size: 18px;">Imperfect Verbs&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;imperfecttense-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;imperfecttense-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="imperfecttense-setchooser"><div><input style="width: 10px;" type="checkbox" id="imperfectverbs" name="set" value="imperfectverbs" onchange="selectSet()"/><label style="font-size: 15px;" for="imperfectverbs">Imperfect Verbs</label></div></div><div><span style="font-size: 18px;">Preterite Verbs&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;preteritetense-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;preteritetense-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="preteritetense-setchooser"><div><input style="width: 10px;" type="checkbox" id="preteriteverbs" name="set" value="preteriteverbs" onchange="selectSet()"/><label style="font-size: 15px;" for="preteriteverbs">Preterite Verbs</label></div><div><input style="width: 10px;" type="checkbox" id="contextclues" name="set" value="contextclues" onchange="selectSet()"/><label style="font-size: 15px;" for="contextclues">Preterite Context Clues</label></div></div><div><span style="font-size: 18px;">Present Verbs&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;presenttense-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;presenttense-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="presenttense-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div></div></div></div>
+<button>Change which topic(s) you are studying (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Vocabulary&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;vocabulary-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;vocabulary-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="vocabulary-setchooser"><div><input style="width: 10px;" type="checkbox" id="cuerpobodyparts" name="set" value="cuerpobodyparts" onchange="selectSet()"/><label style="font-size: 15px;" for="cuerpobodyparts">Body Parts (el cuerpo)</label></div><div><input style="width: 10px;" type="checkbox" id="healthterms" name="set" value="healthterms" onchange="selectSet()"/><label style="font-size: 15px;" for="healthterms">Health Terms (la salud)</label></div><div><input style="width: 10px;" type="checkbox" id="verbos" name="set" value="verbos" onchange="selectSet()"/><label style="font-size: 15px;" for="verbos">Verbs (los verbos)</label></div></div><div><span style="font-size: 18px;">Imperfect Verbs&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;imperfecttense-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;imperfecttense-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="imperfecttense-setchooser"><div><input style="width: 10px;" type="checkbox" id="imperfectverbs" name="set" value="imperfectverbs" onchange="selectSet()"/><label style="font-size: 15px;" for="imperfectverbs">Imperfect Verbs</label></div></div><div><span style="font-size: 18px;">Preterite Verbs&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;preteritetense-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;preteritetense-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="preteritetense-setchooser"><div><input style="width: 10px;" type="checkbox" id="preteriteverbs" name="set" value="preteriteverbs" onchange="selectSet()"/><label style="font-size: 15px;" for="preteriteverbs">Preterite Verbs</label></div><div><input style="width: 10px;" type="checkbox" id="contextclues" name="set" value="contextclues" onchange="selectSet()"/><label style="font-size: 15px;" for="contextclues">Preterite Context Clues</label></div></div><div><span style="font-size: 18px;">Present Verbs&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;presenttense-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;presenttense-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="presenttense-setchooser"><div><input style="width: 10px;" type="checkbox" id="spanish1review" name="set" value="spanish1review" onchange="selectSet()"/><label style="font-size: 15px;" for="spanish1review">Spanish 1 Review</label></div></div></div></div>
 <table class="main-table-parent">
 <tbody id="main-table">
 <tr id="firstrow">

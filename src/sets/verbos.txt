@@ -1,7 +1,7 @@
 caerse	to fall
 dañar	to damage
 darse con	to bump into; to run into
-doler	to hurt
+doler (o:ue)	to hurt
 enfermarse	to get sick
 estar enfermo/a	to be sick
 estornudar	to sneeze
@@ -19,3 +19,4 @@ tener fiebre	to have a fever
 tomar la temperatura	to take someone's temperature
 torcerse (el tobillo)	to sprain (one's ankle)
 toser	to cough
+estar alérgico/a	to be allergic
