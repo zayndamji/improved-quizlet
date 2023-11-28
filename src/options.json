@@ -4,8 +4,24 @@
     "display": "Vocabulary 2 (Technology)",
     "sets": [
       [
-        "technology",
+        "technologyterms",
         "Technology (la tecnología)"
+      ],
+      [
+        "computer",
+        "Computer (la computadora)"
+      ],
+      [
+        "elcarro",
+        "Car (el carro)"
+      ],
+      [
+        "verbs2",
+        "Verbs (los verbos)"
+      ],
+      [
+        "otrasexpresiones",
+        "Other Expressions (otras expresiones)"
       ]
     ]
   },

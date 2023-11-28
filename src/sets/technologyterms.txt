@@ -1,0 +1,24 @@
+la aplicación	application
+la cámara digital	digital camera
+la cámara de vídeo	video camera
+el cargador	charger
+el canal	(TV) channel
+el cibercafé	cybercafé
+el control remoto	remote control
+el correo de voz	voice mail
+el disco compacto	CD
+el estéreo	stereo
+la pantalla táctil	touch screen
+el radio	radio
+el reproductor de CD	CD player
+el celular	cell phone
+la tableta	tablet (computer)
+el televisor	television set
+apagar	to turn off
+funcionar	to work
+llamar	to call
+poner; prender	to turn on
+sonar	to ring
+descompuesto	not working
+lento	slow
+lleno	full

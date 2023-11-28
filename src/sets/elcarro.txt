@@ -1,0 +1,27 @@
+la autopista; la carretera	highway
+el baúl	trunk
+la calle	street
+el capó; el cofre	hood
+el carro; el coche	car
+la circulación; el tráfico	traffic
+el garaje; el taller mecánico	garage
+la gasolina	gasoline
+la gasolinera	gas station
+la licencia de conducir	driver's licence
+la llanta	tire
+el mecánico	mechanic
+el navegador GPS	GPS
+el parabrisas	windshield
+la policía	police force
+el policía	policeman
+la velocidad máxima	speed limit
+el volante	steering wheel
+arrancar	to start
+arreglar	to fix
+bajar	to get off; to get out of a vehicle
+conducir; manejar	to drive
+estacionar	to park
+llenar el tanque	to fill the tank
+parar	to stop
+revisar el aceite	to check the oil
+subir	to get on or into a vehicle

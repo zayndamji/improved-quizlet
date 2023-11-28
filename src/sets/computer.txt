@@ -1,0 +1,26 @@
+el archivo	file
+la arroba	@ symbol
+el blog	blog
+el buscador	browser
+la computadora portatíl	portable computer
+la connexión inalámbrica	wireless
+la dirección electrónica	email
+la impresona	printer
+Internet	Internet
+el mensaje de texto	text message
+el monitor	monitor
+la página principal	home page
+la pantalla	screen
+el programa de computación	software
+el ratón	mouse
+la red	web
+el sitio web	webpage
+el teclado	keyboard
+borrar	to erase
+chatear	to chat
+descargar	download
+escanear	to scan
+grabar	to record
+guardar	to save
+imprimir	to print
+navegar en internet	to surf the net
