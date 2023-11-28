@@ -1,7 +1,17 @@
 [
   {
-    "name": "vocabulary",
-    "display": "Vocabulary",
+    "name": "vocabulary2",
+    "display": "Vocabulary 2 (Technology)",
+    "sets": [
+      [
+        "technology",
+        "Technology (la tecnología)"
+      ]
+    ]
+  },
+  {
+    "name": "vocabulary1",
+    "display": "Vocabulary 1 (Health)",
     "sets": [
       [
         "cuerpobodyparts",
