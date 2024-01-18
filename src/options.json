@@ -1,5 +1,15 @@
 [
   {
+    "name": "vocabulary3",
+    "display": "Vocabulary 3 (Housing)",
+    "sets": [
+      [
+        "lasviviendas",
+        "Las Viviendas"
+      ]
+    ]
+  },
+  {
     "name": "vocabulary2",
     "display": "Vocabulary 2 (Technology)",
     "sets": [
