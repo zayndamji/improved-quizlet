@@ -52,20 +52,6 @@
 
   <br>
 
-  <a href="/copy" target="_blank" class="button-anchor">Copy Accents (useful on Chromebooks)</a>
-
-  <br>
-
-  <button onclick="resetScreen(); restartQuiz(); updateFlipped(); regenerateQuiz();">Restart</button>
-  |&nbsp;
-  <button onclick="clearWords(); generateWords(); shuffleWords(); updateFlipped(); regenerateQuiz();">Shuffle</button>
-  |&nbsp;
-  <button onclick="solveQuiz();">Solve All</button>
-
-  <br>
-  <button onclick="switchTermAndDefinition(); resetScreen(); restartQuiz(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
-  <br>
-
   <div id="set-parent">
     <button>Settings (hover to see)</button>
     div(style="margin-bottom: 8px;")
@@ -102,6 +88,21 @@
               input(style="width: 10px;" type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
               label(style="font-size: 15px;" for=week[0]) #{week[1]}
   </div>
+
+  <a href="/copy" target="_blank" class="button-anchor">Copy Accents (useful on Chromebooks)</a>
+
+  <br>
+
+  <button onclick="switchTermAndDefinition(); resetScreen(); restartQuiz(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
+  <br>
+
+  <button onclick="resetScreen(); restartQuiz(); updateFlipped(); regenerateQuiz();">Restart</button>
+  |&nbsp;
+  <button onclick="clearWords(); generateWords(); shuffleWords(); updateFlipped(); regenerateQuiz();">Shuffle</button>
+  |&nbsp;
+  <button onclick="solveQuiz();">Solve All</button>
+
+  <br><br>
 
   <table class="main-table-parent">
     <tbody id="main-table">
