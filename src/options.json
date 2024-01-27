@@ -4,8 +4,12 @@
     "display": "Vocabulary 3 (Housing)",
     "sets": [
       [
-        "lasviviendas",
-        "Las Viviendas"
+        "housing",
+        "Housing (las viviendas)"
+      ],
+      [
+        "furniture",
+        "Furniture (los muebles)"
       ]
     ]
   },

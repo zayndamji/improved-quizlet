@@ -1,0 +1,18 @@
+la alfombra	carpet; rug
+la almohada	pillow
+el armario	closet
+el cartel	poster
+la cómoda	chest of drawers
+las cortinas	curtains
+el cuadro	picture
+el estante	bookcase, bookshelves
+la lámpara	lamp
+la luz	light; electricity
+la manta	blanket
+la mesita	end table
+la mesita de noche	night stand
+los muebles	furniture
+la pared	wall
+la pintura	painting; picture
+el sillón	armchair
+el sofá	undefined
