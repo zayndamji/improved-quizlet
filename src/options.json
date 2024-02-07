@@ -5,11 +5,15 @@
     "sets": [
       [
         "housing",
-        "Housing (las viviendas)"
+        "Las viviendas"
+      ],
+      [
+        "mesa",
+        "Los electrodomésticos y la mesa"
       ],
       [
         "furniture",
-        "Furniture (los muebles)"
+        "Los muebles"
       ]
     ]
   },

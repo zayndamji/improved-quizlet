@@ -1,0 +1,19 @@
+el congelador	freezer
+el cuchillo	knife
+el electrodoméstico	electrical appliance
+el horno (de microondas)	oven (microwave)
+el lavaplatos	dishwasher
+el plato	plate
+el refrigerador	refrigerator
+el tenedor	fork
+el vaso	glass
+la cafetera	coffee maker
+la cocina, la estufa	stove
+la copa	wineglass; goblet
+la cuchara	spoon
+la lavadora	washing machine
+la mesa	table
+la secadora	clothes dryer
+la servilleta	napkin
+la taza	cup
+la tostadora	toaster
