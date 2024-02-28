@@ -1,5 +1,15 @@
 [
   {
+    "name": "commands",
+    "display": "Commands",
+    "sets": [
+      [
+        "youcommands",
+        "Tú/Usted/Ustedes Commands"
+      ]
+    ]
+  },
+  {
     "name": "vocabulary3",
     "display": "Vocabulary 3 (Housing)",
     "sets": [
@@ -20,7 +30,7 @@
         "Verbos y expresiones verbales"
       ],
       [
-        "chores",
+        "quehaceres",
         "Los quehaceres domésticos"
       ]
     ]

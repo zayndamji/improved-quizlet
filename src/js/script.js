@@ -36,15 +36,23 @@ function restartQuiz() {
 }
 
 function resetScreen() {
-  const topRow = document.getElementById('main-table').firstElementChild;
+  const topRow = document.getElementById('firstrow');
+  const topRow2 = document.getElementById('firstrow2');
+  console.log(topRow, topRow2)
   document.getElementById('main-table').textContent = '';
   document.getElementById('main-table').append(topRow);
+  document.getElementById('main-table').append(topRow2);
   if (getLocalStorage('set').includes('imperfectverbs') ||
       getLocalStorage('set').includes('spanish1review') ||
       getLocalStorage('set').includes('preteriteverbs')) {
     document.getElementById('firstrow').style.display = 'flex';
+    document.getElementById('firstrow2').style.display = 'none';
+  } else if (getLocalStorage('set').includes('youcommands')) {
+    document.getElementById('firstrow').style.display = 'none';
+    document.getElementById('firstrow2').style.display = 'flex';
   } else {
     document.getElementById('firstrow').style.display = 'none';
+    document.getElementById('firstrow2').style.display = 'none';
   }
 }
 

@@ -1,0 +1,35 @@
+Comer	To eat	come	No comas	Coma	No coma	coman	No coman
+Bailar	To dance	baila	No bailes	baile	No baile	bailen	No bailen
+LLamarme	To call me	llámame	No me llames	llámeme	No me llame	llámenme	No me llamen
+Servirla	To serve it	sírvela	No la sirvas	Sírvala	No la sirva	sírvanme	No me sirvan
+Conducir	To drive	Conduce	No conduzcas	conduzca	No conduzca	conduzcan	No conduzcan
+Servir	To serve	sirve	No sirvas	sirva	No sirva	Sirvan	No sirvan
+Llegar	To arrive	llega	No llegues	llegue	No llegue	lleguen	No lleguen
+Venir	To come	ven	No vengas	venga	No venga	vengan	No vengan
+Poner	To put; to place; to turn on	pon	No pongas	ponga	No ponga	pongan	No pongan
+Salir	To leave; to go out	sal	No salgas	salga	No salga	Salgan	No salgan
+Decir	To say; to tell	di	No digas	diga	No diga	digan	No digan
+Hacer	To make; to do	haz	No hagas	haga	No haga	Hagan	No hagan
+Tener	To have	Ten	No tengas	tenga	No tenga	Tengan	No tengan
+Ir	To go	ve	No vayas	vaya	No vaya	Vayan	No vayan
+Ser	To be	sé	No seas	sea	No sea	sean	No sean
+Estar	To be	está	No estés	esté	No esté	Estén	No estén
+Dar	To give	da	No des	dé	No dé	den	No den
+Saber	To know (information; facts)	sabe	No sepas	sepa	No sepa	sepan	No sepan
+Dormirse	To fall asleep; to go to sleep	duérmate	No te duermas	duérmase	No se duerma	duérmanse	No se duerman
+Caerse	To fall	cáete	No te caigas	caígase	No se caiga	caíganse	No se caigan
+Oír	To hear	oye	No oigas	oiga	No oiga	oigan	No oigan
+Apagarla	To turn it off	Apágala	No la apagues	apáguela	No la apague	apáguenla	No la apaguen
+Seguirnos	To follow us	síguenos	No nos sigas	síganos	No nos siga	sígannos	No nos sigan
+Pedirlo	To ask for/order it	pídelo	No lo pidas	pídalo	No lo pida	pídanlo	No lo pidan
+Traermelo	To bring me it	tráemelo	No me lo traigas	traígamelo	No me lo traiga	traíganmelo	No me lo traigan
+Lavar	To wash	lava	No laves	lave	No lave	laven	No laven
+Limpiar	To clean	limpia	No limpies	Limpie	No limpie	limpien	No limpien
+Pasarla	To pass it	pásala	No la pases	Pásela	No la pase	pásenla	No la pasen
+Creerme	To believe me	créeme	No me creas	créame	No me crea	créanme	No me crean
+Sacudirlos	To dust them	Sacúdelos	No los sacudas	sacúdalos	No los sacuda	sacúdanlos	No los sacudan
+Pedir	To ask for; order	pide	No pidas	pida	No pida	pidan	No pidan
+Cerrarla	To close it	ciérrala	No la cierres	ciérrla	No la cierre	Ciérrenlo	No lo cierren
+Abrirla	To open it	ábrela	No la abras	ábrala	No la abra	ábranla	No la abran
+Guardar	To put away	guarda	No guardes	guarde	No guarde	Guarden	No guarden
+Praticar	To practice	practica	No practiques	practique	No practique	practiquen	No practiquen
