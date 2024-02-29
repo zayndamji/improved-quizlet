@@ -47,7 +47,7 @@ function resetScreen() {
       getLocalStorage('set').includes('preteriteverbs')) {
     document.getElementById('firstrow').style.display = 'flex';
     document.getElementById('firstrow2').style.display = 'none';
-  } else if (getLocalStorage('set').includes('youcommands')) {
+  } else if (getLocalStorage('set').includes('tuustedustedes')) {
     document.getElementById('firstrow').style.display = 'none';
     document.getElementById('firstrow2').style.display = 'flex';
   } else {

@@ -1,7 +1,7 @@
 Comer	To eat	come	No comas	Coma	No coma	coman	No coman
 Bailar	To dance	baila	No bailes	baile	No baile	bailen	No bailen
 LLamarme	To call me	llámame	No me llames	llámeme	No me llame	llámenme	No me llamen
-Servirla	To serve it	sírvela	No la sirvas	Sírvala	No la sirva	sírvanme	No me sirvan
+Servirla	To serve it	sírvela	No la sirvas	Sírvala	No la sirva	sírvanla	No la sirvan
 Conducir	To drive	Conduce	No conduzcas	conduzca	No conduzca	conduzcan	No conduzcan
 Servir	To serve	sirve	No sirvas	sirva	No sirva	Sirvan	No sirvan
 Llegar	To arrive	llega	No llegues	llegue	No llegue	lleguen	No lleguen
@@ -29,7 +29,7 @@ Pasarla	To pass it	pásala	No la pases	Pásela	No la pase	pásenla	No la pasen
 Creerme	To believe me	créeme	No me creas	créame	No me crea	créanme	No me crean
 Sacudirlos	To dust them	Sacúdelos	No los sacudas	sacúdalos	No los sacuda	sacúdanlos	No los sacudan
 Pedir	To ask for; order	pide	No pidas	pida	No pida	pidan	No pidan
-Cerrarla	To close it	ciérrala	No la cierres	ciérrla	No la cierre	Ciérrenlo	No lo cierren
+Cerrarla	To close it	ciérrala	No la cierres	ciérrla	No la cierre	Ciérrenla	No la cierren
 Abrirla	To open it	ábrela	No la abras	ábrala	No la abra	ábranla	No la abran
 Guardar	To put away	guarda	No guardes	guarde	No guarde	Guarden	No guarden
 Praticar	To practice	practica	No practiques	practique	No practique	practiquen	No practiquen
