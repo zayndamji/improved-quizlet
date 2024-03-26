@@ -1,5 +1,15 @@
 [
   {
+    "name": "subjunctivetense",
+    "display": "Subjunctive Verbs",
+    "sets": [
+      [
+        "subjunctive",
+        "Subjunctive Verbs"
+      ]
+    ]
+  },
+  {
     "name": "commands",
     "display": "Commands",
     "sets": [
