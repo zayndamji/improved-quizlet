@@ -1,0 +1,43 @@
+el abuelo	grandfather
+la abuela	grandmother
+los abuelos	grandparents
+el amigo	friend (male)
+el apellido	last name
+el bisabuelo	great-grandfather
+la bisabuela	great-grandmother
+el esposo	husband
+la esposa	wife
+la familia	family
+el gemelo	twin (male)
+la gemela	twin (female)
+la gente	people
+el hermanastro	stepbrother
+la hermanastra	stepsister
+el hermano	brother
+la hermana	sister
+el hijastro	stepson
+la hijastra	stepdaughter
+el hijo	son
+la hija	daughter
+los hijos	children
+la madrastra	stepmother
+la madre	mother
+el medio hermano	half-brother
+la media hermana	half-sister
+el nieto	grandson
+la nieta	granddaughter
+el padrastro	stepfather
+el padre	father
+los padres	parents
+los parientes	relatives
+el primo	cousin (male)
+la prima	cousin (female)
+el sobrino	nephew
+la sobrina	niece
+el tío	uncle
+la tía	aunt
+el cuñado	brother-in-law
+la cuñada	sister-in-law
+el suegro	father-in-law
+la suegra	mother-in-law
+la nuera	daughter-in-law

@@ -4,12 +4,172 @@
     "display": "Spanish 1",
     "sets": [
       [
-        "greetings",
-        "Greetings"
+        "arsimple",
+        "AR Verbs (infinitives)"
+      ],
+      [
+        "ar",
+        "AR Verbs (conjugations)"
+      ],
+      [
+        "ersimple",
+        "ER Verbs (infinitives)"
+      ],
+      [
+        "er",
+        "ER Verbs (conjugations)"
+      ],
+      [
+        "irsimple",
+        "IR Verbs (infinitives)"
+      ],
+      [
+        "ir",
+        "IR Verbs (conjugations)"
+      ],
+      [
+        "eiesimple",
+        "E:IE Verbs (infinitives)"
+      ],
+      [
+        "eie",
+        "E:IE Verbs (conjugations)"
+      ],
+      [
+        "ouesimple",
+        "O:UE Verbs (infinitives)"
+      ],
+      [
+        "oue",
+        "O:UE Verbs (conjugations)"
+      ],
+      [
+        "uuesimple",
+        "U:UE Verbs (infinitives)"
+      ],
+      [
+        "uue",
+        "U:UE Verbs (conjugations)"
+      ],
+      [
+        "eisimple",
+        "E:I Verbs (infinitives)"
+      ],
+      [
+        "ei",
+        "E:I Verbs (conjugations)"
+      ],
+      [
+        "irregularsimple",
+        "Irregular Verbs (infinitives)"
+      ],
+      [
+        "irregular",
+        "Irregular Verbs (conjugations)"
+      ],
+      [
+        "mnemonics",
+        "Ser/Estar Mnemonic Devices"
+      ],
+      [
+        "tenerexpressions",
+        "Expressions used with Tener"
+      ],
+      [
+        "numbers",
+        "Numbers"
+      ],
+      [
+        "family",
+        "Family"
+      ],
+      [
+        "descadjectives",
+        "Descriptive Adjectives"
+      ],
+      [
+        "possadjectives",
+        "Possessive Adjectives"
+      ],
+      [
+        "hobbies",
+        "Hobbies"
+      ],
+      [
+        "colors",
+        "Colors"
+      ],
+      [
+        "nationalities",
+        "Nationalities"
+      ],
+      [
+        "gustar",
+        "Gustar (verb)"
+      ],
+      [
+        "irverb",
+        "Ir (verb)"
+      ],
+      [
+        "ser",
+        "Ser (verb)"
+      ],
+      [
+        "estar",
+        "Estar (verb)"
       ],
       [
         "alphabet",
         "Spanish Alphabet"
+      ],
+      [
+        "greetings",
+        "Greetings"
+      ],
+      [
+        "location",
+        "Location"
+      ],
+      [
+        "age",
+        "Age Expressions"
+      ],
+      [
+        "nouns",
+        "Nouns and Articles"
+      ],
+      [
+        "classroom",
+        "Classroom Objects"
+      ],
+      [
+        "subjects",
+        "School Subjects"
+      ],
+      [
+        "school",
+        "School Expressions"
+      ],
+      [
+        "days",
+        "Days"
+      ],
+      [
+        "months",
+        "Months"
+      ],
+      [
+        "body",
+        "Body Parts"
+      ],
+      [
+        "counting",
+        "Counting Expressions"
+      ],
+      [
+        "prepositions",
+        "Prepositions"
       ]
     ]
   }

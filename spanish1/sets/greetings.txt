@@ -1,13 +1,27 @@
-Hello	Hola
-What is your name? (formal)	¿Cómo se llama usted?
-What is your name? (informal)	¿Cómo te llamas?
-My name is	Me llamo
-And you? (formal)	¿Y usted?
-And you? (informal)	¿Y tú?
-It's a pleasure	Mucho gusto
-The pleasure is all mine	El gusto es mío
-Likewise	Igualmente
-Charmed. Delighted	Encantado/a
-name	el nombre
-Mr.	el señor
-Ms., Mrs.	la señora
+Hola	Hello
+¿Cómo se llama usted?	What's your name? (formal)
+¿Cómo te llamas?	What is your name? (informal)
+Me llamo	My name is ...
+¿Y usted?	And you (formal)
+¿Y tú?	And you? (informal)
+Mucho gusto	It's a pleasure
+El gusto es mío	The pleasure is all mine
+Igualmente	Likewise
+Encantado/a	Charmed
+El nombre	Name
+El señor (sr)	Mr.
+La señora (sra)	Ms., Mrs
+Buenos días	good morning
+Buenas tardes	good afternoon
+Buenas noches	good evening/good night
+Hasta la vista	See you later
+Le presento a	I would like to introduce you to (name) (formal)
+Te presento a	I would like to introduce you to (name) (informal)
+¿Cómo estás?	How are you (familiar)
+Muy bien	Very Good
+Regular	so-so; OK
+No muy bien	Not very well
+Gracias	Thank you
+Excellente	Excellent
+saludos	greetings
+introducciones	introductions

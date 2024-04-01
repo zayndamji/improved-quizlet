@@ -1,0 +1,40 @@
+cierro	to close/yo
+cierra	to close/él
+cierras	to close/tú
+cerramos	to close/nos
+cierran	to close/ellos
+comienzo	to begin/yo
+comienza	to begin/él
+comienzas	to begin/tú
+comenzamos	to begin/nos
+comienzan	to begin/ellos
+empiezo	to begin/yo
+empieza	to begin/él
+empiezas	to begin/tú
+empezamos	to begin/nos
+empiezan	to begin/ellos
+entiendo	to understand/yo
+entiende	to understand/él
+entiendes	to understand/tú
+entendemos	to understand/nos
+entienden	to understand/ellos
+pienso	to think/yo
+piensa	to think/él
+piensas	to think/tú
+pensamos	to think/nos
+piensan	to think/ellos
+pierdo	to lose; to miss/yo
+pierde	to lose; to miss/él
+pierdes	to lose; to miss/tú
+perdemos	to lose; to miss/nos
+pierden	to lose; to miss/ellos
+prefiero	to prefer/yo
+prefiere	to prefer/él
+prefieres	to prefer/tú
+preferimos	to prefer/nos
+prefieren	to prefer/ellos
+quiero	to want; to love/yo
+quiere	to want; to love/él
+quieres	to want; to love/tú
+queremos	to want; to love/nos
+quieren	to want; to love/ellos
