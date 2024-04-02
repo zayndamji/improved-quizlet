@@ -1,0 +1,27 @@
+el árbol	tree
+el bosque (tropical)	(tropical; rain) forest
+el cielo	sky
+el cráter	crater
+el desierto	desert
+la estrella	star
+la flor	flower
+el pasto, la césped	grass
+el lago	lake
+la luna	moon
+la naturaleza	nature
+la nube	cloud
+la piedra	stone
+la planta	plant
+el río	river
+la selva, la jungla	jungle
+el sendero	trail; path
+el sol	sun
+la tierra	land; soil
+el valle	valley
+el volcán	volcano
+el animal	animal
+el ave, el pájaro	bird
+el gato	cat
+el perro	dog
+el pez, los peces	fish (singular & plural)
+la vaca	cow

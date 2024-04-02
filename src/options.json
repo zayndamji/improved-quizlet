@@ -1,10 +1,36 @@
 [
   {
+    "name": "vocabulary4",
+    "display": "Vocabulary 4 (Nature)",
+    "sets": [
+      [
+        "natural",
+        "La naturaleza y los animales"
+      ],
+      [
+        "conjunctions",
+        "Conjunciones"
+      ],
+      [
+        "dudas",
+        "Las dudas y certezas"
+      ],
+      [
+        "emotions",
+        "Las emociones"
+      ],
+      [
+        "environment",
+        "El medio ambiente"
+      ]
+    ]
+  },
+  {
     "name": "subjunctivetense",
     "display": "Subjunctive Verbs",
     "sets": [
       [
-        "subjunctivo",
+        "subjunctiveverbs",
         "Subjunctive Verbs"
       ]
     ]
