@@ -1,0 +1,15 @@
+fuentes	sources
+lugar	place
+daños	harm
+seguro	safe
+llevar	to take
+algo	something
+incrementar	to increase
+arreglar	to fix
+romper	to break
+acabar	to do away with
+cosas	things
+lejos	far away
+mentenerse	to maintain
+sucio	dirty
+limpio	clean
