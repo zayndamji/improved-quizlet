@@ -1,0 +1,35 @@
+el abrigo	coat
+los jeans	jeans
+los calcetines	socks
+la camisa	shirt
+la chaqueta	jacket
+el cinturón	belt
+la corbata, el lazo	tie
+la falda	skirt
+los guantes	gloves
+el impermeable	raincoat
+los pantalones	pants
+los pantalones cortos	shorts
+la ropa interior	underwear
+las sandalias	sandals
+los sombreros	hats
+el suéter	sweater
+el traje	suit
+el traje de baño	bathing suit
+el vestido	dress
+el cuello	neck
+el cuerpo	body
+los dedos	fingers
+el estómago	stomach
+la garganta	throat
+el hueso	bone
+la muela	molar
+la nariz	nose
+el oído	inner ear
+los ojos	eyes
+las orejas	ears
+el pie	foot
+los pies	feet
+las piernas	legs
+las rodillas	knees
+los tobillos	ankles
