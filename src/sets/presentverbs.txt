@@ -1,0 +1,26 @@
+buscar	to look for	busco	buscas	busca	bucamos	buscan
+caber	to fit	quepo	cabes	cabe	cabemos	caben
+caerse	to fall	me caigo	te caes	se cae	nos caemos	se caen
+corregir	to correct	corrijo	corriges	corrige	corregimos	corrigen
+conocer	to know	conozco	conoces	conoce	conocemos	conocen
+compartir	to share	comparto	compartes	comparte	compartimos	comparten
+dar	to give	doy	das	da	damos	dan
+dirigir	to direct, manage	dirijo	diriges	dirige	dirigimos	dirigen
+estar	to be (temporary)	estoy	estás	está	estamos	están
+escribir	to write	escribo	escribes	escribe	escribimos	escriben
+hacer	to do, to make	hago	haces	hace	hacemos	hacen
+ir	to go to	voy	vas	va	vamos	van
+jugar	to play	juego	juegas	juega	jugamos	juegan
+pensar	to think	pienso	piensas	piensa	pensamos	piensan
+poder	to be able to	puedo	puedes	puede	podemos	pueden
+proponer	to propose, to suggest	propongo	propones	propone	proponemos	proponen
+parecer	to seem, appear	parezco	paraces	parace	paracemos	paracen
+pedir	to ask for, to order	pido	pides	pide	pedimos	piden
+prohibir	to prohibit	prohíbo	prohíbes	prohíbe	prohibimos	prohíben
+ser	to be (permanent)	soy	eres	es	somos	son
+salir	to leave, to go out	salgo	sales	sale	salimos	salen
+viajar	to travel	viajo	viajas	viaja	viajamos	viajan
+aburrirse	to get bored	me aburro	te aburres	se aburre	nos aburrimos	se aburren
+distinguir	to distinguish	distingo	distingues	distingue	distinguimos	distinguen
+suponer	to suppose, to assume	supongo	supones	supone	suponemos	suponen
+venir	to come	vengo	vienes	viene	venimos	vienen

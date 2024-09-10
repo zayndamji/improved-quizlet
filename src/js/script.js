@@ -42,9 +42,7 @@ function resetScreen() {
   document.getElementById('main-table').textContent = '';
   document.getElementById('main-table').append(topRow);
   document.getElementById('main-table').append(topRow2);
-  if (getLocalStorage('set').includes('imperfectverbs') ||
-      getLocalStorage('set').includes('spanish1review') ||
-      getLocalStorage('set').includes('preteriteverbs')) {
+  if (getLocalStorage('set').includes('presentverbs')) {
     document.getElementById('firstrow').style.display = 'flex';
     document.getElementById('firstrow2').style.display = 'none';
   } else if (getLocalStorage('set').includes('tuustedustedes')) {
