@@ -1,5 +1,15 @@
 [
   {
+    "name": "verbs",
+    "display": "Spanish 3 Verbs",
+    "sets": [
+      [
+        "present",
+        "Present Tense"
+      ]
+    ]
+  },
+  {
     "name": "vocabulary",
     "display": "Spanish 3 Vocabulary",
     "sets": [
