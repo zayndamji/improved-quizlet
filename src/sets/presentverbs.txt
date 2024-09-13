@@ -14,7 +14,7 @@ jugar	to play	juego	juegas	juega	jugamos	juegan
 pensar	to think	pienso	piensas	piensa	pensamos	piensan
 poder	to be able to	puedo	puedes	puede	podemos	pueden
 proponer	to propose, to suggest	propongo	propones	propone	proponemos	proponen
-parecer	to seem, appear	parezco	paraces	parace	paracemos	paracen
+parecer	to seem, appear	parezco	pareces	parece	parecemos	parecen
 pedir	to ask for, to order	pido	pides	pide	pedimos	piden
 prohibir	to prohibit	prohíbo	prohíbes	prohíbe	prohibimos	prohíben
 ser	to be (permanent)	soy	eres	es	somos	son
