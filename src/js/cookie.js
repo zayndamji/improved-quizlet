@@ -62,6 +62,7 @@ if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
 } else {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
   document.getElementById('vocabulary-setchooser').children[3].children[0].checked = true;
+  document.getElementById('vocabulary-setchooser').children[4].children[0].checked = true;
   selectSet();
   console.log('User is new... generating quiz from scratch.');
 }

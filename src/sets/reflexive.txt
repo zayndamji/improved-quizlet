@@ -1,0 +1,47 @@
+secándose	yo me seco, tu te secas, usted/el/ella se seca, nosotros nos secamos, ustedes/ellos/ellas se secan
+acostarse	to go to bed
+afeitarse	to shave
+bañarse	to take a bath
+cepillarse	to brush one's teeth/hair
+despertarse	to wake up
+dormirse	to fall asleep
+ducharse	to take a shower
+lavarse	to wash oneself
+levantarse	to get up
+maquillarse	to put on makeup
+peinarse	to comb one's hair
+ponerse	to put on clothing
+secarse	to dry off
+quitarse	to take off clothing
+vestirse	to get dressed
+aburrir	to bore
+aburrirse	to get bored
+acordar	to agree
+acordarse	to remember
+comer	to eat
+comerse	to eat up
+dormir	to sleep
+ir	to go
+irse (de)	to go away from
+llevar	to carry
+llevarse	to carry away
+mudar	to change
+mudarse	to move (change residence)
+parecer	to seem
+parecerse (a)	to resemble; to look like
+poner	to put
+ponerse	to put on (clothing, make-up)
+quitar	to take away
+quitarse	to take off (clothing)
+acercarse (a)	to approach
+arrepentirse (de)	to regret
+atreverse (a)	to dare to
+convertirse (en)	to become
+darse cuenta (de)	to realize
+enterarse (de)	to find out (about)
+fijarse (en)	to take notice (of)
+morirse (de)	to die (of)
+olvidarse (de)	to forget (about)
+preocuparse (por)	to worry (about)
+quejarse (de)	to complain (about)
+sorprenderse (de)	to be surprised (about)
