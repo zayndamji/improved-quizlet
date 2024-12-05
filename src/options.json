@@ -34,5 +34,19 @@
         "Las diversiones"
       ]
     ]
+  },
+  {
+    "name": "finalone",
+    "display": "Semester 1 Final Review",
+    "sets": [
+      [
+        "unitonekeyvocab",
+        "Unit 1 Vocab"
+      ],
+      [
+        "unittwokeyvocab",
+        "Unit 2 Vocab"
+      ]
+    ]
   }
 ]
