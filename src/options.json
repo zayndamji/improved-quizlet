@@ -6,6 +6,14 @@
       [
         "presentverbs",
         "Present Tense"
+      ],
+      [
+        "gustarverbos",
+        "Gustar y verbos similares"
+      ],
+      [
+        "reflexiveverbs",
+        "Reflexive verbs"
       ]
     ]
   },
@@ -24,14 +32,6 @@
       [
         "unittwo",
         "Las diversiones"
-      ],
-      [
-        "gustar",
-        "Gustar y verbos similares"
-      ],
-      [
-        "reflexive",
-        "Reflexive verbs"
       ]
     ]
   }
