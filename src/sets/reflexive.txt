@@ -10,7 +10,7 @@ lavarse	to wash oneself
 levantarse	to get up
 maquillarse	to put on makeup
 peinarse	to comb one's hair
-ponerse	to put on clothing
+ponerse	to put on (clothing)
 secarse	to dry off
 quitarse	to take off clothing
 vestirse	to get dressed
@@ -24,12 +24,12 @@ dormir	to sleep
 ir	to go
 irse (de)	to go away from
 llevar	to carry
-llevarse	to carry away
+llevarse bien/mal	to get along well/badly
 mudar	to change
 mudarse	to move (change residence)
 parecer	to seem
 parecerse (a)	to resemble; to look like
-poner	to put
+poner	to put, place
 ponerse	to put on (clothing, make-up)
 quitar	to take away
 quitarse	to take off (clothing)
