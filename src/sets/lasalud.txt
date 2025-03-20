@@ -1,0 +1,68 @@
+la depresión	depression
+la enfermedad	disease; illness
+la gripe	flu
+la herida	injury/ wound
+el malestar	discomfort
+la obesidad	obesity
+el resfriado	cold
+la respiración	breathing
+la tensión (alta/baja)	(high/low) blood pressure
+la tos	cough
+el virus	virus
+contagiarse	to become infected
+desmayarse	to faint
+empeorar	to deteriorate; to get worse
+enfermarse	to get sick
+estar resfriado/a	to have a cold
+lastimarse	to get hurt
+permanecer	to remain; to last
+ponerse bien/mal	to get well/sick
+sufrir (de)	to suffer (from)
+tener buen/mal aspecto	to look healthy/sick
+tener fiebre	to have a fever
+toser	to cough
+agotado/a	exhausted
+inflamado/a	inflamed
+mareado/a	dizzy
+la alimentación	diet (nutrition)
+la autoestima	self-esteem
+el bienestar	well-being
+el estado de ánimo	mood
+la salud	health
+adelgazar	to lose weight
+dejar de fumar	to quit smoking
+descansar	to rest
+engordar	to gain weight
+estar a dieta	to be on a diet
+mejorar	to improve, to get better
+prevenir (e:ie)	to prevent
+relajarse	to relax
+trasnochar	to stay up all night
+sano/a	healthy
+la cirugía	surgery
+el/la cirujano/a	surgeon
+la consulta	doctor's appointment
+el consultorio	doctor's office
+la operación	operation, surgery
+los primeros auxilios	first aid
+la sala de emergencias	emergency room
+el analgésico	painkiller
+la aspirina	aspirin
+el calmante	tranquilizer
+los efectos secundarios	side effects
+el jarabe (para la tos)	(cough) syrup
+la pastilla	pill
+la receta	prescription
+el tratamiento	treatment
+la vacuna	vaccine
+la venda	bandage
+el yeso	cast
+curarse	to heal; to be cured
+poner(se) una inyección	to give/get a shot
+recuperarse	to recover
+sanar	to heal
+tratar	to treat
+vacunar(se)	to vaccinate/to get vaccinated
+curativo/a	healing
+infarto	heart attack
+evitar	to avoid, evade
