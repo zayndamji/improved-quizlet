@@ -1,5 +1,23 @@
 [
   {
+    "name": "subjunctive",
+    "display": "Subjunctive",
+    "sets": [
+      [
+        "willinfluence",
+        "Verbs of will/influence"
+      ],
+      [
+        "emotion",
+        "Verbs of emotion"
+      ],
+      [
+        "doubt",
+        "Verbs of doubt/denial"
+      ]
+    ]
+  },
+  {
     "name": "verbs",
     "display": "Spanish 3 Verbs",
     "sets": [
