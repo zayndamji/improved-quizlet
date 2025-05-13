@@ -1,0 +1,35 @@
+la bienvenida	welcome
+el albergue	hostel
+el itinerario	itinerary
+el alojamiento	lodging
+la despedida	farewell, goodbye
+la tarjeta de embarque	boarding pass
+la temporada alta/baja	high season/low season
+hacer las maletas	to pack
+alojarse	to stay
+hacer transbordo	to transfer (planes/trains)
+de buena categoría	first-rate
+recomendable	advisable, recommended
+hacer un viaje	to take a trip
+irse de vacaciones	to go on vacation
+perder (e:ie) (el vuelo)	to miss (the flight)
+a bordo	on board
+retrasado	delayed
+vigente	valid
+el accidente (automovilístico)	(car) accident
+la brújula	compass
+el/la agente de aduanas	customs agent
+el/la guía turístico/a	tour guide
+el aviso	notice; warning
+el cinturón de seguridad	seat belt
+el buceo	scuba diving
+el congestionamiento	traffic jam
+las medidas de seguridad	security measures
+aterrizar	to land (plane)
+despegar	to take off
+prohibido/a	prohibited
+el/la aventurero/a	adventurer
+la frontera	border
+la selva	jungle
+la ruinas	ruins
+la isla	island
