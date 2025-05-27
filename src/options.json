@@ -22,6 +22,10 @@
     "display": "Spanish 3 Verbs",
     "sets": [
       [
+        "spanishverbs",
+        "All Verbs (future tense test)"
+      ],
+      [
         "presentverbs",
         "Present Tense"
       ],
