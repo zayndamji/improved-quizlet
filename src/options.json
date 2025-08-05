@@ -1,89 +1,11 @@
 [
   {
-    "name": "subjunctive",
-    "display": "Subjunctive",
+    "name": "summerhw",
+    "display": "Summer Homework",
     "sets": [
       [
-        "willinfluence",
-        "Verbs of will/influence"
-      ],
-      [
-        "emotion",
-        "Verbs of emotion"
-      ],
-      [
-        "doubt",
-        "Verbs of doubt/denial"
-      ]
-    ]
-  },
-  {
-    "name": "verbs",
-    "display": "Spanish 3 Verbs",
-    "sets": [
-      [
-        "spanishverbs",
-        "All Verbs (future tense test)"
-      ],
-      [
-        "presentverbs",
-        "Present Tense"
-      ],
-      [
-        "gustarverbos",
-        "Gustar y verbos similares"
-      ],
-      [
-        "reflexive",
-        "Reflexive verbs"
-      ]
-    ]
-  },
-  {
-    "name": "vocabulary",
-    "display": "Spanish 3 Vocabulary",
-    "sets": [
-      [
-        "laropa",
-        "La ropa y el cuerpo"
-      ],
-      [
-        "relations",
-        "Las relaciones personales"
-      ],
-      [
-        "unittwo",
-        "Las diversiones"
-      ],
-      [
-        "lavida",
-        "La vida diaria"
-      ],
-      [
-        "dialgo",
-        "Di algo (Unit 3)"
-      ],
-      [
-        "lasalud",
-        "La salud (Unit 4)"
-      ],
-      [
-        "unitfive",
-        "Los viajes (Unit 5)"
-      ]
-    ]
-  },
-  {
-    "name": "finalone",
-    "display": "Semester 1 Final Review",
-    "sets": [
-      [
-        "unitonekeyvocab",
-        "Unit 1 Vocab"
-      ],
-      [
-        "unittwokeyvocab",
-        "Unit 2 Vocab"
+        "falsecognates",
+        "Cognatos Falsos"
       ]
     ]
   }
