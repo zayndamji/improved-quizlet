@@ -1,11 +1,19 @@
 [
   {
-    "name": "summerhw",
-    "display": "Summer Homework",
+    "name": "communication",
+    "display": "Expressiones que facilitan la comunicación",
     "sets": [
       [
-        "falsecognates",
-        "Cognatos Falsos"
+        "untema",
+        "Para presentar un tema"
+      ],
+      [
+        "unaidea",
+        "Para expresar una idea"
+      ],
+      [
+        "elaborar",
+        "Para elaborar o clarificar"
       ]
     ]
   }

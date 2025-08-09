@@ -393,7 +393,37 @@ input:checked + .slider:before {
   .spanish-english-toggle {
     display: none !important;
   }
-}</style><meta id="meta-set-falsecognates.txt" content="actual	current, present
+}</style><meta id="meta-set-elaborar.txt" content="además (de)	furthermore, in addition
+a la (misma) vez	at the same time
+además	besides, furthermore
+al mismo tiempo	at the same time
+asimismo	likewise
+bastaría poner un ejemplo	here is an example
+con respecto a	with respect to
+conforme a	according to
+constar que	to make known that, to certify that
+de aquí (ahora, hoy) en adelante	from now on
+de hecho	in fact
+el caso es que	the fact is that
+el hecho de que	the fact that
+en otras palabras	in other words
+entonces	then
+es decir (que)	that is to say, in other words
+específicamente	specifically
+igualmente	equally
+las razones por las que	the reasons for which
+mientras	while
+mientras tanto	meanwhile, in the meantime
+o sea	that is to say, in other words
+para continuar	to continue
+para ejemplificar	to exemplify
+para ilustrar	to illustrate
+por añadidura	as well, besides, in addition
+por eso	therefore
+por ejemplo	for example
+principalmente	mostly, especially
+también	also
+tampoco	neither, nor either"/><meta id="meta-set-falsecognates.txt" content="actual	current, present
 actualmente	currently, presently
 el argumento	plot of a story or novel
 asistir a	to attend
@@ -419,7 +449,38 @@ recordar	to remember
 restar	to subtract
 sensible	sensitive
 suceder	to happen, occur
-últimamente	lately"/></head>
+últimamente	lately"/><meta id="meta-set-unaidea.txt" content="a causa de	on account of, because of
+a mi parecer	in my opinion
+a pesar de todo	in spite of everything
+actualmente	at present
+ahora mismo	right now
+al considerar	upon considering
+claro	of course
+como	since
+de ninguna manera	by no means
+de todos modos	at any rate
+en cuanto a	regarding, with respect to
+en la actualidad	currently
+en realidad	actually
+en vista de que	considering that
+es cierto que	it is true that, it is certain that
+es seguro que	it is certain that
+hace poco	a short while ago
+hasta el momento, hasta la fecha	until now
+hay que tomar en cuenta que	one must realize that
+hoy día	nowadays
+la verdad es que	the truth is that
+lo esencial es que	what is essential is that
+lo importante es que	what is important is that
+lo que importa es que	what matters is that
+sin duda	without a doubt
+sobre todo	above all"/><meta id="meta-set-untema.txt" content="a partir de	beginning with
+al principio	at the beginning
+como punto de partida	as a starting point
+en primer lugar	first of all
+en segundo, tercer lugar	second(ly), third(ly)
+para empezar/comenzar	to begin with
+primero	first"/></head>
 <body>
 <span id="splashscreen" class="fullscreen">
 <span id="splashscreen-inner" style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></span>
@@ -459,7 +520,7 @@ suceder	to happen, occur
 <label for="splashscreen-selector">Show Splashscreen</label>
 <input id="splashscreen-selector" name="splashscreen-selector" type="checkbox" onclick="toggleSplashscreen(); regenerateQuiz();"></div></div>
 <div id="set-parent">
-<button>Change which topic(s) you are studying (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Summer Homework&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;summerhw-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;summerhw-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="summerhw-setchooser"><div><input style="width: 10px;" type="checkbox" id="falsecognates" name="set" value="falsecognates" onchange="selectSet()"/><label style="font-size: 15px;" for="falsecognates">Cognatos Falsos</label></div></div></div></div>
+<button>Change which topic(s) you are studying (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Expressiones que facilitan la comunicación&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;communication-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;communication-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="communication-setchooser"><div><input style="width: 10px;" type="checkbox" id="untema" name="set" value="untema" onchange="selectSet()"/><label style="font-size: 15px;" for="untema">Para presentar un tema</label></div><div><input style="width: 10px;" type="checkbox" id="unaidea" name="set" value="unaidea" onchange="selectSet()"/><label style="font-size: 15px;" for="unaidea">Para expresar una idea</label></div><div><input style="width: 10px;" type="checkbox" id="elaborar" name="set" value="elaborar" onchange="selectSet()"/><label style="font-size: 15px;" for="elaborar">Para elaborar o clarificar</label></div></div></div></div>
 <a href="/copy" target="_blank" class="button-anchor">Copy Accents (useful on Chromebooks)</a>
 <br>
 <button onclick="switchTermAndDefinition(); resetScreen(); restartQuiz(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
@@ -941,7 +1002,9 @@ if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
   console.log('User has previous data... regenerating quiz from saved data.');
 } else {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
-  document.getElementById('summerhw-setchooser').children[0].children[0].checked = true;
+  document.getElementById('communication-setchooser').children[0].children[0].checked = true;
+  document.getElementById('communication-setchooser').children[1].children[0].checked = true;
+  document.getElementById('communication-setchooser').children[2].children[0].checked = true;
   selectSet();
   console.log('User is new... generating quiz from scratch.');
 }</script></body>
