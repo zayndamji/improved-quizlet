@@ -449,7 +449,31 @@ recordar	to remember
 restar	to subtract
 sensible	sensitive
 suceder	to happen, occur
-últimamente	lately"/><meta id="meta-set-unaidea.txt" content="a causa de	on account of, because of
+últimamente	lately"/><meta id="meta-set-quiz1.txt" content="a partir de	beginning with
+al principio	at the beginning
+como punto de partida	as a starting point
+en primer lugar	first of all
+para empezar	to begin with
+a causa de	on account of, because of
+a pesar de todo	in spite of everything
+al considerar	upon considering
+de ninguna manera	by no means
+es cierto que	it's certain that
+hasta el momento	until now
+la verdad es que	the truth is that
+lo que importa es que	what matters is that
+sobre todo	above all
+además (de)	furthermore; in addition
+al mismo tiempo	at the same time
+el caso es que / el hecho de que	the fact is that
+en otras palabras	in other words
+igualmente	likewise
+las razones por las que	the reasons for which
+mientras tanto	meanwhile
+para ilustrar	to illustrate
+tampoco	neither, not either
+en la actualidad	currently, right now
+por añadidura	in addition"/><meta id="meta-set-unaidea.txt" content="a causa de	on account of, because of
 a mi parecer	in my opinion
 a pesar de todo	in spite of everything
 actualmente	at present
@@ -520,7 +544,7 @@ primero	first"/></head>
 <label for="splashscreen-selector">Show Splashscreen</label>
 <input id="splashscreen-selector" name="splashscreen-selector" type="checkbox" onclick="toggleSplashscreen(); regenerateQuiz();"></div></div>
 <div id="set-parent">
-<button>Change which topic(s) you are studying (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Expressiones que facilitan la comunicación&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;communication-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;communication-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="communication-setchooser"><div><input style="width: 10px;" type="checkbox" id="untema" name="set" value="untema" onchange="selectSet()"/><label style="font-size: 15px;" for="untema">Para presentar un tema</label></div><div><input style="width: 10px;" type="checkbox" id="unaidea" name="set" value="unaidea" onchange="selectSet()"/><label style="font-size: 15px;" for="unaidea">Para expresar una idea</label></div><div><input style="width: 10px;" type="checkbox" id="elaborar" name="set" value="elaborar" onchange="selectSet()"/><label style="font-size: 15px;" for="elaborar">Para elaborar o clarificar</label></div></div></div></div>
+<button>Change which topic(s) you are studying (<span id="numberofsets">1</span> chosen) (hover to see)</button><div id="set"><div><span style="font-size: 18px;">Quiz Study Sets&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;quiz-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;quiz-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="quiz-setchooser"><div><input style="width: 10px;" type="checkbox" id="quiz1" name="set" value="quiz1" onchange="selectSet()"/><label style="font-size: 15px;" for="quiz1">Quiz 1: Expresiones que facilitan la comunicación</label></div></div><div><span style="font-size: 18px;">Expressiones que facilitan la comunicación&nbsp;&nbsp;</span><button style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick="selectAllSets(true, &quot;communication-setchooser&quot;);">Select All</button><button style="padding: 5px; font-size: 16px;" onclick="selectAllSets(false, &quot;communication-setchooser&quot;);">Deselect All</button></div><div class="responsive-grid-buttons" id="communication-setchooser"><div><input style="width: 10px;" type="checkbox" id="untema" name="set" value="untema" onchange="selectSet()"/><label style="font-size: 15px;" for="untema">Para presentar un tema</label></div><div><input style="width: 10px;" type="checkbox" id="unaidea" name="set" value="unaidea" onchange="selectSet()"/><label style="font-size: 15px;" for="unaidea">Para expresar una idea</label></div><div><input style="width: 10px;" type="checkbox" id="elaborar" name="set" value="elaborar" onchange="selectSet()"/><label style="font-size: 15px;" for="elaborar">Para elaborar o clarificar</label></div></div></div></div>
 <a href="/copy" target="_blank" class="button-anchor">Copy Accents (useful on Chromebooks)</a>
 <br>
 <button onclick="switchTermAndDefinition(); resetScreen(); restartQuiz(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
@@ -1002,9 +1026,7 @@ if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
   console.log('User has previous data... regenerating quiz from saved data.');
 } else {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
-  document.getElementById('communication-setchooser').children[0].children[0].checked = true;
-  document.getElementById('communication-setchooser').children[1].children[0].checked = true;
-  document.getElementById('communication-setchooser').children[2].children[0].checked = true;
+  document.getElementById('quiz-setchooser').children[0].children[0].checked = true;
   selectSet();
   console.log('User is new... generating quiz from scratch.');
 }</script></body>

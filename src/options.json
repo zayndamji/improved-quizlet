@@ -1,5 +1,15 @@
 [
   {
+    "name": "quiz",
+    "display": "Quiz Study Sets",
+    "sets": [
+      [
+        "quiz1",
+        "Quiz 1: Expresiones que facilitan la comunicación"
+      ]
+    ]
+  },
+  {
     "name": "communication",
     "display": "Expressiones que facilitan la comunicación",
     "sets": [
