@@ -9,7 +9,7 @@ app.get('/', (req, res, next) => {
 });
 app.use('/', express.static('./serve/'));
 
-app.listen(() => {
+app.listen(3456, () => {
   app._router.stack.forEach(r => {
     if (r.route && r.route.path) {
       console.log(`${r.route.stack[0].method.toUpperCase()} ${r.route.path}`);
