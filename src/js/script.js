@@ -125,7 +125,6 @@ function regenerateQuiz() {
                 (ignoreAccents && (convertToNoAccents(convertToPlain(target.value)) == convertToNoAccents(convertToPlain(singleDefinition))))) {
           words[i].status[j] = 2;
           if (skip) {
-            splashscreenAnimation('green', 'Correct!');
             playSuccessSound();
           }
           words[i].word[j] = singleDefinition;
@@ -134,7 +133,6 @@ function regenerateQuiz() {
         else {
           words[i].status[j] = 1;
           if (skip) {
-            splashscreenAnimation('red', 'Wrong!');
             playFailureSound();
           }
           words[i].word[j] = target.value.trim();
@@ -242,7 +240,7 @@ function regenerateQuiz() {
   }
   else {
     document.getElementById('outer-progress-text').textContent = text;
-    document.getElementById('progress-bar').style.width = Math.floor(percentage) * 0.93 + '%';
+    document.getElementById('progress-bar').style.width = Math.floor(percentage) + '%';
     document.getElementById('progress-bar').style.display = 'block';
   }
 
@@ -257,11 +255,13 @@ function solveQuiz() {
     }
   }
   regenerateQuiz();
-  longSplashscreenAnimation('green', '100%..?');
 }
 
 function selectAllSets(on, id) {
-  Array.from(document.getElementById(id).children).forEach(e => e.children[0].checked = on);
+  Array.from(document.getElementById(id).children).forEach(e => {
+    const checkbox = e.children[0].children[0];
+    checkbox.checked = on;
+  });
   selectSet();
 }
 

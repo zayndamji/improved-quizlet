@@ -26,120 +26,129 @@
 </head>
 
 <body>
-  <span id="splashscreen" class="fullscreen">
-    <span id="splashscreen-inner" style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></span>
-  </span>
-
   <div class="navbar">
-    <br>
-    <div class="navbar-title">
-      <span>Improved Quizlet</span>
-      <span class="navbar-title-author">by Zayn Damji</span>
-    </div>
-    <div class="right-bar">
-      <span class="spanish-english-toggle" id="spanish-english-toggle" style="flex: 1; margin-right: 25px; margin-top: 8px; display: flex; align-items: center;">
-        <span style="font-size: 100%; margin-right: 10px;">English</span>
-        <label class="switch">
-          <input type="checkbox" id="flipped-or-not">
-          <span class="slider round"></span>
-        </label>
-        <span style="font-size: 100%; margin-left: 10px;">Spanish</span>
-      </span>
-    </div>
-  </div>
-
-  <div style="height: 52px"></div>
-
-  <br>
-  //- <span style="font-size: 16px; color: red;">Note: This website is now Spanish 3. Click <a href="/spanish1">here for Spanish 1</a> and <a href="/spanish2">here for Spanish 2</a></span>
-  //- <span style="font-size: 20px; color: red;"><strong>Parecer</strong> conjugations have been fixed. Please review them.</span>
-  //- <br><br>
-
-  <div id="set-parent">
-    <button>Settings (hover to see)</button>
-    div(style="margin-bottom: 8px;")
-      <label for="status-selector">Hide whether Correct or Incorrect</label>
-      <input id="status-selector" name="status-selector" type="checkbox" onclick="toggleStatus(); regenerateQuiz();">
-      <br>
-      <label for="accents-selector">Ignore Accents</label>
-      <input id="accents-selector" name="accents-selector" type="checkbox" onclick="toggleAccents(); regenerateQuiz();">
-      <br>
-      <label for="mute-selector">Mute Sounds</label>
-      <input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();" checked>
-      <br>
-      <label for="column-selector">Test in Columns</label>
-      <input id="column-selector" name="column-selector" type="checkbox" onclick="toggleColumns(); regenerateQuiz();">
-      <br>
-      <label for="splashscreen-selector">Show Splashscreen</label>
-      <input id="splashscreen-selector" name="splashscreen-selector" type="checkbox" onclick="toggleSplashscreen(); regenerateQuiz();">
-  </div>
-
-  <div id="set-parent">
-    <button>Change which topic(s) you are studying (<span id="numberofsets">1</span> chosen) (hover to see)</button>
-    div(id="set")
-      each sec in options
-        - const secId = `${sec.name}-setchooser`
-        div
-          span(style="font-size: 18px;") #{sec.display}&nbsp;&nbsp;
-          - const onclickOn = `selectAllSets(true, "${secId}");`
-          button(style="padding: 5px; font-size: 16px; margin-right: 8px;" onclick=onclickOn) Select All
-          - const onclickOff = `selectAllSets(false, "${secId}");`
-          button(style="padding: 5px; font-size: 16px;" onclick=onclickOff) Deselect All
-        div(class="responsive-grid-buttons" id=secId)
-          each week in sec.sets
-            div
-              input(style="width: 10px;" type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
-              label(style="font-size: 15px;" for=week[0]) #{week[1]}
-  </div>
-
-  <a href="/copy" target="_blank" class="button-anchor">Copy Accents (useful on Chromebooks)</a>
-
-  <br>
-
-  <button onclick="switchTermAndDefinition(); resetScreen(); restartQuiz(); regenerateQuiz();">Switch to testing in <span id="current-lang">Spanish</span></button>
-  <br>
-
-  <button onclick="resetScreen(); restartQuiz(); updateFlipped(); regenerateQuiz();">Restart</button>
-  |&nbsp;
-  <button onclick="clearWords(); generateWords(); shuffleWords(); updateFlipped(); regenerateQuiz();">Shuffle</button>
-  |&nbsp;
-  <button onclick="solveQuiz();">Solve All</button>
-
-  <br><br>
-
-  <table class="main-table-parent">
-    <tbody id="main-table">
-      <tr id="firstrow">
-        <th>Verb</th>
-        <th>Definition</th>
-        <th>Yo</th>
-        <th>Tú</th>
-        <th>Él/Usted</th>
-        <th>Nosotros</th>
-        <th>Ellos/Ustedes</th>
-      </tr>
-      <tr id="firstrow2">
-        <th>Verb</th>
-        <th>Definition</th>
-        <th>Tú</th>
-        <th>-Tú</th>
-        <th>Usted</th>
-        <th>-Usted</th>
-        <th>Ustedes</th>
-        <th>-Ustedes</th>
-      </tr>
-    </tbody>
-  </table>
-
-  <div style="width: 100%; position: fixed; bottom: 0; height: 55px; background-color: white;">
-    <div id="progress">
-      <div id="outer-progress-text">0%</div>
-      <div id="progress-bar" style="display: none;">
+    <div class="navbar-content">
+      <div class="navbar-title">
+        <span>Improved Quizlet</span>
+        <span class="navbar-title-author">by Zayn Damji</span>
+      </div>
+      <div class="right-bar">
+        <div class="spanish-english-toggle" id="spanish-english-toggle">
+          <span>English</span>
+          <label class="switch">
+            <input type="checkbox" id="flipped-or-not">
+            <span class="slider round"></span>
+          </label>
+          <span>Spanish</span>
+        </div>
       </div>
     </div>
   </div>
 
-  <br><br><br><br>
+  <div class="container">
+    <div class="main-content">
+      
+      <div class="settings-panel">
+        <div class="card-header" onclick="toggleSettings()">
+          <span>Settings</span>
+          <button class="toggle-button" id="settings-toggle">Open</button>
+        </div>
+        <div class="settings-grid" id="settings-content" style="display: none;">
+          <div class="setting-item">
+            <label class="setting-label" for="status-selector">Hide whether Correct or Incorrect</label>
+            <input id="status-selector" name="status-selector" type="checkbox" onclick="toggleStatus(); regenerateQuiz();">
+          </div>
+          <div class="setting-item">
+            <label class="setting-label" for="accents-selector">Ignore Accents</label>
+            <input id="accents-selector" name="accents-selector" type="checkbox" onclick="toggleAccents(); regenerateQuiz();">
+          </div>
+          <div class="setting-item">
+            <label class="setting-label" for="mute-selector">Mute Sounds</label>
+            <input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();" checked>
+          </div>
+          <div class="setting-item">
+            <label class="setting-label" for="column-selector">Test in Columns</label>
+            <input id="column-selector" name="column-selector" type="checkbox" onclick="toggleColumns(); regenerateQuiz();">
+          </div>
+        </div>
+      </div>
+
+      <div class="topics-section">
+        <div class="card-header" onclick="toggleTopics()">
+          <span>Study Topics</span>
+          <span class="text-sm">(<span id="numberofsets">1</span> selected)</span>
+          <button class="toggle-button" id="topics-toggle">Open</button>
+        </div>
+        <div id="set" style="display: none;">
+          each sec in options
+            - const secId = `${sec.name}-setchooser`
+            div.topic-category
+              .category-header
+                span.category-title #{sec.display}
+                .category-actions
+                  - const onclickOn = `selectAllSets(true, "${secId}");`
+                  - const onclickOff = `selectAllSets(false, "${secId}");`
+                  button.secondary(onclick=onclickOn) Select All
+                  button.secondary(onclick=onclickOff) Deselect All
+              .topic-grid(id=secId)
+                each week in sec.sets
+                  div
+                    div
+                      input(type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
+                      label(for=week[0]) #{week[1]}
+        </div>
+      </div>
+
+      <div class="actions-section">
+        <div class="actions-primary">
+          <button onclick="switchTermAndDefinition(); resetScreen(); restartQuiz(); regenerateQuiz();">
+            span
+              |Switch to&nbsp;
+              span#current-lang Spanish
+          </button>
+          <button class="secondary" onclick="resetScreen(); restartQuiz(); updateFlipped(); regenerateQuiz();">Restart</button>
+          <button class="secondary" onclick="clearWords(); generateWords(); shuffleWords(); updateFlipped(); regenerateQuiz();">Shuffle</button>
+          <button class="danger" onclick="solveQuiz();">Solve All</button>
+          <a href="/copy" target="_blank" class="button-anchor outline">Copy Accents</a>
+        </div>
+      </div>
+
+      <div class="quiz-container">
+        <table id="main-table">
+          <tr id="firstrow">
+            <th>Verb</th>
+            <th>Definition</th>
+            <th>Yo</th>
+            <th>Tú</th>
+            <th>Él/Usted</th>
+            <th>Nosotros</th>
+            <th>Ellos/Ustedes</th>
+          </tr>
+          <tr id="firstrow2">
+            <th>Verb</th>
+            <th>Definition</th>
+            <th>Tú</th>
+            <th>-Tú</th>
+            <th>Usted</th>
+            <th>-Usted</th>
+            <th>Ustedes</th>
+            <th>-Ustedes</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <br><br>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-wrapper">
+      <div id="outer-progress-text">0%</div>
+      <div id="progress">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+  </div>
 
   each sound in sounds
     audio(style="display: none;" id=sound.id)
@@ -153,9 +162,6 @@
 
   script
     include ./js/sound.js
-
-  script
-    include ./js/animation.js
 
   script
     include ./js/script.js

@@ -30,10 +30,29 @@ function toggleColumns(newColumns) {
   document.getElementById('column-selector').checked = testInColumns;
 }
 
-let splashscreenEnabled = false;
+// Dropdown toggle functions
+function toggleSettings() {
+  const content = document.getElementById('settings-content');
+  const button = document.getElementById('settings-toggle');
+  
+  if (content.style.display === 'none' || content.style.display === '') {
+    content.style.display = 'grid';
+    button.textContent = 'Close';
+  } else {
+    content.style.display = 'none';
+    button.textContent = 'Open';
+  }
+}
 
-function toggleSplashscreen(newSplashscreen) {
-  splashscreenEnabled = newSplashscreen ?? !splashscreenEnabled;
-  setLocalStorage('splash', splashscreenEnabled.toString());
-  document.getElementById('splashscreen-selector').checked = splashscreenEnabled;
+function toggleTopics() {
+  const content = document.getElementById('set');
+  const button = document.getElementById('topics-toggle');
+  
+  if (content.style.display === 'none' || content.style.display === '') {
+    content.style.display = 'block';
+    button.textContent = 'Close';
+  } else {
+    content.style.display = 'none';
+    button.textContent = 'Open';
+  }
 }
