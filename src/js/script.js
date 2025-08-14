@@ -211,8 +211,6 @@ function regenerateQuiz() {
       if (words[i].status[j] == 1 && showStatus) {
         const span = document.createElement('span');
         span.innerHTML = `&nbsp;${words[i].definition[j]}`;
-        span.style.color = 'red';
-        span.style.fontSize = '80%';
         span.setAttribute('id', `wrong-${i}-${j}`);
         inputWord.parentElement.append(span);
       }
