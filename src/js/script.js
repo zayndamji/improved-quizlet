@@ -286,12 +286,7 @@ function createTwoColumnLayout() {
   
   if (dataRows.length <= 6) return; // Don't split if there are too few rows
   
-  // Store original state if not already stored
-  if (!quizContainer.dataset.originalState) {
-    quizContainer.dataset.originalState = 'true';
-  }
-  
-  // Hide the main table
+  // Clear the main table
   mainTable.style.display = 'none';
   
   // Create two column containers
@@ -317,19 +312,6 @@ function createTwoColumnLayout() {
   leftTable.id = 'left-table';
   rightTable.id = 'right-table';
   
-  // Copy table styles to new tables
-  leftTable.style.width = '100%';
-  leftTable.style.borderCollapse = 'separate';
-  leftTable.style.borderSpacing = '0';
-  leftTable.style.fontSize = '0.875rem';
-  leftTable.style.tableLayout = 'fixed';
-  
-  rightTable.style.width = '100%';
-  rightTable.style.borderCollapse = 'separate';
-  rightTable.style.borderSpacing = '0';
-  rightTable.style.fontSize = '0.875rem';
-  rightTable.style.tableLayout = 'fixed';
-  
   // Add headers to both tables
   headerRows.forEach(headerRow => {
     leftTable.appendChild(headerRow.cloneNode(true));
@@ -341,9 +323,9 @@ function createTwoColumnLayout() {
   
   dataRows.forEach((row, index) => {
     if (index < midpoint) {
-      leftTable.appendChild(row.cloneNode(true));
+      leftTable.appendChild(row);
     } else {
-      rightTable.appendChild(row.cloneNode(true));
+      rightTable.appendChild(row);
     }
   });
   
@@ -352,9 +334,6 @@ function createTwoColumnLayout() {
   rightColumn.innerHTML = '';
   leftColumn.appendChild(leftTable);
   rightColumn.appendChild(rightTable);
-  
-  // Reattach event listeners to cloned inputs
-  reattachEventListeners();
 }
 
 function removeTwoColumnLayout() {
@@ -366,66 +345,7 @@ function removeTwoColumnLayout() {
   if (leftColumn) leftColumn.remove();
   if (rightColumn) rightColumn.remove();
   
-  // Show the original table
   mainTable.style.display = 'table';
-  
-  // Reset the dataset
-  delete quizContainer.dataset.originalState;
-}
-
-function reattachEventListeners() {
-  // Reattach event listeners to all input elements in both columns
-  const allInputs = document.querySelectorAll('.column-left input, .column-right input');
-  
-  allInputs.forEach(input => {
-    const checkAnswer = (target, check, skip) => {
-      const i = parseInt(target.getAttribute('i'));
-      const j = parseInt(target.getAttribute('j'));
-      const singleDefinition = words[i].definition[j];
-
-      if (check) {
-        if (target.value.trim() == '') {
-          words[i].status[j] = 0;
-          words[i].word[j] = '';
-        }
-        else if (convertToPlain(target.value) == convertToPlain(singleDefinition) ||
-                (ignoreAccents && (convertToNoAccents(convertToPlain(target.value)) == convertToNoAccents(convertToPlain(singleDefinition))))) {
-          words[i].status[j] = 2;
-          if (skip) {
-            playSuccessSound();
-          }
-          words[i].word[j] = singleDefinition;
-        }
-        else {
-          words[i].status[j] = 1;
-          if (skip) {
-            playFailureSound();
-          }
-          words[i].word[j] = target.value.trim();
-        }
-
-        regenerateQuiz();
-
-        if (skip && (i + 1 < words.length || j + 1 < words[i].definition.length)) {
-          if (testInColumns) {
-            const nextInput = document.getElementById(`input-${i+1}-${j}`) || document.getElementById(`input-0-${j+1}`);
-            if (nextInput) nextInput.select();
-          } else {
-            const nextInput = document.getElementById(`input-${i}-${j+1}`) || document.getElementById(`input-${i+1}-0`);
-            if (nextInput) nextInput.select();
-          }
-        }
-      }
-    }
-    
-    // Remove existing listeners
-    input.replaceWith(input.cloneNode(true));
-    const newInput = input.parentNode.querySelector(`input[i="${input.getAttribute('i')}"][j="${input.getAttribute('j')}"]`);
-    
-    // Add new listeners
-    newInput.addEventListener('keypress', e => checkAnswer(e.target, e.key == 'Enter', true));
-    newInput.addEventListener('blur', e => checkAnswer(e.target, true, false));
-  });
 }
 
 // Handle window resize
@@ -444,16 +364,12 @@ window.addEventListener('resize', () => {
 // Override the original regenerateQuiz to include column layout
 const originalRegenerateQuiz = regenerateQuiz;
 regenerateQuiz = function() {
-  // Always ensure we're working with the original table first
-  removeTwoColumnLayout();
-  
-  // Run the original regenerateQuiz function
   originalRegenerateQuiz();
-  
-  // Then apply column layout if needed
   setTimeout(() => {
-    if (window.innerWidth >= 900 && words.length > 6) {
+    if (window.innerWidth >= 900) {
       createTwoColumnLayout();
+    } else {
+      removeTwoColumnLayout();
     }
   }, 0);
 }
