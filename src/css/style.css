@@ -230,13 +230,26 @@ button.danger:hover {
   color: var(--gray-600);
 }
 
+.panels-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .panels-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .settings-panel, .topics-section {
   background: white;
   border-radius: var(--border-radius);
   padding: 0.5rem;
   box-shadow: var(--shadow);
   border: 1px solid var(--gray-200);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .settings-grid {

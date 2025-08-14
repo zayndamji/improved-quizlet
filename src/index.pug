@@ -48,37 +48,38 @@
   <div class="container">
     <div class="main-content">
       
-      <div class="settings-panel">
-        <div class="card-header" onclick="toggleSettings()">
-          <span>Settings</span>
-          <button class="toggle-button" id="settings-toggle">Open</button>
+      <div class="panels-wrapper">
+        <div class="settings-panel">
+          <div class="card-header" onclick="toggleSettings()">
+            <span>Settings</span>
+            <button class="toggle-button" id="settings-toggle">Open</button>
+          </div>
+          <div class="settings-grid" id="settings-content" style="display: none;">
+            <div class="setting-item">
+              <label class="setting-label" for="status-selector">Hide whether Correct or Incorrect</label>
+              <input id="status-selector" name="status-selector" type="checkbox" onclick="toggleStatus(); regenerateQuiz();">
+            </div>
+            <div class="setting-item">
+              <label class="setting-label" for="accents-selector">Ignore Accents</label>
+              <input id="accents-selector" name="accents-selector" type="checkbox" onclick="toggleAccents(); regenerateQuiz();">
+            </div>
+            <div class="setting-item">
+              <label class="setting-label" for="mute-selector">Mute Sounds</label>
+              <input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();" checked>
+            </div>
+            <div class="setting-item">
+              <label class="setting-label" for="column-selector">Test in Columns</label>
+              <input id="column-selector" name="column-selector" type="checkbox" onclick="toggleColumns(); regenerateQuiz();">
+            </div>
+          </div>
         </div>
-        <div class="settings-grid" id="settings-content" style="display: none;">
-          <div class="setting-item">
-            <label class="setting-label" for="status-selector">Hide whether Correct or Incorrect</label>
-            <input id="status-selector" name="status-selector" type="checkbox" onclick="toggleStatus(); regenerateQuiz();">
-          </div>
-          <div class="setting-item">
-            <label class="setting-label" for="accents-selector">Ignore Accents</label>
-            <input id="accents-selector" name="accents-selector" type="checkbox" onclick="toggleAccents(); regenerateQuiz();">
-          </div>
-          <div class="setting-item">
-            <label class="setting-label" for="mute-selector">Mute Sounds</label>
-            <input id="mute-selector" name="mute-selector" type="checkbox" onclick="toggleMute(); regenerateQuiz();" checked>
-          </div>
-          <div class="setting-item">
-            <label class="setting-label" for="column-selector">Test in Columns</label>
-            <input id="column-selector" name="column-selector" type="checkbox" onclick="toggleColumns(); regenerateQuiz();">
-          </div>
-        </div>
-      </div>
 
-      <div class="topics-section">
-        <div class="card-header" onclick="toggleTopics()">
-          <span>Study Topics</span>
-          <span class="text-sm">(<span id="numberofsets">1</span> selected)</span>
-          <button class="toggle-button" id="topics-toggle">Open</button>
-        </div>
+        <div class="topics-section">
+          <div class="card-header" onclick="toggleTopics()">
+            <span>Study Topics</span>
+            <span class="text-sm">(<span id="numberofsets">1</span> selected)</span>
+            <button class="toggle-button" id="topics-toggle">Open</button>
+          </div>
         <div id="set" style="display: none;">
           each sec in options
             - const secId = `${sec.name}-setchooser`
@@ -97,6 +98,7 @@
                       input(type="checkbox" id=week[0] name="set" value=week[0] onchange="selectSet()")
                       label(for=week[0]) #{week[1]}
         </div>
+      </div>
       </div>
 
       <div class="actions-section">
