@@ -11,15 +11,15 @@
   },
   {
     "name": "art",
-    "display": "Art and Emotion",
+    "display": "Art & Emotion",
     "sets": [
       [
         "art1",
-        "Art and Emotion (Spanish/English)"
+        "Art & Emotion (English Translation)"
       ],
       [
         "art2",
-        "Art and Emotion (Spanish)"
+        "Art & Emotion (Spanish Translation)"
       ]
     ]
   },
