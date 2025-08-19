@@ -14,8 +14,12 @@
     "display": "Art and Emotion",
     "sets": [
       [
-        "artemotion",
-        "Art and Emotion Vocabulary"
+        "art1",
+        "Art and Emotion (Spanish/English)"
+      ],
+      [
+        "art2",
+        "Art and Emotion (Spanish)"
       ]
     ]
   },
