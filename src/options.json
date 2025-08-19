@@ -10,6 +10,16 @@
     ]
   },
   {
+    "name": "art",
+    "display": "Art and Emotion",
+    "sets": [
+      [
+        "artemotion",
+        "Art and Emotion Vocabulary"
+      ]
+    ]
+  },
+  {
     "name": "communication",
     "display": "Expressiones que facilitan la comunicación",
     "sets": [

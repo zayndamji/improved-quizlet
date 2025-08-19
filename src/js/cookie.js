@@ -55,10 +55,8 @@ if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
   console.log('User has previous data... regenerating quiz from saved data.');
 } else {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
-  if (document.getElementById('quiz1')) {
-    document.getElementById('quiz1').checked = true;
-  } else {
-    document.getElementById('quiz-setchooser').children[0].children[0].checked = true;
+  if (document.getElementById('artemotion')) {
+    document.getElementById('artemotion').checked = true;
   }
   selectSet();
   console.log('User is new... generating quiz from scratch.');
