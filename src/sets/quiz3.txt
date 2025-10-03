@@ -1,0 +1,21 @@
+(más) arriba/abajo	ubicación geográfica - higher/lower
+cerca/lejos	ubicación geográfica - near/far
+delante/detrás	ubicación geográfica - in front of/behind
+dentro/fuera	ubicación geográfica - inside/outside
+(a la) derecha/izquierda	ubicación geográfica - to the right/left
+encima/debajo (de)	ubicación geográfica - on top of/under
+en el medio/en el centro	ubicación geográfica - in the middle/in the center
+a 10 km de	distancia - 10 km from
+a lo lejos	distancia - in the distance
+a (más/menos de) 1 hora	distancia - more/less than an hour
+a un día de viaje	distancia - a day's travel
+cerca/lejos (de)	distancia - close to/far from
+en las cercanías de	distancia - in the vicinity of
+en los alrededores de	distancia - in the vicinty of
+ahora (mismo)	ubicación temporal - right now/right away/just now
+antes/después (de)	ubicación temporal - before/after
+más tarde	ubicación temporal - later
+cuando, mientras	ubicación temporal - when, during
+de niño/joven/adulto	ubicación temporal - as a child/teen/young person/adult
+nunca/a veces/siempre	ubicación temporal - never, sometimes, always
+todos los días/años	ubicación temporal - everyday, every year
