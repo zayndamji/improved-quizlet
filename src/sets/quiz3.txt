@@ -11,7 +11,7 @@ a (más/menos de) 1 hora	distancia - more/less than an hour
 a un día de viaje	distancia - a day's travel
 cerca/lejos (de)	distancia - close to/far from
 en las cercanías de	distancia - in the vicinity of
-en los alrededores de	distancia - in the vicinty of
+en los alrededores de	distancia - in the surroundings of
 ahora (mismo)	ubicación temporal - right now/right away/just now
 antes/después (de)	ubicación temporal - before/after
 más tarde	ubicación temporal - later
