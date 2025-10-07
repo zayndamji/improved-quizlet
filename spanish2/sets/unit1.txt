@@ -1,0 +1,50 @@
+La actividad	The activity
+El club	The club
+Los deportes electrónicos	Electronic sports
+El excursionismo	Hiking
+El grupo	The group
+El club de negocios	The business club
+El club del medio ambiente	The environmental club
+La orquesta	The orchestra
+La banda	The band
+El coro	The choir
+El yoga	Yoga
+El club de voluntarios	The volunteer club
+El club de cocina	The cooking club
+Baloncesto	Basketball
+Béisbol	Baseball
+Voleibol	Volleyball
+Fútbol americano	American football
+Fútbol	Soccer
+Tenis	Tennis
+Hockey	Hockey
+Natación	Swimming
+Gimnasia	Gymnastics
+Porristas	Cheerleaders
+El aficionado	The fan
+El voluntario	The volunteer
+Animar	To cheer
+Aplaudir	To applaud
+Apoyar	To support
+Ganar	To win
+Perder	To lose
+El partido	The match
+Juntos	Together
+El equipo	The team
+El festival de música	The music festival
+El concierto	The concert
+La obra de teatro	The play
+La canción	The song
+El cantante	The singer
+La letra	The lyrics
+El mensaje	The message
+El género	The genre
+Música Pop	Pop music
+¿Qué?	What?
+¿Cómo?	How?
+¿Cuándo?	When?
+¿Por qué?	Why?
+¿Dónde?	Where?
+¿Quién?	who, whom
+¿Cuál?	Which?
+¿cuántos(as)/cuánto)?	How many/much?

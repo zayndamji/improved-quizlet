@@ -1,5 +1,15 @@
 [
   {
+    "name": "vocab",
+    "display": "Vocabulario",
+    "sets": [
+      [
+        "unit1",
+        "Unidad 1: Aficionados Unidos"
+      ]
+    ]
+  },
+  {
     "name": "present",
     "display": "Present Tense",
     "sets": [
