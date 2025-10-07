@@ -39,6 +39,12 @@ if (tempColumns != "") {
   console.log('User has toggled columns before.')
 }
 
+const tempSplashscreen = getLocalStorage('splash');
+if (tempSplashscreen != "") {
+  toggleSplashscreen(tempSplashscreen == 'true');
+  console.log('User has toggled splashscreen before.')
+}
+
 const tempFlipped = getLocalStorage('flipped');
 if (tempFlipped != "") {
   flipped = tempFlipped == 'true';
@@ -55,9 +61,8 @@ if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
   console.log('User has previous data... regenerating quiz from saved data.');
 } else {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
-  if (document.getElementById('quiz3')) {
-    document.getElementById('quiz3').checked = true;
-  }
+  document.getElementById('vocabulary4-setchooser').children[2].children[0].checked = true;
+  document.getElementById('vocabulary4-setchooser').children[3].children[0].checked = true;
   selectSet();
   console.log('User is new... generating quiz from scratch.');
 }

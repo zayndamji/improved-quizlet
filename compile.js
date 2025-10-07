@@ -63,6 +63,23 @@ fs.writeFileSync('serve/spanish2/index.html',
   }
 ));
 
+if (!fs.existsSync('serve/spanish2old')) {
+  fs.mkdirSync('serve/spanish2old');
+}
+
+fs.writeFileSync('serve/spanish2old/index.html',
+  pug.renderFile('spanish2old/index.pug', {
+    setData: fs.readdirSync('spanish2old/sets').map(e => {
+      return {
+        name: e,
+        content: fs.readFileSync('spanish2old/sets/' + e, { encoding: 'utf-8' }),
+      }
+    }),
+    sounds,
+    options: JSON.parse(fs.readFileSync('spanish2old/options.json', { encoding: 'utf-8' }))
+  }
+));
+
 if (!fs.existsSync('serve/spanish3')) {
   fs.mkdirSync('serve/spanish3');
 }

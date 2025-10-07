@@ -1,0 +1,37 @@
+comprar	to buy
+hablar	to speak/to talk
+bailar	to dance
+cantar	to sing
+subir	to climb/to go up
+comer	to eat
+beber	to drink
+caminar	to walk
+vivir	to live
+limpiar	to clean
+lavar	to wash
+escribir	to write
+dormir (o:ue)	to sleep
+ser	to be (permanent)
+estar	to be (temporary)
+estudiar	to study
+amar	to love
+correr	to run
+escuchar	to listen
+leer	to read
+ver	to see
+mirar	to look at
+callar	to be quiet
+dividir	to divide
+sumar	to add
+saludar	to greet
+despedir	to say goodbye
+parar	to stop
+pasear	to take a walk
+conducir	to drive
+besar	to kiss
+olvidar	to forget
+salir	to leave/to exit
+llegar	to arrive
+tocar	to touch/to play an instrument
+desayunar	to have breakfast
+cenar	to have dinner

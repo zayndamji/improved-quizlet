@@ -1,8 +1,8 @@
-let words = [], content = '', flipped = true;
+let words = [], content = '', flipped = false;
 
 const specialChars = /;|,|\/| |-|\=|\[|\]|\{|\}|\?|<|>|'|"|\:|\+|_|\)|\(|‎/g;
 const convertToPlain = w => w.toLowerCase().replace(specialChars, '').trim();
-const convertToNoAccents = w => w.replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i').replace('ó', 'o').replace('ü', 'u');
+const convertToNoAccents = w => w.replace('é', 'e').replace('á', 'a').replace('ú', 'u').replace('ñ', 'n').replace('í', 'i').replace('ó', 'o');
 
 function selectSet() {
   const setValue = Array.from(document.querySelectorAll('input[name="set"]:checked')).map(e => e.value);
@@ -42,7 +42,9 @@ function resetScreen() {
   document.getElementById('main-table').textContent = '';
   document.getElementById('main-table').append(topRow);
   document.getElementById('main-table').append(topRow2);
-  if (getLocalStorage('set').includes('presentverbs')) {
+  if (getLocalStorage('set').includes('imperfectverbs') ||
+      getLocalStorage('set').includes('spanish1review') ||
+      getLocalStorage('set').includes('preteriteverbs')) {
     document.getElementById('firstrow').style.display = 'flex';
     document.getElementById('firstrow2').style.display = 'none';
   } else if (getLocalStorage('set').includes('tuustedustedes')) {
@@ -125,6 +127,7 @@ function regenerateQuiz() {
                 (ignoreAccents && (convertToNoAccents(convertToPlain(target.value)) == convertToNoAccents(convertToPlain(singleDefinition))))) {
           words[i].status[j] = 2;
           if (skip) {
+            splashscreenAnimation('green', 'Correct!');
             playSuccessSound();
           }
           words[i].word[j] = singleDefinition;
@@ -133,6 +136,7 @@ function regenerateQuiz() {
         else {
           words[i].status[j] = 1;
           if (skip) {
+            splashscreenAnimation('red', 'Wrong!');
             playFailureSound();
           }
           words[i].word[j] = target.value.trim();
@@ -211,6 +215,8 @@ function regenerateQuiz() {
       if (words[i].status[j] == 1 && showStatus) {
         const span = document.createElement('span');
         span.innerHTML = `&nbsp;${words[i].definition[j]}`;
+        span.style.color = 'red';
+        span.style.fontSize = '80%';
         span.setAttribute('id', `wrong-${i}-${j}`);
         inputWord.parentElement.append(span);
       }
@@ -238,7 +244,7 @@ function regenerateQuiz() {
   }
   else {
     document.getElementById('outer-progress-text').textContent = text;
-    document.getElementById('progress-bar').style.width = Math.floor(percentage) + '%';
+    document.getElementById('progress-bar').style.width = Math.floor(percentage) * 0.93 + '%';
     document.getElementById('progress-bar').style.display = 'block';
   }
 
@@ -253,13 +259,11 @@ function solveQuiz() {
     }
   }
   regenerateQuiz();
+  longSplashscreenAnimation('green', '100%..?');
 }
 
 function selectAllSets(on, id) {
-  Array.from(document.getElementById(id).children).forEach(e => {
-    const checkbox = e.children[0].children[0];
-    checkbox.checked = on;
-  });
+  Array.from(document.getElementById(id).children).forEach(e => e.children[0].checked = on);
   selectSet();
 }
 
