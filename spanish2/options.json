@@ -4,8 +4,12 @@
     "display": "Vocabulario",
     "sets": [
       [
-        "unit1",
+        "aficionados",
         "Unidad 1: Aficionados Unidos"
+      ],
+      [
+        "infinitive",
+        "Unidad 1: Infinitive Expressions"
       ]
     ]
   },
@@ -14,7 +18,7 @@
     "display": "Present Tense",
     "sets": [
       [
-        "presenttense",
+        "ptense",
         "Present Tense"
       ]
     ]
