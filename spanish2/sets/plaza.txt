@@ -1,0 +1,26 @@
+el barrio	neighborhood
+la calle	street
+el centro	center, downtown
+la farmacia	pharmacy, drugstore
+la feria artesanal	craft fair
+la librería	bookstore
+la oficina de correos	post office
+la plaza	town square
+charlar	talk, chat
+organizar	to organize, to arrange, to set up
+pasear	to take a walk
+participar en la marcha	to participate in a march
+¿Dónde queda...?	Where is... located?
+¿cómo llego a..?	How do I get to...?
+la cuadra	block (city)
+doblar	to turn
+la esquina	street corner
+sigue recto/derecho	continue straight
+a la derecha	to the right of
+a la izquierda	to the left of
+al lado de	next to, beside
+detrás de	behind
+cerca de	near
+lejos de	far from
+enfrente de/delante de	in front of
+entre	between
