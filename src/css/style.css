@@ -611,7 +611,7 @@ input[type="checkbox"] {
 
 #progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--success), var(--secondary));
+  background: lightgreen;
   border-radius: inherit;
   transition: width 0.3s ease;
   width: 0%;
@@ -623,11 +623,10 @@ input[type="checkbox"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--gray-900);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: black;
   z-index: 121;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
   pointer-events: none;
 }
 
