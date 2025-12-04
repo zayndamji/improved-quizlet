@@ -17,7 +17,7 @@ tuitear	to tweet
 meterse	to get into
 los cibernautas	Internet user
 el taller	workshop
-el afición	liking, hobby
+la afición	liking, hobby
 el confinamiento	confinement, lockdown
 decena	ten
 ascenso	raise, ascent
