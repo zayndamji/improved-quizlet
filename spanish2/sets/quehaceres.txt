@@ -1,0 +1,28 @@
+cocinar la cena	to cook dinner
+cocinar el desayuno	to cook breakfast
+aspirar la alfombra	to vacuum the carpet
+trapear el piso	to mop the floor
+guardar los platos	to put away the dishes
+limpiar el vidrio	to clean the glass
+cuidar a los niños	to take care of the kids
+hacer los mandados	to run errands
+tender la cama	to make the bed
+ordenar el cuarto	to organize the room
+limpiar el cuarto de baño	to clean the restroom
+lavar el piso	to wash the floor
+lavar los platos	to wash the dishes
+barrer el piso	to sweep
+quitar el polvo	to dust
+cocinar	to cook
+poner la mesa	to set the table
+dar de comer al perro	to feed the dog
+lavar la ropa	to wash the clothes
+tender la ropa	to hang the clothes
+planchar	to iron
+sacar la basura	to take out the trash
+sacar a pasear al perro	to take the dog for a walk
+pasar la aspiradora	to vacuum
+recoger la mesa	to pick up the table
+cortar el césped	to mow the lawn
+lavar el coche	to wash the car
+regar las plantas	to water the plants
