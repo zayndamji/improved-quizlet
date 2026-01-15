@@ -24,12 +24,12 @@
         "Quiz 5: Las influencers"
       ],
       [
-        "quiz6part1",
+        "quiz6translations",
         "Quiz 6: Temático (translations)"
       ],
       [
-        "quiz6part2",
-        "Quiz 6: Temático (definitions)"
+        "quiz6definitions",
+        "Quiz 6: Temático (translations + definitions)"
       ]
     ]
   },
