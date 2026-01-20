@@ -1,0 +1,28 @@
+lavar la ropa	lava la ropa
+tender la ropa	tiende la ropa
+planchar	plancha
+sacar la basura	saca la basura
+sacar a pasear al perro	saca a pasear al perro
+pasar la aspiradora	pasa la aspiradora
+recoger la mesa	recoge la mesa
+cortar el césped	corta el césped
+lavar el coche	lava el coche
+regar las plantas	riega las plantas
+cocinar la cena	cocina la cena
+aspirar la alfombra	aspira la alfombra
+trapear el piso	trapea el piso
+cocinar el desayuno	cocina el desayuno
+guardar los platos	guarda los platos
+limpiar el vidrio	limpia el vidrio
+cuidar a los niños	cuida a los niños
+hacer los mandados	haz los mandados
+tender la cama	tiende la cama
+ordenar el cuarto	ordena el cuarto
+limpiar el cuarto de baño	limpia el cuarto de baño
+lavar el piso	lava el piso
+barrer el piso	barre el piso
+quitar el polvo	quita el polvo
+cocinar	cocina
+poner la mesa	pon la mesa
+dar de comer al perro	da de comer al perro
+lavar los platos	lava los platos
