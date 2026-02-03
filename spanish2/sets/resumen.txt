@@ -1,0 +1,37 @@
+el barrio	neighborhood
+la calle	street
+el centro	center, downtown
+charlar	to chat
+la farmacia	pharmacy
+la feria artesanal	craft fair
+la librería	bookstore
+la oficina de correos	post office
+organizar	to organize
+participar en una marcha	to participate in a march
+pasear	to stroll
+la plaza	plaza
+¿cómo llego a...?	How do I get to...?
+la cuadra	block
+doblar	to turn
+¿dónde queda...?	Where is...?
+la esquina	corner
+sigue recto	continue straight
+vale	okay
+el banco	bank
+el cajero automático	automatic teller machine (ATM)
+la carnicería	butcher shop
+con tarjeta	with a credit card
+el dinero	money
+en efectivo	cash
+la gasolina	gas
+la gasolinera	gas station
+la heladería	ice cream shop
+la joya	piece of jewelry
+la joyería	jewelry shop
+pagar	to pay
+la panadería	bakery (bread)
+la pastelería	bakery (pastries)
+la peluquería	hair salon
+el quiosco	kiosk
+la tienda de ropa	clothing store
+la zapatería	shoe shop
