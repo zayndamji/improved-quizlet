@@ -35,3 +35,21 @@ la peluquería	hair salon
 el quiosco	kiosk
 la tienda de ropa	clothing store
 la zapatería	shoe shop
+ayudarse	to help each other
+cargar	to charge
+compartir la pantalla	to share the screen
+comunicarse	to communicate with each other
+conectarse	to connect (to something, with each other)
+conocerse	to meet each other, to know each other
+la contraseña	password
+encontrarse (o:ue)	to meet up with each other
+entenderse (e:ie)	to understand each other, to get along
+entrar en la sala virtual	to enter the virtual classroom
+grabar	to record
+mandarse mensajes	to send each other messages
+la página web	web page
+participar en el foro	to participate in a forum
+reunirse	to get together
+la señal de wifi	wifi signal
+usar una aplicación	to use an application
+verse	to see each other
