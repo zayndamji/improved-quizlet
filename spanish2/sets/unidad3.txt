@@ -1,0 +1,25 @@
+el aceite	oil
+el ajo	garlic
+el alimento	food, nourishment
+la bebida	beverage
+el chocolate	chocolate
+la comida (casera)	homemade food
+frito(a)	fried
+la fruta	fruit
+la galleta	cookie
+la guayaba	guava
+la harina	flour
+el ingrediente	ingredient
+la miel	honey
+el pastelito	pastry
+el pavo	turkey
+pedir (e:i)	to ask for, to request
+la piña	pineapple
+el plato principal	main dish
+la verdura	vegetable
+la zanahoria	carrot
+batir	to beat, whisk
+cortar	to cut
+hervir (e:ie)	to boil
+mezclar	to mix
+pelar	to peel
