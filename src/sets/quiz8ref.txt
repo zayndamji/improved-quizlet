@@ -1,0 +1,20 @@
+levantarse	to get up
+acostarse	to go to bed
+despertarse	to wake up
+ducharse	to shower
+bañarse	to bathe
+vestirse	to get dressed
+peinarse	to comb one’s hair
+lavarse	to wash oneself
+cepillarse	to brush (teeth/hair)
+afeitarse	to shave
+maquillarse	to put on makeup
+prepararse	to get ready
+sentarse	to sit down
+acordarse (de)	to remember
+olvidarse (de)	to forget
+sentirse	to feel
+quedarse	to stay / remain
+enojarse	to get angry
+divertirse	to have fun
+relajarse	to relax

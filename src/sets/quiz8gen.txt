@@ -1,0 +1,24 @@
+China	chino/a
+Uruguay	uruguayo/a
+Perú	peruano/a
+Estados Unidos	estadounidense
+Paris	parisiense
+Londres	londinense
+México	mexicano/a
+Nicaragua	nicaragüense
+Costa Rica	costarricense
+Canada	canadiense
+Colombia	colombiano/a
+Ecuador	ecuatoriano/a
+Bolivia	boliviano/a
+Italia	italiano/a
+Panamá	panameño/a
+Brasil	brasileño/a
+El Salvador	salvadoreño/a
+Honduras	hondureño/a
+Finlandia	finlandés/esa
+Dinamarca	danés/esa
+Suiza	suizo/a, helvético/a
+Puerto Rico	puertorriqueño/a, boricua
+Nueva York	neoyorquino/a
+Grecia	griego/a
