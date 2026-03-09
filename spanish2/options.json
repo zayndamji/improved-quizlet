@@ -1,5 +1,15 @@
 [
   {
+    "name": "imperfecttense",
+    "display": "Imperfect Tense",
+    "sets": [
+      [
+        "imperfect",
+        "Imperfect Tense"
+      ]
+    ]
+  },
+  {
     "name": "vocab",
     "display": "Vocabulario",
     "sets": [
