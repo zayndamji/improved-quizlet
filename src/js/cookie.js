@@ -55,8 +55,14 @@ if (tempWords != "" && tempWords != '[]' && setIsStillValid) {
   console.log('User has previous data... regenerating quiz from saved data.');
 } else {
   Array.from(document.getElementById('set').children).forEach(e => e.children[0].checked = false);
-  if (document.getElementById('quiz9')) {
-    document.getElementById('quiz9').checked = true;
+  if (document.getElementById('quiz9p1')) {
+    document.getElementById('quiz9p1').checked = true;
+  }
+  if (document.getElementById('quiz9p2')) {
+    document.getElementById('quiz9p2').checked = true;
+  }
+  if (document.getElementById('quiz9p3')) {
+    document.getElementById('quiz9p3').checked = true;
   }
   selectSet();
   console.log('User is new... generating quiz from scratch.');
