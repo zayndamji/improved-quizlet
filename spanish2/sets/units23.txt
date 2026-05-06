@@ -1,0 +1,112 @@
+el barrio	neighborhood
+la calle	street
+el centro	center, downtown
+charlar	to chat
+la farmacia	pharmacy
+la feria artesanal	craft fair
+la librería	bookstore
+la ofician de correos	post office
+organizar	to organize
+participar en una marcha	to participate in a march
+pasear	to stroll
+¿Cómo llego a...?	How do I get to...?
+la cuadra	block
+doblar	to turn
+¿Dónde queda...?	Where is...?
+la esquina	corner
+Sigue (recto)	continue straight
+vale	okay
+el banco	bank
+el cajero automático	automatic teller machine (ATM)
+la carnicerIa	butcher shop
+con tarjeta de crédito	with a credit card
+el dinero	money
+en efectivo	cash
+la gasolinera	gas station
+la heladería	ice cream shop
+la joya	piece of jewelry
+la joyería	jewelry shop
+pagar	to pay
+la panadería	bakery (bread)
+la pastelería	bakery (pastries, cakes)
+la peluquería	hair salon
+el quiosco	kiosk
+la tienda de ropa	clothing store
+la zapatería	shoe shop
+ayudarse	to help each other
+cargar	to charge
+compartir la pantalla	to share the screen
+comunicarse	to communicate with each other
+conectarse	to connect (to something, with each other)
+conocerse	to know each other
+la contraseña	password
+encontrarse (o:ue)	to meet up with each other
+entenderse (e,ie) bien/mal	To understand/misunderstand each other well
+entrar a la sala virtual	to enter the virtual classroom
+grabar	to record
+mandarse mensajes	to send each other messages
+la página web	web page
+participar en un foro	to participate in a forum
+reunirse	to get together
+la señal de wifi	wifi signal
+usar una aplicación	to use an application
+verse uno al otro	to see each other
+la comida casera	homemade food
+el aceite	oil
+el ajo	garlic
+el alimento	food
+la bebida	beverage, drink
+fito/a	fried
+la fruta	fruit
+la galleta	cookie
+la guayaba	guava
+la harina	flour
+el ingrediente	ingredient
+la miel	honey
+el pastelito	pastry
+el pavo	turkey
+el plato principal	main dish
+la verdura	vegetable
+la zanahoria	carrot
+mezclar	to mix
+pelar	to peel
+batir	to beat, whisk
+cortar	to cut
+hervir (e:ie)	to boil
+al aire libre	outdoors
+el bocadito	sandwich
+el caldo	broth
+caliente	hot
+el camarero	server
+el carrito de comida	food cart
+los cubiertos	cutlery, utensils
+la cuchara	spoon
+el cuchillo	knife
+frío/a	cold
+llevar	to bring, take
+los mariscos	shellfish, seafood
+la merienda	snack
+nutritivo/a	nutritious
+el puesto de comida	food stand
+el tenedor	fork
+el vaso	drinking glass
+el beneficio	benefit
+con moderación	with moderation
+consumir	to consume
+cultivar	to cultivate
+disponible	available
+evitar	to avoid
+la grasa	fat, grease
+el huerto	vegetable garden
+malgastar	to waste
+mejorar	to improve
+orgánico/a	organic
+el planeta	planet
+procesado/a	processed
+proteger	to protect
+la proteína	protein
+el recurso	resource
+saludable	healthy
+sostenible	sustainable
+la tierra	land; soil
+el trigo	wheat
