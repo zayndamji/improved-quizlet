@@ -1,5 +1,15 @@
 [
   {
+    "name": "preteritetense",
+    "display": "Preterite Tense",
+    "sets": [
+      [
+        "preterite",
+        "Preterite Tense"
+      ]
+    ]
+  },
+  {
     "name": "final",
     "display": "Final Exam",
     "sets": [
